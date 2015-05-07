@@ -4,11 +4,14 @@
     angular.module('app.login')
         .controller('Login', Login);
 
-    function Login() {
+    Login.$inject = ['OAuth'];
+
+    function Login(OAuth) {
         /* jshint validthis: true */
         var vm = this;
 
-        vm.loginTest = Math.random(20);
+        // Authenticated
+        vm.isAuthenticated = OAuth.isAuthenticated();
     }
 
 })();
