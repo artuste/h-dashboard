@@ -5,9 +5,12 @@
         .controller('Login', Login)
         .factory('Integration', Integration);
 
-    function Login(Integration) {
+    Login.$inject = ['$rootScope', '$interval', 'Integration'];
+
+    function Login($rootScope, $interval, Integration) {
         /* jshint validthis: true */
         var vm = this;
+
 
         vm.login = login;
 
@@ -40,6 +43,15 @@
             };
 
             Integration.init(login); // promise ???
+
+            $interval(function () {
+                if(localStorage.getItem('login') && localStorage.getItem('access_token')) {
+                vm.oauth2 = {
+                        login: localStorage.getItem('login'),
+                        token: localStorage.getItem('access_token')
+                    }
+                }
+            }, 500);
         }
     }
 

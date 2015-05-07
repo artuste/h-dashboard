@@ -27,6 +27,7 @@
         'ui.calendar',
         'schemaForm',
         'angular-lodash',
+        'LocalStorageModule',
 
         /*
          * Feature areas
