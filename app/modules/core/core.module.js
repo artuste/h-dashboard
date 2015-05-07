@@ -20,7 +20,7 @@
         /*
          * 3rd Party modules
          */
-        'angular-oauth2',
+        //'angular-oauth2',
         'ui.utils',
         'ui.bootstrap',
         'angularMoment',
