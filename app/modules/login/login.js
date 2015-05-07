@@ -9,26 +9,37 @@
         /* jshint validthis: true */
         var vm = this;
 
+        vm.login = login;
+
         activate();
 
         function activate() {
-            Integration.init({
+            //Integration.startSession();
+            //
+            //Integration.getAssessment()
+            //    .then(function(response) {
+            //        console.log('GET ASSESS', response);
+            //    });
+            //
+            //Integration.endSession()
+            //    .then(function(response) {
+            //        console.log('success', response);
+            //    }, function (err) {
+            //        console.log('err', err);
+            //    });
+            //
+            //Integration.clearCache();
+        }
+
+        function login() {
+            var login = {
                 login: 'WebClient',
                 password: '70fdb7b56227077c8df02c7a576f8937',
                 clientId: 'WebClient',
                 clientSecret: 'i%^+g5Xm7F.^^-F'
-            });
+            };
 
-            Integration.startSession();
-
-            Integration.endSession()
-                .then(function(response) {
-                    console.log('success', response);
-                }, function (err) {
-                    console.log('err', err);
-                });
-
-            Integration.clearCache();
+            Integration.init(login); // promise ???
         }
     }
 
@@ -37,11 +48,12 @@
             init: init,
             startSession: startSession,
             endSession: endSession,
-            clearCache: clearCache
+            clearCache: clearCache,
+            getAssessment: getAssessment
         };
 
         function init(params) {
-            harimata.init(params.login, params.password, params.clientId, params.clientSecret, {});
+            return harimata.init(params.login, params.password, params.clientId, params.clientSecret, {});
         }
 
         function startSession() {
@@ -61,6 +73,10 @@
 
         function clearCache() {
             harimata.clearCache();
+        }
+
+        function getAssessment() {
+            return harimata.getAssessment();
         }
     }
 

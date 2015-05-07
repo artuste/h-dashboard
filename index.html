@@ -46,23 +46,23 @@
 <div id="main">
     <div id="header">
         <span class="logo"><span class="glyphicon glyphicon-user"></span> Harimata Events</span>
-        <count-watchers></count-watchers>
+        <!--<count-watchers></count-watchers>-->
+        <button class="btn btn-primary pull-right" ui-sref="login" style="margin: 7px;">Log-in</button>
     </div>
 
-    <div id="center">
-        <div class="container">
-            <section>
-                <div class="page-container">
-                    <div class="page-content-wrapper">
-                        <button class="btn btn-default pull-right" ui-sref="login">Log-in</button>
-                        <div ui-view
-                             class="page-content-example-ui">
-                        </div>
+    <div id="center"
+    <div class="container">
+        <section>
+            <div class="page-container">
+                <div class="page-content-wrapper">
+                    <div ui-view
+                         class="page-content-example-ui">
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </div>
+</div>
 </div>
 
 <!-- bower:js -->
@@ -130,7 +130,6 @@
 <!--<script src="app/assets/theme/admin/pages/scripts/ui-general.js" type="text/javascript"></script>-->
 <!--<script src="app/scripts/init.js"></script>-->
 <!-- end Metronic -->
-
 
 
 <!--Harimata-->
