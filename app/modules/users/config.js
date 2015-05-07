@@ -3,15 +3,22 @@
 
     angular
         .module('app')
-        .config(['$stateProvider', config]);
+        .config(['$stateProvider', 'URLS', config]);
 
-    function config($stateProvider) {
+    function config($stateProvider, URLS) {
+        var basePath = URLS.base;
 
         $stateProvider
             .state('users', {
                 url: '/users',
-                templateUrl: 'app/modules/users/users.tpl.html',
+                templateUrl: basePath + '/app/modules/users/users.tpl.html',
                 controller: 'Users',
+                controllerAs: 'vm'
+            })
+            .state('userDetails', {
+                url: '/user/details/:id',
+                templateUrl: basePath + '/app/modules/users/users.details.tpl.html',
+                controller: 'UsersDetails',
                 controllerAs: 'vm'
             });
     }

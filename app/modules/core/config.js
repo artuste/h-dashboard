@@ -2,10 +2,12 @@
     'use strict';
 
     angular.module('app')
-        .config(['$urlRouterProvider', '$locationProvider', 'toastrConfig', config]);
+        .constant('URLS', {
+            base: window.location.origin
+        })
+        .config(['$urlRouterProvider', 'toastrConfig', config]);
 
-    function config($urlRouterProvider, $locationProvider, toastrConfig) {
-        //$locationProvider.html5Mode(true);
+    function config($urlRouterProvider, toastrConfig) {
         $urlRouterProvider.otherwise("/users");
 
         angular.extend(toastrConfig, {

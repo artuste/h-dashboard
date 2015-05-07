@@ -54,6 +54,7 @@
             <section>
                 <div class="page-container">
                     <div class="page-content-wrapper">
+                        <button class="btn btn-default pull-right" ui-sref="login">Log-in</button>
                         <div ui-view
                              class="page-content-example-ui">
                         </div>
@@ -98,6 +99,9 @@
 <script src="bower_components/lodash/dist/lodash.compat.js"></script>
 <script src="bower_components/angular-lodash/angular-lodash.js"></script>
 <script src="bower_components/angular-smart-table/dist/smart-table.js"></script>
+<script src="bower_components/angular-cookie/angular-cookie.js"></script>
+<script src="bower_components/query-string/query-string.js"></script>
+<script src="bower_components/angular-oauth2/dist/angular-oauth2.js"></script>
 <!-- endbower -->
 
 <!-- i18n -->
@@ -131,6 +135,7 @@
 
 <!-- blocks -->
 <script src="app/modules/app.js"></script>
+<script src="app/modules/core/core.oauth2.js"></script>
 <script src="app/modules/core/config.js"></script>
 
 <script src="app/modules/core/core.module.js"></script>
@@ -141,12 +146,17 @@
 <script src="app/modules/tools/tools.js"></script>
 
 <script src="app/modules/components/components.module.js"></script>
-<script src="app/modules/components/breadcrumbs/breadcrumbs.dir.js"></script>
 
+<!--Login-->
+<script src="app/modules/login/config.js"></script>
+<script src="app/modules/login/login.module.js"></script>
+<script src="app/modules/login/login.js"></script>
 
+<!--Users-->
 <script src="app/modules/users/config.js"></script>
 <script src="app/modules/users/users.module.js"></script>
 <script src="app/modules/users/users.js"></script>
+<script src="app/modules/users/userDetails.js"></script>
 <!-- end AngularJS app files -->
 
 </body>

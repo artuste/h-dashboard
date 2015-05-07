@@ -59,6 +59,7 @@
     "angular-ui-calendar": "latest",
     "angular-schema-form": "~0.8.0",
     "angular-lodash": "~0.1.2",
-    "angular-smart-table": "~2.0.2"
+    "angular-smart-table": "~2.0.2",
+    "angular-oauth2": "~2.1.0"
   }
 }

@@ -20,6 +20,7 @@
         /*
          * 3rd Party modules
          */
+        'angular-oauth2',
         'ui.utils',
         'ui.bootstrap',
         'angularMoment',
@@ -30,6 +31,8 @@
         /*
          * Feature areas
          */
+        'app.login',
         'app.users'
     ]);
+
 })();

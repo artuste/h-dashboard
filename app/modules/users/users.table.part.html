@@ -6,6 +6,7 @@
         <th>birth date</th>
         <th>balance</th>
         <th>email</th>
+        <th>Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -15,6 +16,7 @@
         <td>{{row.birthDate}}</td>
         <td>{{row.balance}}</td>
         <td>{{row.email}}</td>
+        <td><button class="btn btn-primary" ng-click="vm.viewDetails(row)">Details</button></td>
     </tr>
     </tbody>
 </table>
