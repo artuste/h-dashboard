@@ -1,0 +1,50 @@
+<div class="panel panel-default">
+    <div class="panel-heading">User data</div>
+    <div class="panel-body">
+        <form name="form" role="form">
+            <fieldset>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="control-label" for="gender">Płeć</label>
+
+                    <div class="controls">
+                        <input id="gender" name="gender" type="text" placeholder="Podaj płeć" class="form-control">
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="control-label" for="age">Podaj wiek</label>
+
+                    <div class="controls">
+                        <input id="age" name="age" type="text" placeholder="Podaj wiek" class="form-control">
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+                <div class="form-group">
+                    <label class="control-label" for="device">Urządzenie</label>
+
+                    <div class="controls">
+                        <select id="device" name="device" class="form-control">
+                            <opiton></opiton>
+                            <option>Komputer</option>
+                            <option>Tablet</option>
+                            <option>Telfon</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+    </div>
+
+    <div class="panel-footer">
+        <!-- Button -->
+        <div class="form-group">
+            <div class="controls">
+                <button ng-click="vm.save(form)" id="save" name="save" class="btn green">Wyślij</button>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>

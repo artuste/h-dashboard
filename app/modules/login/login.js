@@ -5,9 +5,9 @@
         .controller('Login', Login)
         .factory('Integration', Integration);
 
-    Login.$inject = ['$rootScope', '$interval', 'Integration'];
+    Login.$inject = ['$rootScope', '$interval', 'logger', 'Integration'];
 
-    function Login($rootScope, $interval, Integration) {
+    function Login($rootScope, $interval, logger, Integration) {
         /* jshint validthis: true */
         var vm = this;
 
@@ -17,21 +17,7 @@
         activate();
 
         function activate() {
-            //Integration.startSession();
-            //
-            //Integration.getAssessment()
-            //    .then(function(response) {
-            //        console.log('GET ASSESS', response);
-            //    });
-            //
-            //Integration.endSession()
-            //    .then(function(response) {
-            //        console.log('success', response);
-            //    }, function (err) {
-            //        console.log('err', err);
-            //    });
-            //
-            //Integration.clearCache();
+
         }
 
         function login() {
@@ -44,12 +30,14 @@
 
             Integration.init(login); // promise ???
 
-            $interval(function () {
-                if(localStorage.getItem('login') && localStorage.getItem('access_token')) {
-                vm.oauth2 = {
+            var interval = $interval(function () {
+                if (localStorage.getItem('login') && localStorage.getItem('access_token')) {
+                    $rootScope.oauth2 = {
                         login: localStorage.getItem('login'),
                         token: localStorage.getItem('access_token')
-                    }
+                    };
+                    logger.info('Zostałeś poprawnie zalogowany!');
+                    $interval.cancel(interval);
                 }
             }, 500);
         }

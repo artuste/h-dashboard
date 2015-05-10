@@ -28,6 +28,7 @@
         'schemaForm',
         'angular-lodash',
         'LocalStorageModule',
+        'ng-token-auth',
 
         /*
          * Feature areas
