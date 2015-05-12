@@ -2,29 +2,26 @@
     'use strict';
 
     angular.module('app')
-        .run(['$rootScope', '$injector', function ($rootScope, $injector) {
+        .factory('sessionService', sessionService)
+        .run(['$rootScope', '$injector', 'sessionService', function ($rootScope, $injector, sessionService) {
             $injector.get("$http").defaults.transformRequest = function (data, headersGetter) {
-                var sessionService = new sessionService();
-
-                if (sessionService.isLogged()) {
+                if (sessionService.getAccessToken()) {
                     headersGetter()['Authorization'] = "Bearer " + sessionService.getAccessToken();
-                }
-                if (data) {
-                    return angular.toJson(data);
-                }
-
-                ////////////
-                function sessionService() {
-                    return {
-                        isLogged: isLogged
-                    };
-
-                    function isLogged() {
-                        return 100;
-                    }
                 }
             };
         }]);
 
+    ////////////
+    function sessionService() {
+        var _token = localStorage.getItem('access_token');
+
+        return {
+            getAccessToken: getAccessToken
+        };
+
+        function getAccessToken() {
+            return _token;
+        }
+    }
 
 })();
