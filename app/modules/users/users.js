@@ -6,7 +6,7 @@
         .factory('UsersHttpFacade', UsersHttpFacade)
 
     Users.$inject = ['$state', 'UsersHttpFacade'];
-    UsersHttpFacade.$inject = ['$http', 'logger'];
+    UsersHttpFacade.$inject = ['$http', '$state', 'logger'];
 
     function Users($state, UsersHttpFacade) {
         /* jshint validthis: true */
@@ -27,7 +27,7 @@
         }
     }
 
-    function UsersHttpFacade($http, logger) {
+    function UsersHttpFacade($http, $state, logger) {
         return {
             getUserData: getUserData,
             save: save
@@ -66,15 +66,16 @@
 
         function save(form) {
             // TODO
-            logger.success('Zapisano!');
-
-            console.log('form save', form);
 
             $http({
                 url: 'app/modules/users/data.json',
                 method: "GET"
-            }).then(function (response) {
-                debugger;
+            }).then(function () {
+                logger.success('Zapisano!');
+
+                console.log('form save', form);
+            }, function () {
+                $state.go('login');
             })
 
         }
