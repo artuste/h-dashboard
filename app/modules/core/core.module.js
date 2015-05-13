@@ -34,7 +34,8 @@
          * Feature areas
          */
         'app.login',
-        'app.users'
+        'app.users',
+        'app.scorm'
     ]);
 
 })();
