@@ -11,6 +11,13 @@
         /* jshint validthis: true */
         var vm = this;
 
+        vm.user = {};
+
+        // temporary
+        vm.copy = function () {
+            vm.user.username = 'WebClient';
+            vm.user.password = '70fdb7b56227077c8df02c7a576f8937';
+        };
 
         vm.login = login;
 
@@ -24,8 +31,8 @@
 
             // TODO: It should be from form
             var login = {
-                login: 'WebClient',
-                password: '70fdb7b56227077c8df02c7a576f8937',
+                login: vm.user.username,
+                password: vm.user.password,
                 clientId: 'WebClient',
                 clientSecret: 'i%^+g5Xm7F.^^-F'
             };
@@ -40,7 +47,7 @@
                     };
 
                     logger.success('Zostałeś poprawnie zalogowany!');
-                }, function() {
+                }, function () {
                     logger.error('Błąd!');
                 });
         }
@@ -64,9 +71,11 @@
                 age: 4,
                 gender: "m", // 'm' for male, 'f' for female
                 device: "Browser",
-                appName: "YDP Game 1",
-                comment: "example of comment",
-                disorders: "list, of, disorders"
+                appName: "YDPApp",
+                comment: "put comment here",
+                disorders: "list, of, disorders",
+                userId: "ad282f82-f8a8-11e4-a322-1697f925ec7b",
+                login: "ydpTestLogin1"
             });
         }
 
