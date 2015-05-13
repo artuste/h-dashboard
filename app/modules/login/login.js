@@ -5,9 +5,9 @@
         .controller('Login', Login)
         .factory('Integration', Integration);
 
-    Login.$inject = ['$rootScope', '$interval', 'logger', 'Integration'];
+    Login.$inject = ['$rootScope', 'logger', 'Integration'];
 
-    function Login($rootScope, $interval, logger, Integration) {
+    function Login($rootScope, logger, Integration) {
         /* jshint validthis: true */
         var vm = this;
 
@@ -28,8 +28,6 @@
         }
 
         function login() {
-
-            // TODO: It should be from form
             var login = {
                 login: vm.user.username,
                 password: vm.user.password,
