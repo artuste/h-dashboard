@@ -21,6 +21,8 @@
         }
 
         function login() {
+
+            // TODO: It should be from form
             var login = {
                 login: 'WebClient',
                 password: '70fdb7b56227077c8df02c7a576f8937',
@@ -28,18 +30,19 @@
                 clientSecret: 'i%^+g5Xm7F.^^-F'
             };
 
-            Integration.init(login); // promise ???
+            Integration.init(login)
+                .then(function () {
+                    Integration.startSession();
 
-            var interval = $interval(function () {
-                if (localStorage.getItem('login') && localStorage.getItem('access_token')) {
                     $rootScope.oauth2 = {
                         login: localStorage.getItem('login'),
                         token: localStorage.getItem('access_token')
                     };
-                    logger.info('Zostałeś poprawnie zalogowany!');
-                    $interval.cancel(interval);
-                }
-            }, 500);
+
+                    logger.success('Zostałeś poprawnie zalogowany!');
+                }, function() {
+                    logger.error('Błąd!');
+                });
         }
     }
 
