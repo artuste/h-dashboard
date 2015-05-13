@@ -5,9 +5,9 @@
         .controller('Login', Login)
         .factory('Integration', Integration);
 
-    Login.$inject = ['$rootScope', 'logger', 'Integration'];
+    Login.$inject = ['$rootScope', '$state', 'logger', 'Integration'];
 
-    function Login($rootScope, logger, Integration) {
+    function Login($rootScope, $state, logger, Integration) {
         /* jshint validthis: true */
         var vm = this;
 
@@ -37,14 +37,15 @@
 
             Integration.init(login)
                 .then(function () {
+                    $state.go('scorm');
                     Integration.startSession();
 
-                    $rootScope.oauth2 = {
-                        login: localStorage.getItem('login'),
-                        token: localStorage.getItem('access_token')
-                    };
+                    //$rootScope.oauth2 = {
+                    //    login: localStorage.getItem('login'),
+                    //    token: localStorage.getItem('access_token')
+                    //};
 
-                    logger.success('Zostałeś poprawnie zalogowany!');
+                    logger.success('Zostałeś poprawnie zalogowany <b>' + localStorage.getItem('login') + '</b>');
                 }, function () {
                     logger.error('Błąd!');
                 });
