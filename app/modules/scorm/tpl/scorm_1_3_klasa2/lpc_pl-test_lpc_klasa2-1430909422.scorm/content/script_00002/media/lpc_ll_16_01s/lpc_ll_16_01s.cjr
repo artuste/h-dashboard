@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<class name="lpc_ll_16_01s" package="lpcll1601s" />
+	<properties>
+		<width value="720" />
+		<height value="450" />
+	</properties>
+		<scripts>
+			<scriptfile src="lpc_ll_16_01s.js"/>
+			<scriptfile src="lpc_ll_16_01sEngine.js"/>
+		</scripts>
+	<assets>
+		<assetfile src="images/Bitmapa14.png" type="image" id="Bitmapa14"/>
+		<assetfile src="images/Bitmapa15.png" type="image" id="Bitmapa15"/>
+		<assetfile src="images/Bitmapa16.png" type="image" id="Bitmapa16"/>
+		<assetfile src="images/Bitmapa17.png" type="image" id="Bitmapa17"/>
+		<assetfile src="images/Bitmapa18.png" type="image" id="Bitmapa18"/>
+		<assetfile src="images/Bitmapa19.png" type="image" id="Bitmapa19"/>
+		<assetfile src="images/Bitmapa12.png" type="image" id="Bitmapa12"/>
+		<assetfile src="sounds/ok.mp3" type="sound" id="ok"/>
+		<assetfile src="sounds/wrong.mp3" type="sound" id="wrong"/>
+	</assets>
+	<libraries>
+			<library version="1.0.0.0" package="ydpjs">
+				<libraryfile src="ButtonDecorator.js"/>
+				<libraryfile src="Delegate.js"/>
+				
+				<libraryfile src="Slider.js"/>
+			</library>
+	</libraries>
+</manifest>

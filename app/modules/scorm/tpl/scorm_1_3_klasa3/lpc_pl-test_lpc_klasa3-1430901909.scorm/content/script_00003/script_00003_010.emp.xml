@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.2.127" identifier="ITEM_010" playerVersion="1.8.0" timeDependent="false" title="Porządkowanie">
+<styleDeclaration><link href="../common/default.css" userAgent=".*"/><link href="../common/default2.css" userAgent=".*"/><link href="../common/default_ipad.css" userAgent="(.*iPad.*)"/><link href="../common/default_android.css" userAgent="(.*Android.*)"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>4</value>
+		</defaultValue>
+	</outcomeDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_5-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_5-TODO"/>
+		<outcomeDeclaration cardinality="ordered" identifier="ORDERING_RESPONSE_5-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="ordered" identifier="ORDERING_RESPONSE_5-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_5-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="ORDERING_RESPONSE_5-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="ORDERING_RESPONSE_5-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_5-MISTAKES"/>
+				<responseDeclaration cardinality="ordered" checkMode="default" countMode="single" identifier="ORDERING_RESPONSE_5">
+					<correctResponse>
+						<value forIndex="0">-52171358</value>
+						<value forIndex="0">577669964</value>
+						<value forIndex="0">606299115</value>
+						<value forIndex="0">634928266</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_6-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_6-TODO"/>
+		<outcomeDeclaration cardinality="ordered" identifier="ORDERING_RESPONSE_6-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="ordered" identifier="ORDERING_RESPONSE_6-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_6-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="ORDERING_RESPONSE_6-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="ORDERING_RESPONSE_6-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_6-MISTAKES"/>
+				<responseDeclaration cardinality="ordered" checkMode="default" countMode="single" identifier="ORDERING_RESPONSE_6">
+					<correctResponse>
+						<value forIndex="0">663557417</value>
+						<value forIndex="0">692186568</value>
+						<value forIndex="0">720815719</value>
+						<value forIndex="0">749444870</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_7-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_7-TODO"/>
+		<outcomeDeclaration cardinality="ordered" identifier="ORDERING_RESPONSE_7-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="ordered" identifier="ORDERING_RESPONSE_7-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_7-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="ORDERING_RESPONSE_7-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="ORDERING_RESPONSE_7-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_7-MISTAKES"/>
+				<responseDeclaration cardinality="ordered" checkMode="default" countMode="single" identifier="ORDERING_RESPONSE_7">
+					<correctResponse>
+						<value forIndex="0">778074021</value>
+						<value forIndex="0">806703172</value>
+						<value forIndex="0">835332323</value>
+						<value forIndex="0">1465173645</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_8-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_8-TODO"/>
+		<outcomeDeclaration cardinality="ordered" identifier="ORDERING_RESPONSE_8-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="ordered" identifier="ORDERING_RESPONSE_8-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_8-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="ORDERING_RESPONSE_8-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="ORDERING_RESPONSE_8-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_8-MISTAKES"/>
+				<responseDeclaration cardinality="ordered" checkMode="default" countMode="single" identifier="ORDERING_RESPONSE_8">
+					<correctResponse>
+						<value forIndex="0">1493802796</value>
+						<value forIndex="0">1522431947</value>
+						<value forIndex="0">1551061098</value>
+						<value forIndex="0">1579690249</value>
+					</correctResponse>
+				</responseDeclaration>
+		<itemBody>
+
+
+<div class="emp_content">
+	<div class="emp_content_container emp_bg_activity">
+		
+		<div class="emp_content_center">
+			<div class="emp_content_prev">
+				<div class="emp_button emp_home_button"><link itemIndex="0"><shape class="emp_home_container"/></link></div>
+				<prevItemNavigation class="emp_button"/>
+			</div>
+
+			<div class="emp_activity_page">
+				<div class="emp_header_mini">
+					<div class="emp_info_page_title"><div class="emp_info_page_title_inset"><info class="info_page_title"/></div></div>
+				</div>
+				<div class="emp_scroll">
+					<div class="emp_activity_title">
+						<div class="emp_activity_title_audio"><audioPlayer data="media/lpc_ma_085_07.mp3" id="dummy1">
+<source src="media/lpc_ma_085_07.mp3" type="audio/mp4"/>	</audioPlayer></div>
+						<div class="emp_activity_title_text"><simpleText id="dummy2">
+Ułóż liczby od najmniejszej do największej.</simpleText></div>	
+					</div>
+					<div class="emp_activity_content">
+						<div class="emp_activities">
+							<group class="tpl_1x4" id="dummy3">
+	<div class="emp_table_1x2">
+	<div class="emp_single_row emp_w4d"><div class="emp_col_inset"><orderInteraction class="emp_ordering_horizontal4" id="dummy3_1" orientation="horizontal" responseIdentifier="ORDERING_RESPONSE_5" shuffle="true">
+
+	<simpleChoice identifier="-52171358">
+<img class="" src="media/lpc_ma_085_i09.png"/>	</simpleChoice>
+	<simpleChoice identifier="577669964">
+<img class="" src="media/lpc_ma_085_i10.png"/>	</simpleChoice>
+	<simpleChoice identifier="606299115">
+<img class="" src="media/lpc_ma_085_i11.png"/>	</simpleChoice>
+	<simpleChoice identifier="634928266">
+<img class="" src="media/lpc_ma_085_i12.png"/>	</simpleChoice>
+	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="wrong"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/wrong.mp3" type="narration">
+								<source src="media/wrong.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+		<feedback>
+			<condition>
+				<and>
+						<propertyCondition property="allOk"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+</orderInteraction>
+</div></div>
+	<div class="emp_single_row emp_w4d"><div class="emp_col_inset"><orderInteraction class="emp_ordering_horizontal4" id="dummy3_2" orientation="horizontal" responseIdentifier="ORDERING_RESPONSE_6" shuffle="true">
+
+	<simpleChoice identifier="663557417">
+<img class="" src="media/lpc_ma_085_i13.png"/>	</simpleChoice>
+	<simpleChoice identifier="692186568">
+<img class="" src="media/lpc_ma_085_i14.png"/>	</simpleChoice>
+	<simpleChoice identifier="720815719">
+<img class="" src="media/lpc_ma_085_i15.png"/>	</simpleChoice>
+	<simpleChoice identifier="749444870">
+<img class="" src="media/lpc_ma_085_i16.png"/>	</simpleChoice>
+	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="wrong"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/wrong.mp3" type="narration">
+								<source src="media/wrong.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+		<feedback>
+			<condition>
+				<and>
+						<propertyCondition property="allOk"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+</orderInteraction>
+</div></div>
+	<div class="emp_single_row emp_w4d"><div class="emp_col_inset"><orderInteraction class="emp_ordering_horizontal4" id="dummy3_3" orientation="horizontal" responseIdentifier="ORDERING_RESPONSE_7" shuffle="true">
+
+	<simpleChoice identifier="778074021">
+<img class="" src="media/lpc_ma_085_i17.png"/>	</simpleChoice>
+	<simpleChoice identifier="806703172">
+<img class="" src="media/lpc_ma_085_i18.png"/>	</simpleChoice>
+	<simpleChoice identifier="835332323">
+<img class="" src="media/lpc_ma_085_i19.png"/>	</simpleChoice>
+	<simpleChoice identifier="1465173645">
+<img class="" src="media/lpc_ma_085_i20.png"/>	</simpleChoice>
+	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="wrong"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/wrong.mp3" type="narration">
+								<source src="media/wrong.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+		<feedback>
+			<condition>
+				<and>
+						<propertyCondition property="allOk"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+</orderInteraction>
+</div></div>
+	<div class="emp_single_row emp_w4d emp_col_last"><div class="emp_col_inset"><orderInteraction class="emp_ordering_horizontal4" id="dummy3_4" orientation="horizontal" responseIdentifier="ORDERING_RESPONSE_8" shuffle="true">
+
+	<simpleChoice identifier="1493802796">
+<img class="" src="media/lpc_ma_085_i21.png"/>	</simpleChoice>
+	<simpleChoice identifier="1522431947">
+<img class="" src="media/lpc_ma_085_i22.png"/>	</simpleChoice>
+	<simpleChoice identifier="1551061098">
+<img class="" src="media/lpc_ma_085_i23.png"/>	</simpleChoice>
+	<simpleChoice identifier="1579690249">
+<img class="" src="media/lpc_ma_085_i24.png"/>	</simpleChoice>
+	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="wrong"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/wrong.mp3" type="narration">
+								<source src="media/wrong.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+		<feedback>
+			<condition>
+				<and>
+						<propertyCondition property="allOk"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+</orderInteraction>
+</div></div>
+</div>
+
+<div>
+	<!-- cannot find module for dummy 'dummy5'!-->
+	<!-- cannot find module for dummy 'dummy6'!-->
+	<!-- cannot find module for dummy 'dummy7'!-->
+	<!-- cannot find module for dummy 'dummy8'!-->
+	<!-- cannot find module for dummy 'dummy9'!-->
+	<!-- cannot find module for dummy 'dummy10'!-->
+</div>
+</group>
+						</div>	
+						
+						<!-- cannot find module for dummy 'dummy4'!-->
+						<!-- cannot find module for dummy 'dummy5'!-->
+						<!-- cannot find module for dummy 'dummy6'!-->
+						<!-- cannot find module for dummy 'dummy7'!-->
+						<!-- cannot find module for dummy 'dummy8'!-->
+						<!-- cannot find module for dummy 'dummy9'!-->
+						<!-- cannot find module for dummy 'dummy10'!-->
+					
+					</div>
+				</div>	
+			</div>
+										
+			<div class="emp_content_next"><nextItemNavigation class="emp_button"/></div>
+			
+			<div class="emp_activity_buttons">
+				<div class="emp_activity_buttons_inset">
+					<markAllButton class="emp_button"/>
+					<showAnswersButton class="emp_button"/>
+					<resetButton class="emp_button"/>
+				</div>
+			</div>
+
+			<div class="emp_button emp_home_button_down"><link itemIndex="0"><shape class="emp_home_container"/></link></div>
+
+			<textFeedback id="textFeedback"/>
+			
+			<div class="emp_info_page_counter"><div class="emp_info_page_counter_inset"><info class="info_page_counter"/></div></div>
+			
+			<tutor tutorId="tutor1"/>
+			
+			<bonus bonusId="bonus1"/>
+			
+			<div class="emp_line_fix"/>
+			
+		</div>	
+		
+	</div>	
+</div>
+		</itemBody>
+</assessmentItem>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library version="2.1" loadType="internal" id="TutorExtensionLPC" src="TutorExtensionLPC.js">
+	<ext implementation="TutorExtensionLPC">
+		<attr name="type" value="com.yauthor.module.plugin.IEmpiriaPlugin"/>
+		<attr name="nodeName" value="TutorExtensionLPC"/>
+		<attr name="toolTip" value="TutorExtensionLPC"/>
+		<attr name="label" value="TutorExtensionLPC"/>
+		<attr name="displayName" value="TutorExtensionLPC"/>
+	</ext>
+</library>

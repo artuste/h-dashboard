@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<manifest identifier="YDP-38676bb49672a3c40" xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd
+http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd  http://ltsc.ieee.org/xsd/LOM lom.xsd" version="1.3">
+   <metadata>
+      <schema>ADL SCORM</schema>
+      <schemaversion>CAM 1.3</schemaversion>
+      <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+         <general>
+            <title>
+               <langstring>Test_LPC_klasa3</langstring>
+            </title>
+            <description>
+               <langstring></langstring>
+            </description>
+         </general>
+      </lom>
+   </metadata>
+   <organizations default="toc0">
+      <organization identifier="toc0">
+         <title>Test_LPC_klasa3</title>
+         <item identifier="I_sec_b171">
+            <title>Test LPC klasa 3</title>
+            <item identifier="I_sco_a3146" identifierref="sco_a3146">
+               <title>Klasa 3</title>
+            </item>
+         </item>
+      </organization>
+   </organizations>
+   <resources>
+      <resource identifier="sco_a3146" type="webcontent" adlcp:scormType="sco" href="proxy/scorm13/script_00003.emt.html">
+         <file href="content/script_00003.emt.xml" />
+         <file href="proxy/scorm13/script_00003.emt.html" />
+      </resource>
+   </resources>
+</manifest>

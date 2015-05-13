@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.2.127" identifier="ITEM_012" playerVersion="1.8.0" timeDependent="false" title="Różne typy pojemników na śmieci">
+<styleDeclaration><link href="../common/default.css" userAgent=".*"/><link href="../common/default2.css" userAgent=".*"/><link href="../common/default_ipad.css" userAgent="(.*iPad.*)"/><link href="../common/default_android.css" userAgent="(.*Android.*)"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>1</value>
+		</defaultValue>
+	</outcomeDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="COLORFILL_RESPONSE_1-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="COLORFILL_RESPONSE_1-TODO"/>
+		<outcomeDeclaration cardinality="multiple" identifier="COLORFILL_RESPONSE_1-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="COLORFILL_RESPONSE_1-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="COLORFILL_RESPONSE_1-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="COLORFILL_RESPONSE_1-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="COLORFILL_RESPONSE_1-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="COLORFILL_RESPONSE_1-MISTAKES"/>
+				<responseDeclaration cardinality="multiple" checkMode="default" countMode="single" evaluate="user" identifier="COLORFILL_RESPONSE_1">
+					<correctResponse>
+						<value>30,63 0e86d8</value>
+						<value>33,56 0e86d8</value>
+						<value>47,90 0e86d8</value>
+						<value>130,275 93d614</value>
+						<value>134,267 93d614</value>
+						<value>147,303 93d614</value>
+						<value>226,63 aa3214</value>
+						<value>230,54 aa3214</value>
+						<value>243,90 aa3214</value>
+						<value>326,276 ff281e</value>
+						<value>330,267 ff281e</value>
+						<value>343,302 ff281e</value>
+						<value>424,63 ffcd1e</value>
+						<value>427,55 ffcd1e</value>
+						<value>440,90 ffcd1e</value>
+					</correctResponse>
+				</responseDeclaration>
+		<itemBody>
+
+
+<div class="emp_content">
+	<div class="emp_content_container emp_bg_activity">
+		
+		<div class="emp_content_center">
+			<div class="emp_content_prev">
+				<div class="emp_button emp_home_button"><link itemIndex="0"><shape class="emp_home_container"/></link></div>
+				<prevItemNavigation class="emp_button"/>
+			</div>
+
+			<div class="emp_activity_page">
+				<div class="emp_header_mini">
+					<div class="emp_info_page_title"><div class="emp_info_page_title_inset"><info class="info_page_title"/></div></div>
+				</div>
+				<div class="emp_scroll">
+					<div class="emp_activity_title">
+						<div class="emp_activity_title_audio"><audioPlayer data="media/lpc_ep_lvl2-3_008_02au.mp3" id="dummy1">
+<source src="media/lpc_ep_lvl2-3_008_02au.mp3" type="audio/mp4"/>	</audioPlayer></div>
+						<div class="emp_activity_title_text"><simpleText id="dummy2">
+Pokoloruj pojemniki odpowiednimi kolorami.</simpleText></div>	
+					</div>
+					<div class="emp_activity_content">
+						<div class="emp_activities">
+							<group class="tpl_1x1" id="dummy3">
+	<div class="emp_col_inset">
+	<colorfillInteraction class="emp_colorfill_500" id="dummy3_1" responseIdentifier="COLORFILL_RESPONSE_1">
+   <buttons>
+    	<button rgb="93D614"/>
+    	<button rgb="FFCD1E"/>
+    	<button rgb="0E86D8"/>
+    	<button rgb="AA3214"/>
+    	<button rgb="FF281E"/>
+    	<eraserButton/>
+   </buttons>
+   <areas>
+   		<area x="30" y="63"/>
+   		<area x="33" y="56"/>
+   		<area x="47" y="90"/>
+   		<area x="130" y="275"/>
+   		<area x="134" y="267"/>
+   		<area x="147" y="303"/>
+   		<area x="226" y="63"/>
+   		<area x="230" y="54"/>
+   		<area x="243" y="90"/>
+   		<area x="326" y="276"/>
+   		<area x="330" y="267"/>
+   		<area x="343" y="302"/>
+   		<area x="424" y="63"/>
+   		<area x="427" y="55"/>
+   		<area x="440" y="90"/>
+   </areas>
+   <image height="450" src="media/lpc_ep_lvl2-3_008_02i.png" width="600"/>
+   <correctImage height="450" src="media/lpc_ep_lvl2-3_008_02i_ca.png" width="600"/>
+	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="wrong"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/wrong.mp3" type="narration">
+								<source src="media/wrong.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="ok"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+</colorfillInteraction>
+	<!-- cannot find module for dummy 'dummy2'!-->
+	<!-- cannot find module for dummy 'dummy3'!-->
+	<!-- cannot find module for dummy 'dummy4'!-->
+	<!-- cannot find module for dummy 'dummy5'!-->
+	<!-- cannot find module for dummy 'dummy6'!-->
+	<!-- cannot find module for dummy 'dummy7'!-->
+	<!-- cannot find module for dummy 'dummy8'!-->
+	<!-- cannot find module for dummy 'dummy9'!-->
+	<!-- cannot find module for dummy 'dummy10'!-->
+</div>
+</group>
+						</div>	
+						
+						<!-- cannot find module for dummy 'dummy4'!-->
+						<!-- cannot find module for dummy 'dummy5'!-->
+						<!-- cannot find module for dummy 'dummy6'!-->
+						<!-- cannot find module for dummy 'dummy7'!-->
+						<!-- cannot find module for dummy 'dummy8'!-->
+						<!-- cannot find module for dummy 'dummy9'!-->
+						<!-- cannot find module for dummy 'dummy10'!-->
+					
+					</div>
+				</div>	
+			</div>
+										
+			<div class="emp_content_next"><nextItemNavigation class="emp_button"/></div>
+			
+			<div class="emp_activity_buttons">
+				<div class="emp_activity_buttons_inset">
+					<markAllButton class="emp_button"/>
+					<showAnswersButton class="emp_button"/>
+					<resetButton class="emp_button"/>
+				</div>
+			</div>
+
+			<div class="emp_button emp_home_button_down"><link itemIndex="0"><shape class="emp_home_container"/></link></div>
+
+			<textFeedback id="textFeedback"/>
+			
+			<div class="emp_info_page_counter"><div class="emp_info_page_counter_inset"><info class="info_page_counter"/></div></div>
+			
+			<tutor tutorId="tutor1"/>
+			
+			<bonus bonusId="bonus1"/>
+			
+			<div class="emp_line_fix"/>
+			
+		</div>	
+		
+	</div>	
+</div>
+		</itemBody>
+</assessmentItem>

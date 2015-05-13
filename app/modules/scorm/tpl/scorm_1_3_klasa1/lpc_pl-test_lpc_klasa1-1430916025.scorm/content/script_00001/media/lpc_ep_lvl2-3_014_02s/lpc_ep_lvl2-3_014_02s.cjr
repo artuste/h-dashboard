@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<class name="lpc_ep_lvl23_014_02s" package="lpceplvl2301402s" />
+	<properties>
+		<width value="720" />
+		<height value="450" />
+	</properties>
+		<scripts>
+			<scriptfile src="lpc_ep_lvl2-3_014_02s.js"/>
+			<scriptfile src="lpc_ep_lvl23_014_02sEngine.js"/>
+		</scripts>
+	<assets>
+		<assetfile src="images/Bitmapa12z.png" type="image" id="Bitmapa12z"/>
+		<assetfile src="images/Bitmapa11z.png" type="image" id="Bitmapa11z"/>
+		<assetfile src="images/Bitmapa10z.png" type="image" id="Bitmapa10z"/>
+		<assetfile src="images/Bitmapa9z.png" type="image" id="Bitmapa9z"/>
+		<assetfile src="images/Bitmapa8z.png" type="image" id="Bitmapa8z"/>
+		<assetfile src="images/Bitmapa7z.png" type="image" id="Bitmapa7z"/>
+		<assetfile src="images/Bitmapa6z.png" type="image" id="Bitmapa6z"/>
+		<assetfile src="images/Bitmapa5z.png" type="image" id="Bitmapa5z"/>
+		<assetfile src="images/Bitmapa4z.png" type="image" id="Bitmapa4z"/>
+		<assetfile src="images/Bitmapa3z.png" type="image" id="Bitmapa3z"/>
+		<assetfile src="images/Bitmapa2z.png" type="image" id="Bitmapa2z"/>
+	</assets>
+	<libraries>
+			<library version="1.0.0.0" package="ydpjs">
+				<libraryfile src="ButtonDecorator.js"/>
+				<libraryfile src="Delegate.js"/>
+			
+				<libraryfile src="Slider.js"/>
+			</library>
+	</libraries>
+</manifest>

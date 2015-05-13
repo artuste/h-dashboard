@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.2.127" identifier="ITEM_006" playerVersion="1.8.0" timeDependent="false" title="Butelki">
+<styleDeclaration><link href="../common/default.css" userAgent=".*"/><link href="../common/default2.css" userAgent=".*"/><link href="../common/default_ipad.css" userAgent="(.*iPad.*)"/><link href="../common/default_android.css" userAgent="(.*Android.*)"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>13</value>
+		</defaultValue>
+	</outcomeDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_10-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_10-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_10-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_10-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_10-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_10-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_10-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_10-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_10">
+					<correctResponse>
+						<value forIndex="0">3</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_11-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_11-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_11-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_11-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_11-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_11-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_11-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_11-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_11">
+					<correctResponse>
+						<value forIndex="0">3</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_12-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_12-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_12-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_12-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_12-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_12-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_12-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_12-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_12">
+					<correctResponse>
+						<value forIndex="0">3</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_13-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_13-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_13-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_13-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_13-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_13-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_13-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_13-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_13">
+					<correctResponse>
+						<value forIndex="0">1</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_14-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_14-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_14-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_14-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_14-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_14-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_14-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_14-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_14">
+					<correctResponse>
+						<value forIndex="0">3</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_15-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_15-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_15-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_15-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_15-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_15-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_15-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_15-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_15">
+					<correctResponse>
+						<value forIndex="0">1</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_16-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_16-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_16-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_16-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_16-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_16-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_16-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_16-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_16">
+					<correctResponse>
+						<value forIndex="0">4</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_17-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_17-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_17-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_17-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_17-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_17-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_17-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_17-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_17">
+					<correctResponse>
+						<value forIndex="0">1</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_5-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_5-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_5-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_5-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_5-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_5-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_5-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_5-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_5">
+					<correctResponse>
+						<value forIndex="0">4</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_6-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_6-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_6-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_6-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_6-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_6-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_6-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_6-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_6">
+					<correctResponse>
+						<value forIndex="0">2</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_7-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_7-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_7-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_7-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_7-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_7-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_7-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_7-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_7">
+					<correctResponse>
+						<value forIndex="0">4</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_8-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_8-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_8-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_8-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_8-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_8-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_8-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_8-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_8">
+					<correctResponse>
+						<value forIndex="0">4</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_9-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_9-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_9-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_9-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_9-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_9-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_9-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_9-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_9">
+					<correctResponse>
+						<value forIndex="0">2</value>
+					</correctResponse>
+				</responseDeclaration>
+		<itemBody>
+
+
+<div class="emp_content">
+	<div class="emp_content_container emp_bg_test">
+		
+		<div class="emp_content_center">
+			<div class="emp_content_prev">
+				<div class="emp_button emp_home_button"><link itemIndex="0"><shape class="emp_home_container"/></link></div>
+				<prevItemNavigation class="emp_button"/>
+			</div>
+
+			<div class="emp_activity_page emp_test_page">
+				<div class="emp_header_mini">
+					<div class="emp_info_page_title"><div class="emp_info_page_title_inset"><info class="info_page_title"/></div></div>
+				</div>
+				<div class="emp_scroll">
+					<div class="emp_activity_title">
+						<div class="emp_activity_title_audio"><audioPlayer data="media/lpc_ma_004_08.mp3" id="dummy1">
+<source src="media/lpc_ma_004_08.mp3" type="audio/mp4"/>	</audioPlayer></div>
+						<div class="emp_activity_title_text"><simpleText id="dummy2">
+Przyklej odpowiednie liczby na butelki.</simpleText></div>	
+					</div>
+					<div class="emp_activity_content">
+						<div class="emp_activities">
+							<group class="emp_sourcelist_2" id="dummy3">
+	<textInteraction class="emp_drag" id="dummy3_1">
+</textInteraction>			
+<labellingInteraction id="dummy3_2" shuffle="true">
+	<img height="400" src="media/lpc_ma_004_i19.png" width="670"/>
+		<children>
+    			<child x="247" y="66">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_5" sourcelistId="defaultSourceListId"/>    			</child>
+    			<child x="318" y="66">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_6" sourcelistId="defaultSourceListId"/>    			</child>
+    			<child x="389" y="66">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_7" sourcelistId="defaultSourceListId"/>    			</child>
+    			<child x="533" y="66">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_8" sourcelistId="defaultSourceListId"/>    			</child>
+    			<child x="604" y="66">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_9" sourcelistId="defaultSourceListId"/>    			</child>
+    			<child x="318" y="196">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_10" sourcelistId="defaultSourceListId"/>    			</child>
+    			<child x="462" y="196">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_11" sourcelistId="defaultSourceListId"/>    			</child>
+    			<child x="533" y="196">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_12" sourcelistId="defaultSourceListId"/>    			</child>
+    			<child x="604" y="196">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_13" sourcelistId="defaultSourceListId"/>    			</child>
+    			<child x="318" y="329">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_14" sourcelistId="defaultSourceListId"/>    			</child>
+    			<child x="389" y="329">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_15" sourcelistId="defaultSourceListId"/>    			</child>
+    			<child x="462" y="329">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_16" sourcelistId="defaultSourceListId"/>    			</child>
+    			<child x="604" y="329">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_17" sourcelistId="defaultSourceListId"/>    			</child>
+</children>
+	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="wrong"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/wrong.mp3" type="narration">
+								<source src="media/wrong.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="ok"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+</labellingInteraction>			
+	<sourceList id="dummy3_3" moveElements="false" shuffle="false" sourcelistId="defaultSourceListId">
+				<simpleSourceListItem alt="1">1</simpleSourceListItem>
+				<simpleSourceListItem alt="2">2</simpleSourceListItem>
+				<simpleSourceListItem alt="3">3</simpleSourceListItem>
+				<simpleSourceListItem alt="4">4</simpleSourceListItem>
+	</sourceList>
+</group>
+						</div>	
+						
+						<!-- cannot find module for dummy 'dummy4'!-->
+						<!-- cannot find module for dummy 'dummy5'!-->
+						<!-- cannot find module for dummy 'dummy6'!-->
+						<!-- cannot find module for dummy 'dummy7'!-->
+						<!-- cannot find module for dummy 'dummy8'!-->
+						<!-- cannot find module for dummy 'dummy9'!-->
+						<!-- cannot find module for dummy 'dummy10'!-->
+					
+					</div>
+				</div>	
+			</div>
+										
+			<div class="emp_content_next"><nextItemNavigation class="emp_button"/></div>
+			
+			<div class="emp_activity_buttons">
+				<div class="emp_activity_buttons_inset">
+					<markAllButton class="emp_button"/>
+					<resetButton class="emp_button"/>
+				</div>
+			</div>
+
+			<div class="emp_button emp_home_button_down"><link itemIndex="0"><shape class="emp_home_container"/></link></div>
+
+			<textFeedback id="textFeedback"/>
+			
+			<div class="emp_info_page_counter"><div class="emp_info_page_counter_inset"><info class="info_page_counter"/></div></div>
+			
+			<div class="emp_line_fix"/>
+			
+		</div>	
+		
+	</div>	
+</div>
+		</itemBody>
+</assessmentItem>

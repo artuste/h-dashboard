@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.2.127" identifier="ITEM_011" playerVersion="1.8.0" timeDependent="false" title="Różne typy środowiska">
+<styleDeclaration><link href="../common/default.css" userAgent=".*"/><link href="../common/default2.css" userAgent=".*"/><link href="../common/default_ipad.css" userAgent="(.*iPad.*)"/><link href="../common/default_android.css" userAgent="(.*Android.*)"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>4</value>
+		</defaultValue>
+	</outcomeDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_18-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_18-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_18-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_18-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_18-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_18-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_18-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_18-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_18">
+					<correctResponse>
+						<value forIndex="0">staw</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_19-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_19-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_19-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_19-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_19-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_19-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_19-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_19-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_19">
+					<correctResponse>
+						<value forIndex="0">las</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_20-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_20-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_20-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_20-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_20-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_20-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_20-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_20-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_20">
+					<correctResponse>
+						<value forIndex="0">dżungla</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_21-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_21-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_21-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_21-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_21-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_21-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_21-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_21-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_21">
+					<correctResponse>
+						<value forIndex="0">ocean</value>
+					</correctResponse>
+				</responseDeclaration>
+		<itemBody>
+
+
+<div class="emp_content">
+	<div class="emp_content_container emp_bg_activity">
+		
+		<div class="emp_content_center">
+			<div class="emp_content_prev">
+				<div class="emp_button emp_home_button"><link itemIndex="0"><shape class="emp_home_container"/></link></div>
+				<prevItemNavigation class="emp_button"/>
+			</div>
+
+			<div class="emp_activity_page">
+				<div class="emp_header_mini">
+					<div class="emp_info_page_title"><div class="emp_info_page_title_inset"><info class="info_page_title"/></div></div>
+				</div>
+				<div class="emp_scroll">
+					<div class="emp_activity_title">
+						<div class="emp_activity_title_audio"><audioPlayer data="media/lpc_ep_lvl2-3_001_02au.mp3" id="dummy1">
+<source src="media/lpc_ep_lvl2-3_001_02au.mp3" type="audio/mp4"/>	</audioPlayer></div>
+						<div class="emp_activity_title_text"><simpleText id="dummy2">
+Dopasuj nazwy do środowisk na obrazkach.</simpleText></div>	
+					</div>
+					<div class="emp_activity_content">
+						<div class="emp_activities">
+							<group class="tpl_1x1" id="dummy3">
+	<div class="emp_col_inset">
+	<labellingInteraction id="dummy3_1" shuffle="true">
+	<img height="420" src="media/lpc_ep_lvl2-3_001_02i.png" width="670"/>
+		<children>
+    			<child x="34" y="155">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_18" sourcelistId="defaultSourceListId"/>    			</child>
+    			<child x="402" y="155">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_19" sourcelistId="defaultSourceListId"/>    			</child>
+    			<child x="34" y="361">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_20" sourcelistId="defaultSourceListId"/>    			</child>
+    			<child x="402" y="361">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_21" sourcelistId="defaultSourceListId"/>    			</child>
+</children>
+	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="wrong"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/wrong.mp3" type="narration">
+								<source src="media/wrong.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="ok"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+</labellingInteraction>
+		<sourceList id="dummy3_2" moveElements="true" shuffle="true" sourcelistId="defaultSourceListId">
+				<simpleSourceListItem alt="ocean">ocean</simpleSourceListItem>
+				<simpleSourceListItem alt="dżungla">dżungla</simpleSourceListItem>
+				<simpleSourceListItem alt="las">las</simpleSourceListItem>
+				<simpleSourceListItem alt="staw">staw</simpleSourceListItem>
+	</sourceList>
+
+	<!-- cannot find module for dummy 'dummy3'!-->
+	<!-- cannot find module for dummy 'dummy4'!-->
+	<!-- cannot find module for dummy 'dummy5'!-->
+	<!-- cannot find module for dummy 'dummy6'!-->
+	<!-- cannot find module for dummy 'dummy7'!-->
+	<!-- cannot find module for dummy 'dummy8'!-->
+	<!-- cannot find module for dummy 'dummy9'!-->
+	<!-- cannot find module for dummy 'dummy10'!-->
+</div>
+</group>
+						</div>	
+						
+						<!-- cannot find module for dummy 'dummy4'!-->
+						<!-- cannot find module for dummy 'dummy5'!-->
+						<!-- cannot find module for dummy 'dummy6'!-->
+						<!-- cannot find module for dummy 'dummy7'!-->
+						<!-- cannot find module for dummy 'dummy8'!-->
+						<!-- cannot find module for dummy 'dummy9'!-->
+						<!-- cannot find module for dummy 'dummy10'!-->
+					
+					</div>
+				</div>	
+			</div>
+										
+			<div class="emp_content_next"><nextItemNavigation class="emp_button"/></div>
+			
+			<div class="emp_activity_buttons">
+				<div class="emp_activity_buttons_inset">
+					<markAllButton class="emp_button"/>
+					<showAnswersButton class="emp_button"/>
+					<resetButton class="emp_button"/>
+				</div>
+			</div>
+
+			<div class="emp_button emp_home_button_down"><link itemIndex="0"><shape class="emp_home_container"/></link></div>
+
+			<textFeedback id="textFeedback"/>
+			
+			<div class="emp_info_page_counter"><div class="emp_info_page_counter_inset"><info class="info_page_counter"/></div></div>
+			
+			<tutor tutorId="tutor1"/>
+			
+			<bonus bonusId="bonus1"/>
+			
+			<div class="emp_line_fix"/>
+			
+		</div>	
+		
+	</div>	
+</div>
+		</itemBody>
+</assessmentItem>

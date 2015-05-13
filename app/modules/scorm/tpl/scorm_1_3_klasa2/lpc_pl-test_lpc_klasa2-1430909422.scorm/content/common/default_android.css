@@ -1,0 +1,157 @@
+	/*.emp_scroll {
+		background-color: orange;
+		color: #079DE3;
+	} */
+
+
+/* ----Android Tablet */
+@media only screen
+and (min-device-width : 800px)
+and (max-device-width : 1280px) {
+ 
+	
+	/* ------------------------------------------------ change res 1280x752 */
+
+	.emp_header_navi_inset{
+		width:1278px;
+	}
+	.emp_content_container{
+		width:1280px;
+		height: 752px;
+	}
+	.emp_bg_toc{
+		background: url("bg_bottom_dodgerblue752.png") repeat-y scroll left top; 
+	}
+	.emp_bg_info{
+		background: url("bg_bottom_yellow752.png") repeat-y scroll left top; 
+	}
+	.emp_bg_activity{
+		background: url("bg_bottom_green752.png") repeat-y scroll left top;
+	}
+	.emp_bg_activity_no_check{
+	background: url("bg_bottom_green752.png") repeat-y scroll left top;
+	}
+	.emp_bg_test{
+		background: url("bg_bottom_magenta752.png") repeat-y scroll left top;
+	}
+	.emp_bg_media{
+		background: url("bg_bottom_blue752.png") repeat-y scroll left top; 
+	}
+	.emp_bg_worksheets{
+		background: url("bg_bottom_purple752.png") repeat-y scroll left top; 
+	}
+	.emp_content_center {
+		background: url("bg_bottom1_752.png") no-repeat scroll left bottom;
+		width: 1278px;
+		height: 750px; 
+	}
+	.emp_bg_media .emp_content_center{
+		background: url("bg_bottom2_752.png") no-repeat scroll left bottom;
+	}
+	.emp_bg_info .emp_content_center{
+		background: url("bg_bottom3_752.png") no-repeat scroll left bottom;
+	}
+	.emp_bg_worksheets .emp_content_center{
+		background: url("bg_bottom4_752.png") no-repeat scroll left bottom;
+	}
+	.emp_bg_activity .emp_content_center{
+		background: url("bg_bottom5_752.png") no-repeat scroll left bottom;
+	}
+	.emp_bg_activity_no_check .emp_content_center{
+	background: url("bg_bottom6_752.png") no-repeat scroll left bottom;
+	}
+	.emp_bg_test .emp_content_center{
+		background: url("bg_bottom5_752.png") no-repeat scroll left bottom;
+	}
+	.emp_scroll{
+		height: 620px;
+	}
+	.emp_activities{
+		width:714px;
+		margin: 0px; 
+	}
+	.emp_activity_content {
+		padding: 0 20px 0px 180px;
+	}
+	.emp_toc_page{
+		width: 1180px;
+	}	
+	.emp_info_page{
+		width: 1180px;
+	}
+	.emp_activity_page{
+		width: 1180px;
+	}
+	.emp_media_page {
+		width: 1180px;
+	}
+	.emp_report_page{
+		width: 1180px;
+	}
+	.emp_activity_title_text{
+		max-width: 840px;
+	}
+	.emp_questions .emp_activity_title_text{
+		max-width: 760px;
+	}
+	.questions_group2 .emp_questions .emp_activity_title_text, 
+	.questions_group3 .emp_questions .emp_activity_title_text,
+	.questions_group4 .emp_questions .emp_activity_title_text, 
+	.questions_group5 .emp_questions .emp_activity_title_text{
+		max-width: 800px;
+	}
+	.qp-feedback-text-module {
+		font-size: 0.85em;
+		max-width: 250px;
+	}
+	.qp-slideshow-button-panel {
+		left: 150px;
+		width: 880px;
+	}
+	.emp_bg_report {
+		background: url("bg_bottom_cyan752.png") repeat-y scroll left top;
+	}
+	/* .emp_report_page .qp-report-table-col-0 {
+		width: 590px;
+	} */
+	.emp_report_page .qp-report-table-col-0 .qp-report-cell {
+		width: 548px;
+		height: 50px;
+		background: url("report_pencil_752.png") no-repeat top left #FFF;
+	}
+	.emp_report_total {
+		margin-left: 608px;
+	}
+	.emp_toc_background_2rows {
+		position: absolute;
+		bottom:140px;
+		left: 190px;
+		width: 900px;
+		height: 350px;
+		background: url("bg_toc_2rows.png") no-repeat scroll left bottom; 
+	} 
+	.emp_toc_background_3rows {
+		position: absolute;
+		bottom:140px;
+		left: 190px;
+		width: 900px;
+		height: 300px;
+		background: url("bg_toc_3rows.png") no-repeat scroll left bottom; 
+	}
+	.emp_toc_background_4rows {
+		position: absolute;
+		bottom:140px;
+		left: 190px;
+		width: 900px;
+		height: 220px;
+		background: url("bg_toc_4rows.png") no-repeat scroll left bottom; 
+	}
+	.emp_toc_background_5rows {
+		position: absolute;
+		bottom:140px;
+		left: 190px;
+		width: 900px;
+		height: 150px;
+		background: url("bg_toc_5rows.png") no-repeat scroll left bottom; 
+	}
+} /* end media */ 

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.2.127" identifier="ITEM_014" playerVersion="1.8.0" timeDependent="false" title="Co mogę zrobić dla Ziemi?">
+<styleDeclaration><link href="../common/default.css" userAgent=".*"/><link href="../common/default2.css" userAgent=".*"/><link href="../common/default_ipad.css" userAgent="(.*iPad.*)"/><link href="../common/default_android.css" userAgent="(.*Android.*)"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>4</value>
+		</defaultValue>
+	</outcomeDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="MCHOICE_RESPONSE_1-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="MCHOICE_RESPONSE_1-TODO"/>
+		<outcomeDeclaration cardinality="multiple" identifier="MCHOICE_RESPONSE_1-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="MCHOICE_RESPONSE_1-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="MCHOICE_RESPONSE_1-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="MCHOICE_RESPONSE_1-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="MCHOICE_RESPONSE_1-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="MCHOICE_RESPONSE_1-MISTAKES"/>
+				<responseDeclaration cardinality="multiple" checkMode="default" countMode="correctAnswers" identifier="MCHOICE_RESPONSE_1">
+					<correctResponse>
+						<value>MCHOICE_RESPONSE_1_0</value>
+						<value>MCHOICE_RESPONSE_1_1</value>
+						<value>MCHOICE_RESPONSE_1_2</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="MCHOICE_RESPONSE_2-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="MCHOICE_RESPONSE_2-TODO"/>
+		<outcomeDeclaration cardinality="multiple" identifier="MCHOICE_RESPONSE_2-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="MCHOICE_RESPONSE_2-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="MCHOICE_RESPONSE_2-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="MCHOICE_RESPONSE_2-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="MCHOICE_RESPONSE_2-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="MCHOICE_RESPONSE_2-MISTAKES"/>
+				<responseDeclaration cardinality="multiple" checkMode="default" countMode="correctAnswers" identifier="MCHOICE_RESPONSE_2">
+					<correctResponse>
+						<value>MCHOICE_RESPONSE_2_2</value>
+					</correctResponse>
+				</responseDeclaration>
+		<itemBody>
+
+
+<div class="emp_content">
+	<div class="emp_content_container emp_bg_activity">
+		
+		<div class="emp_content_center">
+			<div class="emp_content_prev">
+				<div class="emp_button emp_home_button"><link itemIndex="0"><shape class="emp_home_container"/></link></div>
+				<prevItemNavigation class="emp_button"/>
+			</div>
+
+			<div class="emp_activity_page">
+				<div class="emp_header_mini">
+					<div class="emp_info_page_title"><div class="emp_info_page_title_inset"><info class="info_page_title"/></div></div>
+				</div>
+				<div class="emp_scroll">
+					<div class="emp_activity_title">
+						<div class="emp_activity_title_audio"><audioPlayer data="media/lpc_ep_lvl2-3_003_04au.mp3" id="dummy1">
+<source src="media/lpc_ep_lvl2-3_003_04au.mp3" type="audio/mp4"/>	</audioPlayer></div>
+						<div class="emp_activity_title_text"><simpleText id="dummy2">
+Wybierz działania związane z ochroną środowiska.</simpleText></div>	
+					</div>
+					<div class="emp_activity_content">
+						<div class="emp_activities">
+							<group class="emp_no_border_vertical" id="dummy3">
+	<group class="tpl_2x1" id="dummy3_1">
+	<div class="emp_table_2x1">
+	<div class="emp_single_col emp_w2b"><div class="emp_col_inset"><choiceInteraction id="dummy3_1_1" maxChoices="3" responseIdentifier="MCHOICE_RESPONSE_1" shuffle="false">
+
+	<simpleChoice identifier="MCHOICE_RESPONSE_1_0">
+<img id="dummy3_1_1_playerPicture" src="media/lpc_ep_lvl2-3_003_09i.jpg" srcFullScreen="media/lpc_ep_lvl2-3_003_09i_f.jpg">
+</img>	</simpleChoice>
+	<simpleChoice identifier="MCHOICE_RESPONSE_1_1">
+<img id="dummy3_1_1_playerPicture" src="media/lpc_ep_lvl2-3_003_10i.jpg" srcFullScreen="media/lpc_ep_lvl2-3_003_10i_f.jpg">
+</img>	</simpleChoice>
+	<simpleChoice identifier="MCHOICE_RESPONSE_1_2">
+<img id="dummy3_1_1_playerPicture" src="media/lpc_ep_lvl2-3_003_11i.jpg" srcFullScreen="media/lpc_ep_lvl2-3_003_11i_f.jpg">
+</img>	</simpleChoice>
+	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="ok"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="wrong"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/wrong.mp3" type="narration">
+								<source src="media/wrong.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+</choiceInteraction></div></div>
+	<div class="emp_single_col emp_w2b emp_col_last"><div class="emp_col_inset"><choiceInteraction id="dummy3_1_2" maxChoices="3" responseIdentifier="MCHOICE_RESPONSE_2" shuffle="false">
+
+	<simpleChoice identifier="MCHOICE_RESPONSE_2_0">
+<img id="dummy3_1_2_playerPicture" src="media/lpc_ep_lvl2-3_003_12i.jpg" srcFullScreen="media/lpc_ep_lvl2-3_003_12i_f.jpg">
+</img>	</simpleChoice>
+	<simpleChoice identifier="MCHOICE_RESPONSE_2_1">
+<img id="dummy3_1_2_playerPicture" src="media/lpc_ep_lvl2-3_003_13i.jpg" srcFullScreen="media/lpc_ep_lvl2-3_003_13i_f.jpg">
+</img>	</simpleChoice>
+	<simpleChoice identifier="MCHOICE_RESPONSE_2_2">
+<img id="dummy3_1_2_playerPicture" src="media/lpc_ep_lvl2-3_003_14i.jpg" srcFullScreen="media/lpc_ep_lvl2-3_003_14i_f.jpg">
+</img>	</simpleChoice>
+	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="ok"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="wrong"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/wrong.mp3" type="narration">
+								<source src="media/wrong.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+</choiceInteraction></div></div>
+</div>
+<div>
+	<!-- cannot find module for dummy 'dummy3'!-->
+	<!-- cannot find module for dummy 'dummy4'!-->
+	<!-- cannot find module for dummy 'dummy5'!-->
+	<!-- cannot find module for dummy 'dummy6'!-->
+	<!-- cannot find module for dummy 'dummy7'!-->
+	<!-- cannot find module for dummy 'dummy8'!-->
+	<!-- cannot find module for dummy 'dummy9'!-->
+	<!-- cannot find module for dummy 'dummy10'!-->
+</div>
+</group>
+</group>
+						</div>	
+						
+						<!-- cannot find module for dummy 'dummy4'!-->
+						<!-- cannot find module for dummy 'dummy5'!-->
+						<!-- cannot find module for dummy 'dummy6'!-->
+						<!-- cannot find module for dummy 'dummy7'!-->
+						<!-- cannot find module for dummy 'dummy8'!-->
+						<!-- cannot find module for dummy 'dummy9'!-->
+						<!-- cannot find module for dummy 'dummy10'!-->
+					
+					</div>
+				</div>	
+			</div>
+										
+			<div class="emp_content_next"><nextItemNavigation class="emp_button"/></div>
+			
+			<div class="emp_activity_buttons">
+				<div class="emp_activity_buttons_inset">
+					<markAllButton class="emp_button"/>
+					<showAnswersButton class="emp_button"/>
+					<resetButton class="emp_button"/>
+				</div>
+			</div>
+
+			<div class="emp_button emp_home_button_down"><link itemIndex="0"><shape class="emp_home_container"/></link></div>
+
+			<textFeedback id="textFeedback"/>
+			
+			<div class="emp_info_page_counter"><div class="emp_info_page_counter_inset"><info class="info_page_counter"/></div></div>
+			
+			<tutor tutorId="tutor1"/>
+			
+			<bonus bonusId="bonus1"/>
+			
+			<div class="emp_line_fix"/>
+			
+		</div>	
+		
+	</div>	
+</div>
+		</itemBody>
+</assessmentItem>

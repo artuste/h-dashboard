@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<class name="lpc_ma_084_s01" package="lpcma084s01" />
+	<properties>
+		<width value="720" />
+		<height value="450" />
+	</properties>
+		<scripts>
+			<scriptfile src="lpc_ma_084_s01.js"/>
+			<scriptfile src="lpc_ma_084_s01Engine.js"/>
+		</scripts>
+	<libraries>
+			<library version="1.0.0.0" package="ydpjs">
+				<libraryfile src="ButtonDecorator.js"/>
+				<libraryfile src="Delegate.js"/>
+				
+				<libraryfile src="Slider.js"/>
+			</library>
+	</libraries>
+</manifest>

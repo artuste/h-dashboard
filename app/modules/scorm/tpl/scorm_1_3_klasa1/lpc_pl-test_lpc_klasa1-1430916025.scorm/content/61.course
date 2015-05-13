@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<course xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.ydp.pl/cms/course" id="toc61">
+   <name>Test_LPC_klasa1</name>
+   <desc></desc>
+   <cs name="61.course" xlink:href="61.cs"/>
+</course>

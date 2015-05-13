@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<class name="lpc_ma_083_s01" package="lpcma083s01" />
+	<properties>
+		<width value="720" />
+		<height value="450" />
+	</properties>
+		<scripts>
+			<scriptfile src="lpc_ma_083_s01.js"/>
+			<scriptfile src="lpc_ma_083_s01Engine.js"/>
+		</scripts>
+	<assets>
+		<assetfile src="images/Bitmapa2.png" type="image" id="Bitmapa2"/>
+	</assets>
+	<libraries>
+			<library version="1.0.0.0" package="ydpjs">
+				<libraryfile src="ButtonDecorator.js"/>
+				<libraryfile src="Delegate.js"/>
+				<libraryfile src="Slider.js"/>
+			</library>
+	</libraries>
+</manifest>

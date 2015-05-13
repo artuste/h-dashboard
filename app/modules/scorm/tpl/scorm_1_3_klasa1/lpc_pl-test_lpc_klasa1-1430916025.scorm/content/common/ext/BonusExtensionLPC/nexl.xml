@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><library version="1.4" loadType="internal" id="BonusExtensionLPC" src="BonusExtensionLPC.js">
+	<ext implementation="BonusExtensionLPC">
+		<attr name="type" value="com.yauthor.module.plugin.IEmpiriaPlugin"/>
+		<attr name="nodeName" value="BonusExtensionLPC"/>
+		<attr name="toolTip" value="BonusExtensionLPC"/>
+		<attr name="label" value="BonusExtensionLPC"/>
+		<attr name="displayName" value="BonusExtensionLPC"/>
+	</ext>
+</library>

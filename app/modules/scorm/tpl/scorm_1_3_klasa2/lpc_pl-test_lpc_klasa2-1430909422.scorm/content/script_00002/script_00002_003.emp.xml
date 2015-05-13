@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.2.127" identifier="ITEM_003" playerVersion="1.8.0" timeDependent="false" title="Listy dawniej i dziś">
+<styleDeclaration><link href="../common/default.css" userAgent=".*"/><link href="../common/default2.css" userAgent=".*"/><link href="../common/default_ipad.css" userAgent="(.*iPad.*)"/><link href="../common/default_android.css" userAgent="(.*Android.*)"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>1</value>
+		</defaultValue>
+	</outcomeDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_1-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_1-TODO"/>
+		<outcomeDeclaration cardinality="ordered" identifier="ORDERING_RESPONSE_1-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="ordered" identifier="ORDERING_RESPONSE_1-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_1-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="ORDERING_RESPONSE_1-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="ORDERING_RESPONSE_1-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="ORDERING_RESPONSE_1-MISTAKES"/>
+				<responseDeclaration cardinality="ordered" checkMode="default" countMode="single" identifier="ORDERING_RESPONSE_1">
+					<correctResponse>
+						<value forIndex="0">-795239844</value>
+						<value forIndex="0">-766610693</value>
+						<value forIndex="0">-737981542</value>
+						<value forIndex="0">-709352391</value>
+					</correctResponse>
+				</responseDeclaration>
+		<itemBody>
+
+
+<div class="emp_content">
+	<div class="emp_content_container emp_bg_activity">
+		
+		<div class="emp_content_center">
+			<div class="emp_content_prev">
+				<div class="emp_button emp_home_button"><link itemIndex="0"><shape class="emp_home_container"/></link></div>
+				<prevItemNavigation class="emp_button"/>
+			</div>
+
+			<div class="emp_activity_page">
+				<div class="emp_header_mini">
+					<div class="emp_info_page_title"><div class="emp_info_page_title_inset"><info class="info_page_title"/></div></div>
+				</div>
+				<div class="emp_scroll">
+					<div class="emp_activity_title">
+						<div class="emp_activity_title_audio"><audioPlayer data="media/lpc_ll_18_05.mp3" id="dummy1">
+<source src="media/lpc_ll_18_05.mp3" type="audio/mp4"/>	</audioPlayer></div>
+						<div class="emp_activity_title_text"><simpleText id="dummy2">
+Ustaw ilustracje przedstawiające sposoby wysyłania listów 
+<br/>
+między nadawcą i adresatem w kolejności od najstarszego 
+<br/>
+(z lewej strony) do najbardziej nowoczesnego (z prawej 
+<br/>
+strony).</simpleText></div>	
+					</div>
+					<div class="emp_activity_content">
+						<div class="emp_activities">
+							<group class="tpl_1x1" id="dummy3">
+	<div class="emp_col_inset">
+	<table id="dummy3_1">
+	<tr>
+		<td>
+
+<audioPlayer data="media/lpc_ll_18_08.mp3" id="dummy3_1_x0y0">
+<source src="media/lpc_ll_18_08.mp3" type="audio/mp4"/>	</audioPlayer>		</td>
+		<td>
+
+<simpleText id="dummy3_1_x1y0">
+    Nadawca i adresat</simpleText>		</td>
+	</tr>
+</table>
+
+	<group class="emp_space_vertical_20" id="dummy3_2">
+	
+</group>
+	<orderInteraction class="emp_ordering_horizontal4" id="dummy3_3" orientation="horizontal" responseIdentifier="ORDERING_RESPONSE_1" shuffle="true">
+
+	<simpleChoice identifier="-795239844">
+<img class="" src="media/lpc_ll_18_i01.png"/>	</simpleChoice>
+	<simpleChoice identifier="-766610693">
+<img class="" src="media/lpc_ll_18_i02.png"/>	</simpleChoice>
+	<simpleChoice identifier="-737981542">
+<img class="" src="media/lpc_ll_18_i03.png"/>	</simpleChoice>
+	<simpleChoice identifier="-709352391">
+<img class="" src="media/lpc_ll_18_i04.png"/>	</simpleChoice>
+	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="ok"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+</orderInteraction>
+
+	<!-- cannot find module for dummy 'dummy4'!-->
+	<!-- cannot find module for dummy 'dummy5'!-->
+	<!-- cannot find module for dummy 'dummy6'!-->
+	<!-- cannot find module for dummy 'dummy7'!-->
+	<!-- cannot find module for dummy 'dummy8'!-->
+	<!-- cannot find module for dummy 'dummy9'!-->
+	<!-- cannot find module for dummy 'dummy10'!-->
+</div>
+</group>
+						</div>	
+						
+						<!-- cannot find module for dummy 'dummy4'!-->
+						<!-- cannot find module for dummy 'dummy5'!-->
+						<!-- cannot find module for dummy 'dummy6'!-->
+						<!-- cannot find module for dummy 'dummy7'!-->
+						<!-- cannot find module for dummy 'dummy8'!-->
+						<!-- cannot find module for dummy 'dummy9'!-->
+						<!-- cannot find module for dummy 'dummy10'!-->
+					
+					</div>
+				</div>	
+			</div>
+										
+			<div class="emp_content_next"><nextItemNavigation class="emp_button"/></div>
+			
+			<div class="emp_activity_buttons">
+				<div class="emp_activity_buttons_inset">
+					<markAllButton class="emp_button"/>
+					<showAnswersButton class="emp_button"/>
+					<resetButton class="emp_button"/>
+				</div>
+			</div>
+
+			<div class="emp_button emp_home_button_down"><link itemIndex="0"><shape class="emp_home_container"/></link></div>
+
+			<textFeedback id="textFeedback"/>
+			
+			<div class="emp_info_page_counter"><div class="emp_info_page_counter_inset"><info class="info_page_counter"/></div></div>
+			
+			<tutor tutorId="tutor1"/>
+			
+			<bonus bonusId="bonus1"/>
+			
+			<div class="emp_line_fix"/>
+			
+		</div>	
+		
+	</div>	
+</div>
+		</itemBody>
+</assessmentItem>

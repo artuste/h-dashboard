@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<class name="lpc_ma_018_s01" package="lpcma018s01" />
+	<properties>
+		<width value="720" />
+		<height value="450" />
+	</properties>
+		<scripts>
+			<scriptfile src="lpc_ma_018_s01.js"/>
+			<scriptfile src="lpc_ma_018_s01Engine.js"/>
+		</scripts>
+	<assets>
+		<assetfile src="images/Bitmapa4.png" type="image" id="Bitmapa4"/>
+		<assetfile src="images/Bitmapa3.png" type="image" id="Bitmapa3"/>
+		<assetfile src="images/Bitmapa1.png" type="image" id="Bitmapa1"/>
+		<assetfile src="images/Bitmapa36.png" type="image" id="Bitmapa36"/>
+		<assetfile src="images/Bitmapa37.png" type="image" id="Bitmapa37"/>
+		<assetfile src="images/Bitmapa38.png" type="image" id="Bitmapa38"/>
+		<assetfile src="images/Bitmapa39.png" type="image" id="Bitmapa39"/>
+		<assetfile src="images/Bitmapa40.png" type="image" id="Bitmapa40"/>
+		<assetfile src="images/Bitmapa41.png" type="image" id="Bitmapa41"/>
+		<assetfile src="images/Bitmapa42.png" type="image" id="Bitmapa42"/>
+		<assetfile src="images/Bitmapa43.png" type="image" id="Bitmapa43"/>
+		<assetfile src="images/Bitmapa44.png" type="image" id="Bitmapa44"/>
+		<assetfile src="images/Bitmapa45.png" type="image" id="Bitmapa45"/>
+		<assetfile src="images/Bitmapa46.png" type="image" id="Bitmapa46"/>
+		<assetfile src="images/Bitmapa23.png" type="image" id="Bitmapa23"/>
+		<assetfile src="images/Bitmapa47.png" type="image" id="Bitmapa47"/>
+		<assetfile src="images/Bitmapa5.png" type="image" id="Bitmapa5"/>
+		<assetfile src="images/Bitmapa2.png" type="image" id="Bitmapa2"/>
+		<assetfile src="images/Bitmapa6.png" type="image" id="Bitmapa6"/>
+	</assets>
+	<libraries>
+			<library version="1.0.0.0" package="ydpjs">
+				<libraryfile src="ButtonDecorator.js"/>
+				<libraryfile src="Delegate.js"/>
+				
+				<libraryfile src="Slider.js"/>
+			</library>
+	</libraries>
+</manifest>

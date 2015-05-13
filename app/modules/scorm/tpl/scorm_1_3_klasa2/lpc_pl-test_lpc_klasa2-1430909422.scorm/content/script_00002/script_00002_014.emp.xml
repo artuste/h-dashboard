@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.2.127" identifier="ITEM_014" playerVersion="1.8.0" timeDependent="false" title="Kto kogo zje?">
+<styleDeclaration><link href="../common/default.css" userAgent=".*"/><link href="../common/default2.css" userAgent=".*"/><link href="../common/default_ipad.css" userAgent="(.*iPad.*)"/><link href="../common/default_android.css" userAgent="(.*Android.*)"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>1</value>
+		</defaultValue>
+	</outcomeDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="CONNECTION_RESPONSE_2-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="CONNECTION_RESPONSE_2-TODO"/>
+		<outcomeDeclaration cardinality="multiple" identifier="CONNECTION_RESPONSE_2-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="CONNECTION_RESPONSE_2-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="CONNECTION_RESPONSE_2-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="CONNECTION_RESPONSE_2-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="CONNECTION_RESPONSE_2-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="CONNECTION_RESPONSE_2-MISTAKES"/>
+				<responseDeclaration cardinality="multiple" checkMode="default" countMode="single" evaluate="user" identifier="CONNECTION_RESPONSE_2">
+					<correctResponse>
+						<value>CONNECTION_RESPONSE_2_0 CONNECTION_RESPONSE_2_1</value>
+						<value>CONNECTION_RESPONSE_2_3 CONNECTION_RESPONSE_2_4</value>
+						<value>CONNECTION_RESPONSE_2_6 CONNECTION_RESPONSE_2_7</value>
+						<value>CONNECTION_RESPONSE_2_9 CONNECTION_RESPONSE_2_10</value>
+					</correctResponse>
+				</responseDeclaration>
+		<itemBody>
+
+
+<div class="emp_content">
+	<div class="emp_content_container emp_bg_activity">
+		
+		<div class="emp_content_center">
+			<div class="emp_content_prev">
+				<div class="emp_button emp_home_button"><link itemIndex="0"><shape class="emp_home_container"/></link></div>
+				<prevItemNavigation class="emp_button"/>
+			</div>
+
+			<div class="emp_activity_page">
+				<div class="emp_header_mini">
+					<div class="emp_info_page_title"><div class="emp_info_page_title_inset"><info class="info_page_title"/></div></div>
+				</div>
+				<div class="emp_scroll">
+					<div class="emp_activity_title">
+						<div class="emp_activity_title_audio"><audioPlayer data="media/lpc_sc_lvl2-3_024_05au.mp3" id="dummy1">
+<source src="media/lpc_sc_lvl2-3_024_05au.mp3" type="audio/mp4"/>	</audioPlayer></div>
+						<div class="emp_activity_title_text"><simpleText id="dummy2">
+Połącz w pary organizmy i ich pokarm.</simpleText></div>	
+					</div>
+					<div class="emp_activity_content">
+						<div class="emp_activities">
+							<group class="tpl_1x1" id="dummy3">
+	<div class="emp_col_inset">
+	<matchInteraction class="connection_4x4" id="dummy3_1" responseIdentifier="CONNECTION_RESPONSE_2" shuffle="true">
+	<simpleMatchSet>
+	<simpleAssociableChoice fixed="false" identifier="CONNECTION_RESPONSE_2_0" matchMax="1">
+
+<img id="dummy3_1_playerPicture" src="media/lpc_sc_lvl2-3_024_10i.jpg" srcFullScreen="media/lpc_sc_lvl2-3_024_10i_f.jpg">
+	<title>
+		<simpleText>żaba</simpleText>
+	</title>
+</img>	</simpleAssociableChoice>
+	<simpleAssociableChoice fixed="false" identifier="CONNECTION_RESPONSE_2_3" matchMax="1">
+
+<img id="dummy3_1_playerPicture" src="media/lpc_sc_lvl2-3_024_11i.jpg" srcFullScreen="media/lpc_sc_lvl2-3_024_11i_f.jpg">
+	<title>
+		<simpleText>sowa</simpleText>
+	</title>
+</img>	</simpleAssociableChoice>
+	<simpleAssociableChoice fixed="false" identifier="CONNECTION_RESPONSE_2_6" matchMax="1">
+
+<img id="dummy3_1_playerPicture" src="media/lpc_sc_lvl2-3_024_12i.jpg" srcFullScreen="media/lpc_sc_lvl2-3_024_12i_f.jpg">
+	<title>
+		<simpleText>dorsz</simpleText>
+	</title>
+</img>	</simpleAssociableChoice>
+	<simpleAssociableChoice fixed="false" identifier="CONNECTION_RESPONSE_2_9" matchMax="1">
+
+<img id="dummy3_1_playerPicture" src="media/lpc_sc_lvl2-3_024_13i.jpg" srcFullScreen="media/lpc_sc_lvl2-3_024_13i_f.jpg">
+	<title>
+		<simpleText>wilk</simpleText>
+	</title>
+</img>	</simpleAssociableChoice>
+	</simpleMatchSet>
+	<simpleMatchSet>
+	<simpleAssociableChoice fixed="false" identifier="CONNECTION_RESPONSE_2_1" matchMax="1">
+
+<img id="dummy3_1_playerPicture" src="media/lpc_sc_lvl2-3_024_14i.jpg" srcFullScreen="media/lpc_sc_lvl2-3_024_14i_f.jpg">
+	<title>
+		<simpleText>mucha</simpleText>
+	</title>
+</img>	</simpleAssociableChoice>
+	<simpleAssociableChoice fixed="false" identifier="CONNECTION_RESPONSE_2_10" matchMax="1">
+
+<img id="dummy3_1_playerPicture" src="media/lpc_sc_lvl2-3_024_15i.jpg" srcFullScreen="media/lpc_sc_lvl2-3_024_15i_f.jpg">
+	<title>
+		<simpleText>jeleń</simpleText>
+	</title>
+</img>	</simpleAssociableChoice>
+	<simpleAssociableChoice fixed="false" identifier="CONNECTION_RESPONSE_2_4" matchMax="1">
+
+<img id="dummy3_1_playerPicture" src="media/lpc_sc_lvl2-3_024_16i.jpg" srcFullScreen="media/lpc_sc_lvl2-3_024_16i_f.jpg">
+	<title>
+		<simpleText>szczur</simpleText>
+	</title>
+</img>	</simpleAssociableChoice>
+	<simpleAssociableChoice fixed="false" identifier="CONNECTION_RESPONSE_2_7" matchMax="1">
+
+<img id="dummy3_1_playerPicture" src="media/lpc_sc_lvl2-3_024_17i.jpg" srcFullScreen="media/lpc_sc_lvl2-3_024_17i_f.jpg">
+	<title>
+		<simpleText>szprotka</simpleText>
+	</title>
+</img>	</simpleAssociableChoice>
+	</simpleMatchSet>
+	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="ok"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="wrong"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/wrong.mp3" type="narration">
+								<source src="media/wrong.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+</matchInteraction>
+
+
+	<!-- cannot find module for dummy 'dummy2'!-->
+	<!-- cannot find module for dummy 'dummy3'!-->
+	<!-- cannot find module for dummy 'dummy4'!-->
+	<!-- cannot find module for dummy 'dummy5'!-->
+	<!-- cannot find module for dummy 'dummy6'!-->
+	<!-- cannot find module for dummy 'dummy7'!-->
+	<!-- cannot find module for dummy 'dummy8'!-->
+	<!-- cannot find module for dummy 'dummy9'!-->
+	<!-- cannot find module for dummy 'dummy10'!-->
+</div>
+</group>
+						</div>	
+						
+						<!-- cannot find module for dummy 'dummy4'!-->
+						<!-- cannot find module for dummy 'dummy5'!-->
+						<!-- cannot find module for dummy 'dummy6'!-->
+						<!-- cannot find module for dummy 'dummy7'!-->
+						<!-- cannot find module for dummy 'dummy8'!-->
+						<!-- cannot find module for dummy 'dummy9'!-->
+						<!-- cannot find module for dummy 'dummy10'!-->
+					
+					</div>
+				</div>	
+			</div>
+										
+			<div class="emp_content_next"><nextItemNavigation class="emp_button"/></div>
+			
+			<div class="emp_activity_buttons">
+				<div class="emp_activity_buttons_inset">
+					<markAllButton class="emp_button"/>
+					<showAnswersButton class="emp_button"/>
+					<resetButton class="emp_button"/>
+				</div>
+			</div>
+
+			<div class="emp_button emp_home_button_down"><link itemIndex="0"><shape class="emp_home_container"/></link></div>
+
+			<textFeedback id="textFeedback"/>
+			
+			<div class="emp_info_page_counter"><div class="emp_info_page_counter_inset"><info class="info_page_counter"/></div></div>
+			
+			<tutor tutorId="tutor1"/>
+			
+			<bonus bonusId="bonus1"/>
+			
+			<div class="emp_line_fix"/>
+			
+		</div>	
+		
+	</div>	
+</div>
+		</itemBody>
+</assessmentItem>

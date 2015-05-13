@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<class name="lpc_ma_045_s01" package="lpcma045s01" />
+	<properties>
+		<width value="720" />
+		<height value="450" />
+	</properties>
+		<scripts>
+			<scriptfile src="lpc_ma_045_s01.js"/>
+			<scriptfile src="lpc_ma_045_s01Engine.js"/>
+		</scripts>
+	<assets>
+		<assetfile src="images/Bitmap2.png" type="image" id="Bitmap2"/>
+		<assetfile src="images/Bitmap9.png" type="image" id="Bitmap9"/>
+		<assetfile src="images/Bitmap6.png" type="image" id="Bitmap6"/>
+		<assetfile src="images/Bitmap7.png" type="image" id="Bitmap7"/>
+		<assetfile src="images/Bitmapa4.png" type="image" id="Bitmapa4"/>
+		<assetfile src="images/Bitmapa5.png" type="image" id="Bitmapa5"/>
+		<assetfile src="images/Bitmapa6.png" type="image" id="Bitmapa6"/>
+	</assets>
+	<libraries>
+			<library version="1.0.0.0" package="ydpjs">
+				<libraryfile src="ButtonDecorator.js"/>
+				<libraryfile src="Delegate.js"/>
+				<libraryfile src="Slider.js"/>
+			</library>
+	</libraries>
+</manifest>

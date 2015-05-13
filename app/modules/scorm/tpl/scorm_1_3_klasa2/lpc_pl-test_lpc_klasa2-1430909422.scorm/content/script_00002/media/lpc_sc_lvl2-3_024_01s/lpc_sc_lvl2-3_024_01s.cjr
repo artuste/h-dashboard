@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<class name="lpc_sc_lvl23_024_01s" package="lpcsclvl2302401s" />
+	<properties>
+		<width value="720" />
+		<height value="405" />
+	</properties>
+		<scripts>
+			<scriptfile src="lpc_sc_lvl2-3_024_01s.js"/>
+			<scriptfile src="lpc_sc_lvl23_024_01sEngine.js"/>
+		</scripts>
+	<assets>
+		<assetfile src="images/Bitmapa6.png" type="image" id="Bitmapa6"/>
+		<assetfile src="images/Bitmapa7.png" type="image" id="Bitmapa7"/>
+		<assetfile src="images/Bitmapa3.png" type="image" id="Bitmapa3"/>
+		<assetfile src="images/Bitmapa2.png" type="image" id="Bitmapa2"/>
+		<assetfile src="images/Bitmapa5.png" type="image" id="Bitmapa5"/>
+		<assetfile src="images/Bitmapa4.png" type="image" id="Bitmapa4"/>
+		<assetfile src="images/Bitmapa1.png" type="image" id="Bitmapa1"/>
+	</assets>
+	<libraries>
+			<library version="1.0.0.0" package="ydpjs">
+				<libraryfile src="ButtonDecorator.js"/>
+				<libraryfile src="Delegate.js"/>
+				<libraryfile src="Slider.js"/>
+			</library>
+	</libraries>
+</manifest>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<class name="lpc_sc_lvl45_026_01s" package="lpcsclvl4502601s" />
+	<properties>
+		<width value="720" />
+		<height value="450" />
+	</properties>
+		<scripts>
+			<scriptfile src="lpc_sc_lvl4-5_026_01s.js"/>
+			<scriptfile src="lpc_sc_lvl45_026_01sEngine.js"/>
+		</scripts>
+	<assets>
+		<assetfile src="images/Bitmapa35.png" type="image" id="Bitmapa35"/>
+		<assetfile src="images/Bitmapa32.png" type="image" id="Bitmapa32"/>
+		<assetfile src="images/Bitmapa7.png" type="image" id="Bitmapa7"/>
+		<assetfile src="images/Bitmapa15.png" type="image" id="Bitmapa15"/>
+		<assetfile src="images/Bitmapa19.png" type="image" id="Bitmapa19"/>
+		<assetfile src="images/Bitmapa18.png" type="image" id="Bitmapa18"/>
+		<assetfile src="images/Bitmapa23.png" type="image" id="Bitmapa23"/>
+		<assetfile src="images/Bitmapa8.png" type="image" id="Bitmapa8"/>
+		<assetfile src="images/Bitmapa26.png" type="image" id="Bitmapa26"/>
+		<assetfile src="images/Bitmapa27.png" type="image" id="Bitmapa27"/>
+		<assetfile src="images/Bitmapa28.png" type="image" id="Bitmapa28"/>
+		<assetfile src="images/Bitmapa29.png" type="image" id="Bitmapa29"/>
+		<assetfile src="images/Bitmapa30.png" type="image" id="Bitmapa30"/>
+		<assetfile src="images/Bitmapa31.png" type="image" id="Bitmapa31"/>
+		<assetfile src="images/Bitmapa3.png" type="image" id="Bitmapa3"/>
+		<assetfile src="images/Bitmapa20.png" type="image" id="Bitmapa20"/>
+		<assetfile src="images/Bitmapa6.png" type="image" id="Bitmapa6"/>
+		<assetfile src="images/Bitmapa25.png" type="image" id="Bitmapa25"/>
+		<assetfile src="images/Bitmapa1.png" type="image" id="Bitmapa1"/>
+		<assetfile src="images/Bitmapa21.png" type="image" id="Bitmapa21"/>
+		<assetfile src="images/Bitmapa2.png" type="image" id="Bitmapa2"/>
+		<assetfile src="images/Bitmapa17.png" type="image" id="Bitmapa17"/>
+		<assetfile src="images/Bitmapa5.png" type="image" id="Bitmapa5"/>
+		<assetfile src="images/Bitmapa16.png" type="image" id="Bitmapa16"/>
+		<assetfile src="images/Bitmapa4.png" type="image" id="Bitmapa4"/>
+		<assetfile src="images/Bitmapa14.png" type="image" id="Bitmapa14"/>
+	</assets>
+	<libraries>
+			<library version="1.0.0.0" package="ydpjs">
+				<libraryfile src="ButtonDecorator.js"/>
+				<libraryfile src="Delegate.js"/>
+				
+				<libraryfile src="Slider.js"/>
+			</library>
+	</libraries>
+</manifest>

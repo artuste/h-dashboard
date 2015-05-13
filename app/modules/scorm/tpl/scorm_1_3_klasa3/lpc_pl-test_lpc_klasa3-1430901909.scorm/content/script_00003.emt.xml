@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentTest compilerVersion="3.3.2.127" identifer="Klasa 3" playerVersion="1.8.0" title="Klasa 3">
+				
+		<testView href="common/lesson.emp.xml"/>
+		<extensionsLibrary>
+				<link href="common/ext/library.xml"/>
+		</extensionsLibrary>
+	<styleDeclaration>
+		<link href="common/default.css" userAgent=".*"/>
+	</styleDeclaration>
+	<variableProcessing template="default"/>
+
+	<outcomeDeclaration cardinality="single" identifier="DONE"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO"/>
+	<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+	<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+	<outcomeDeclaration cardinality="single" identifier="RESET"/>
+	<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+
+	<testPart>
+		<assessmentSection>
+			<assessmentItemRef class="toc_page" href="script_00003/script_00003_000.emp.xml" identifier="ITEM_000"/>
+			<assessmentItemRef class="activity_page_no_check" href="script_00003/script_00003_001.emp.xml" identifier="ITEM_001"/>
+			<assessmentItemRef class="activity_page" href="script_00003/script_00003_002.emp.xml" identifier="ITEM_002"/>
+			<assessmentItemRef class="media_page" href="script_00003/script_00003_003.emp.xml" identifier="ITEM_003"/>
+			<assessmentItemRef class="activity_page" href="script_00003/script_00003_004.emp.xml" identifier="ITEM_004"/>
+			<assessmentItemRef class="activity_page" href="script_00003/script_00003_005.emp.xml" identifier="ITEM_005"/>
+			<assessmentItemRef class="media_page" href="script_00003/script_00003_006.emp.xml" identifier="ITEM_006"/>
+			<assessmentItemRef class="activity_page" href="script_00003/script_00003_007.emp.xml" identifier="ITEM_007"/>
+			<assessmentItemRef class="media_page" href="script_00003/script_00003_008.emp.xml" identifier="ITEM_008"/>
+			<assessmentItemRef class="media_page" href="script_00003/script_00003_009.emp.xml" identifier="ITEM_009"/>
+			<assessmentItemRef class="activity_page" href="script_00003/script_00003_010.emp.xml" identifier="ITEM_010"/>
+			<assessmentItemRef class="media_page" href="script_00003/script_00003_011.emp.xml" identifier="ITEM_011"/>
+			<assessmentItemRef class="media_page" href="script_00003/script_00003_012.emp.xml" identifier="ITEM_012"/>
+			<assessmentItemRef class="activity_page" href="script_00003/script_00003_013.emp.xml" identifier="ITEM_013"/>
+			<assessmentItemRef class="activity_page" href="script_00003/script_00003_014.emp.xml" identifier="ITEM_014"/>
+			<assessmentItemRef class="activity_page" href="script_00003/script_00003_015.emp.xml" identifier="ITEM_015"/>
+		</assessmentSection>
+	</testPart>
+</assessmentTest>

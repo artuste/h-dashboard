@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library version="1.2" loadType="internal" id="ProgressBonusLPCIct" src="ProgressBonusLPCIct.js">
+	<ext implementation="ProgressBonusLPCIct">
+		<attr name="type" value="com.yauthor.module.plugin.IEmpiriaPlugin"/>
+		<attr name="nodeName" value="progressBonusLPCIct"/>
+		<attr name="toolTip" value="progressBonusLPCIct"/>
+		<attr name="label" value="progressBonusLPCIct"/>
+		<attr name="displayName" value="progressBonusLPCIct"/>
+	</ext>
+</library>

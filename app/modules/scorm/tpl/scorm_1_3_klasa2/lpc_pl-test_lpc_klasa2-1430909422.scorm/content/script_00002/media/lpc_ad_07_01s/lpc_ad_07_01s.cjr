@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<class name="lpc_ad_07_01s" package="lpcad0701s" />
+	<properties>
+		<width value="720" />
+		<height value="405" />
+	</properties>
+		<scripts>
+			<scriptfile src="lpc_ad_07_01s.js"/>
+			<scriptfile src="lpc_ad_07_01sEngine.js"/>
+		</scripts>
+	<assets>
+		<assetfile src="sounds/GOOD.mp3" type="sound" id="GOOD"/>
+	</assets>
+	<libraries>
+			<library version="1.0.0.0" package="ydpjs">
+				<libraryfile src="ButtonDecorator.js"/>
+				<libraryfile src="Delegate.js"/>
+				
+				<libraryfile src="Slider.js"/>
+			</library>
+	</libraries>
+</manifest>
