@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="harimata_bundle.js"></script>
+    <script>
+        harimata.init('WebClient', '70fdb7b56227077c8df02c7a576f8937', 'WebClient', 'i%^+g5Xm7F.^^-F', {})
+                .then(function () {
+                    harimata.startSession({
+                        age: 4,
+                        gender: "m", // 'm' for male, 'f' for female
+                        device: "Browser",
+                        appName: "YDPApp",
+                        comment: "put comment here",
+                        disorders: "list, of, disorders",
+                        userId: "ad282f82-f8a8-11e4-a322-1697f925ec7b",
+                        login: "ydpTestLogin1"
+                    });
+                });
+
+        function send() {
+            harimata.endSession();
+        }
+    </script>
+
+    <title>HarimataTracker test page</title>
+    <style>
+        #mybox {
+            border: 2px solid red;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<button class="harimata-flow" type="button" id="harimata-flow-1">Step 1</button>
+<button class="harimata-flow" type="button" id="harimata-flow-2">Step 2</button>
+<button class="harimata-flow" type="button" id="harimata-flow-3">Step 3</button>
+<button onclick="send()">Send!</button>
+</body>
+
+<div id="mybox">
+    <div>
+</html>
