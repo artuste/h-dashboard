@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Klasa 1
+        <a ui-sref="scorm" class="pull-right"><i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+    <div class="panel-body">
+        <iframe ng-if="vm.url.scorm.klasa_1" src="{{vm.url.scorm.klasa_1}}"></iframe>
+    </div>
+    <button ng-click="vm.send()" type="button" class="btn btn-primary pull-right">Send</button>
+</div>

@@ -8,7 +8,7 @@
         .config(['$urlRouterProvider', 'toastrConfig', config]);
 
     function config($urlRouterProvider, toastrConfig) {
-        $urlRouterProvider.otherwise("/users");
+        $urlRouterProvider.otherwise("/login");
 
         angular.extend(toastrConfig, {
             allowHtml: true,

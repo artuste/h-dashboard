@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-ng-app="app">
+<html data-ng-app="app" ng-cloak>
 
 <head>
     <meta charset="utf-8">
@@ -44,9 +44,16 @@
 <body>
 <div id="main">
     <div id="header">
-        <span class="logo"><span class="glyphicon glyphicon-user"></span> Harimata Events</span>
+        <div class="container">
+            <a ui-sref="login">
+                <div class="logo">YDP/Harimata</div>
+                <div ng-if="oauth2.login" class="pull-right">
+                    <span class="logo"><span class="glyphicon glyphicon-user"></span>  {{oauth2.login}}</span>
+                </div>
+            </a>
+        </div>
         <!--<count-watchers></count-watchers>-->
-        <button class="btn btn-primary pull-right" ui-sref="login" style="margin: 7px;">Log-in</button>
+        <!--<button class="btn btn-primary pull-right" ui-sref="login" style="margin: 7px;">Log-in</button>-->
     </div>
 
     <div id="center">
@@ -105,6 +112,7 @@
 <script src="bower_components/ngstorage/ngStorage.js"></script>
 <!-- endbower -->
 
+
 <!-- i18n -->
 <!-- nl -->
 <script src="https://code.angularjs.org/1.0.3/i18n/angular-locale_nl-nl.js"></script>
@@ -126,8 +134,10 @@
 
 <!--tools-->
 <script src="app/modules/tools/tools.js"></script>
-
 <script src="app/modules/components/components.module.js"></script>
+
+<!--Integration-->
+<script src="app/modules/integration/integration.js"></script>
 
 <!--Login-->
 <script src="app/modules/login/config.js"></script>
