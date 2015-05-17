@@ -5,17 +5,32 @@
 
     angular.module('app')
         .factory('sessionService', sessionService)
-        .run(['$rootScope', '$injector', 'sessionService', function ($rootScope, $injector, sessionService) {
+            .run(['$rootScope', '$state', '$injector', 'sessionService', function ($rootScope, $state, $injector, sessionService) {
 
             console.log('sessionData', sessionService.getUserData());
 
             $rootScope.oauth2 = sessionService.getUserData();
+            $rootScope.logout = logout;
+
+            function logout() {
+                localStorage.removeItem('login');
+                localStorage.removeItem('access_token');
+
+                $rootScope.oauth2 = {};
+            }
+
+            sessionService.watchAuth();
+
         }]);
 
+
+    sessionService.$inject = ['$rootScope', '$state'];
+
     ////////////
-    function sessionService() {
+    function sessionService($rootScope, $state) {
         return {
-            getUserData: getUserData
+            getUserData: getUserData,
+            watchAuth: watchAuth
         };
 
         function getUserData() {
@@ -23,6 +38,16 @@
                 login: localStorage.getItem('login'),
                 token: localStorage.getItem('access_token')
             }
+        }
+
+        function watchAuth() {
+            $rootScope.$watch('oauth2', function (newValue, oldValue) {
+                if (!!newValue.login && !!newValue.token) {
+                    $state.go('scorm');
+                } else {
+                    $state.go('login');
+                }
+            });
         }
     }
 

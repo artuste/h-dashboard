@@ -2,14 +2,23 @@
     "use strict";
 
     angular.module('app.scorm')
-        .controller('Scorm', Scorm);
+        .controller('Scorm', Scorm)
+        .controller('ScormLessons', ScormLessons);
 
-    Scorm.$inject = ['logger', 'URLS', 'Integration'];
 
-    function Scorm(logger, URLS, Integration) {
+    Scorm.$inject = ['logger', 'URLS', 'Integration', 'sessionService'];
+
+    function Scorm(logger, URLS, Integration, sessionService) {
         /* jshint validthis: true */
         var vm = this,
             basePath = URLS.base;
+
+        activate();
+
+
+        function activate() {
+            //sessionService.watchAuth();
+        }
 
         vm.send = send;
         vm.loader = false;
@@ -34,6 +43,11 @@
                     logger.error('Dane nie zostały wysłane');
                 });
         }
+    }
+
+    function ScormLessons() {
+        /* jshint validthis: true */
+        var vm = this;
     }
 
 })();
