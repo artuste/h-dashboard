@@ -13,12 +13,6 @@
         vm.user = {};
         vm.loader = false;
 
-        // temporary
-        vm.copy = function () {
-            vm.user.username = 'WebClient';
-            vm.user.password = '70fdb7b56227077c8df02c7a576f8937';
-        };
-
         vm.login = login;
 
         activate();
@@ -44,7 +38,9 @@
                     $rootScope.oauth2 = sessionService.getUserData();
 
                     vm.loader = false;
-                    //logger.success('Zostałeś poprawnie zalogowany <b>' + localStorage.getItem('login') + '</b>');
+
+                    logger.success('Zostałeś poprawnie zalogowany <b>' + sessionService.getUserData().login + '</b>');
+                    logger.info('Sesja została rozpoczęta');
                 }, function () {
                     logger.error('Błąd!');
                     vm.loader = false;

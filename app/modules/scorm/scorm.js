@@ -45,6 +45,7 @@
                     Integration.clearCache();
                     logger.success('Dane zostały wysłane pomyślnie!');
                     // TODO: LOGOUT HERE ???????
+                    // When session is closed ?
 
                 }, function () {
                     logger.error('Dane nie zostały wysłane');
