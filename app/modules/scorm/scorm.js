@@ -5,9 +5,9 @@
         .controller('Scorm', Scorm);
 
 
-    Scorm.$inject = ['logger', 'URLS', 'Integration'];
+    Scorm.$inject = ['$state', 'logger', 'URLS', 'Integration', 'sessionService'];
 
-    function Scorm(logger, URLS, Integration) {
+    function Scorm($state, logger, URLS, Integration, sessionService) {
         /* jshint validthis: true */
         var vm = this,
             basePath = URLS.base;
@@ -16,7 +16,11 @@
 
 
         function activate() {
-            //
+            var userData = sessionService.getUserData();
+
+            if(!userData.login || !userData.token) {
+                $state.go('login');
+            }
         }
 
         vm.send = send;
