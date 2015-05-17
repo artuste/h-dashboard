@@ -4,14 +4,15 @@
     angular.module('app.scorm')
         .controller('Scorm', Scorm);
 
-    Scorm.$inject = ['URLS', 'Integration'];
+    Scorm.$inject = ['logger', 'URLS', 'Integration'];
 
-    function Scorm(URLS, Integration) {
+    function Scorm(logger, URLS, Integration) {
         /* jshint validthis: true */
         var vm = this,
             basePath = URLS.base;
 
         vm.send = send;
+        vm.loader = false;
 
         vm.url = {
             scorm: {
@@ -22,8 +23,16 @@
         };
 
         function send() {
-            Integration.endSession();
-            //Integration.clearCache();
+            vm.loader = true;
+            Integration.endSession()
+                .then(function () {
+                    vm.loader = false;
+                    Integration.clearCache();
+
+                    logger.success('Dane zostały wysłane pomyślnie!');
+                }, function () {
+                    logger.error('Dane nie zostały wysłane');
+                });
         }
     }
 

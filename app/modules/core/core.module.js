@@ -35,7 +35,8 @@
          */
         'app.login',
         'app.users',
-        'app.scorm'
+        'app.scorm',
+        'app.results'
     ]);
 
 })();

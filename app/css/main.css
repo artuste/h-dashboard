@@ -81,6 +81,49 @@
 .sample-show-hide.ng-hide {
   opacity: 0;
 }
+.spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 100px auto;
+}
+.double-bounce1,
+.double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: bounce 2s infinite ease-in-out;
+  animation: bounce 2s infinite ease-in-out;
+}
+.double-bounce2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+@-webkit-keyframes bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
 body {
   background: #fff;
 }
@@ -98,7 +141,7 @@ iframe {
   position: absolute;
   top: 0;
   left: 0;
-  background: #60B262;
+  background: #E1E5E1;
   color: #fff;
 }
 #sidebar {
@@ -111,7 +154,7 @@ iframe {
 }
 #center {
   float: left;
-  margin-top: 50px;
+  margin-top: 70px;
   width: 100%;
 }
 .action-top-bar {
@@ -123,7 +166,7 @@ iframe {
   font-size: 20px;
   padding-top: 10px;
   padding-left: 10px;
-  color: #fff;
+  color: #9F9F9F;
 }
 .logo .btbw {
   color: #E65848;
