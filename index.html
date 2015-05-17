@@ -42,9 +42,9 @@
 </head>
 
 <body>
-<div id="main">
-    <div id="header">
-        <div class="container">
+<div class="container-fluid">
+    <div id="main">
+        <div id="header">
             <div class="logo">YDP/Harimata</div>
 
             <div class="pull-right">
@@ -71,14 +71,14 @@
                             </li>
                             <li>
                                 <a href="#" ng-click="logout()">
-                                    <i class="icon-key"></i> Log Out </a>
+                                    <i class="icon-key"></i> Log-Out </a>
                             </li>
                         </ul>
 
                         <ul ng-if="!oauth2.login" class="dropdown-menu dropdown-menu-default">
                             <li>
                                 <a ui-sref="login">
-                                    <i class="icon-key"></i> Log In </a>
+                                    <i class="icon-key"></i> Log-In </a>
                             </li>
                         </ul>
                     </li>

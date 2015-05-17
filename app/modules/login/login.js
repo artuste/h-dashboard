@@ -24,18 +24,8 @@
         activate();
 
         function activate() {
-            //watchLogin();
-        }
 
-        //function watchLogin() {
-        //    $scope.$watch('oauth2', function (newValue, oldValue) {
-        //        if(!!newValue.login && !!newValue.token) {
-        //            $state.go('scorm');
-        //        } else {
-        //            debugger;
-        //        }
-        //    });
-        //}
+        }
 
         function login() {
             vm.loader = true;

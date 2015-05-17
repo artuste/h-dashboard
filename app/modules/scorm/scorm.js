@@ -2,13 +2,12 @@
     "use strict";
 
     angular.module('app.scorm')
-        .controller('Scorm', Scorm)
-        .controller('ScormLessons', ScormLessons);
+        .controller('Scorm', Scorm);
 
 
-    Scorm.$inject = ['logger', 'URLS', 'Integration', 'sessionService'];
+    Scorm.$inject = ['logger', 'URLS', 'Integration'];
 
-    function Scorm(logger, URLS, Integration, sessionService) {
+    function Scorm(logger, URLS, Integration) {
         /* jshint validthis: true */
         var vm = this,
             basePath = URLS.base;
@@ -17,7 +16,7 @@
 
 
         function activate() {
-            //sessionService.watchAuth();
+            //
         }
 
         vm.send = send;
@@ -32,22 +31,21 @@
         };
 
         function send() {
-            vm.loader = true;
+
+            // TODO:
+            // User should finished only one lesson and quit (log out) ?
+            // Or start another lesson ...
+
             Integration.endSession()
                 .then(function () {
-                    vm.loader = false;
                     Integration.clearCache();
-
                     logger.success('Dane zostały wysłane pomyślnie!');
+                    // TODO: LOGOUT HERE ???????
+
                 }, function () {
                     logger.error('Dane nie zostały wysłane');
                 });
         }
-    }
-
-    function ScormLessons() {
-        /* jshint validthis: true */
-        var vm = this;
     }
 
 })();
