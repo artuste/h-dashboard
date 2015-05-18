@@ -6,6 +6,6 @@
         <div ng-include="'app/modules/users/users.form.data.part.html'"></div>
     </div>
     <div class="panel-footer">
-        <button ng-click="vm.send()" type="button" class="btn btn-primary">Wy&#347;lij</button>
+        <button ng-disabled="vm.isDisabled" ng-click="vm.send()" type="button" class="btn btn-primary">Wy&#347;lij</button>
     </div>
 </div>

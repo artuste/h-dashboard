@@ -4,9 +4,9 @@
     angular.module('app.scorm')
         .controller('Scorm', Scorm);
 
-    Scorm.$inject = ['$state', 'logger', 'URLS', 'Integration', 'sessionService'];
+    Scorm.$inject = ['$rootScope', '$state', 'logger', 'URLS', 'Integration', 'sessionService'];
 
-    function Scorm($state, logger, URLS, Integration, sessionService) {
+    function Scorm($rootScope, $state, logger, URLS, Integration, sessionService) {
         /* jshint validthis: true */
         var vm = this,
             basePath = URLS.base;
@@ -23,7 +23,7 @@
         }
 
         vm.send = send;
-        vm.loader = false;
+        vm.isDisabled = false;
 
         vm.url = {
             scorm: {
@@ -34,7 +34,7 @@
         };
 
         function send() {
-
+            vm.isDisabled = true;
             // TODO:
             // User should finished only one lesson and quit (log out) ?
             // Or start another lesson ...
@@ -42,12 +42,22 @@
             Integration.endSession()
                 .then(function () {
                     Integration.clearCache();
+
+                    logger.info('Zostałeś wylogowany ponieważ sesja się skończyła');
                     logger.success('Dane zostały wysłane pomyślnie!');
+
+
+                    vm.isDisabled = false;
+
                     // TODO: LOGOUT HERE ???????
                     // When session is closed ?
 
+                    $rootScope.logout();
+                    $state.go('login');
+
                 }, function () {
                     logger.error('Dane nie zostały wysłane');
+                    vm.isDisabled = false;
                 });
         }
     }
