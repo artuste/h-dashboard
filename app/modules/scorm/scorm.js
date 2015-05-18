@@ -4,7 +4,6 @@
     angular.module('app.scorm')
         .controller('Scorm', Scorm);
 
-
     Scorm.$inject = ['$state', 'logger', 'URLS', 'Integration', 'sessionService'];
 
     function Scorm($state, logger, URLS, Integration, sessionService) {
