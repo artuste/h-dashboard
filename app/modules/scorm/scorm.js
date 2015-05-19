@@ -35,9 +35,6 @@
 
         function send() {
             vm.isDisabled = true;
-            // TODO:
-            // User should finished only one lesson and quit (log out) ?
-            // Or start another lesson ...
 
             Integration.endSession()
                 .then(function () {
@@ -46,15 +43,10 @@
                     logger.info('Zostałeś wylogowany ponieważ sesja się skończyła');
                     logger.success('Dane zostały wysłane pomyślnie!');
 
-
                     vm.isDisabled = false;
-
-                    // TODO: LOGOUT HERE ???????
-                    // When session is closed ?
-
                     $rootScope.logout();
-                    $state.go('login');
 
+                    $state.go('login');
                 }, function () {
                     logger.error('Dane nie zostały wysłane');
                     vm.isDisabled = false;
