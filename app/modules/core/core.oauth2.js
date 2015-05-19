@@ -7,8 +7,6 @@
         .factory('sessionService', sessionService)
             .run(['$rootScope', '$state', '$injector', 'sessionService', function ($rootScope, $state, $injector, sessionService) {
 
-            console.log('sessionData', sessionService.getUserData());
-
             $rootScope.oauth2 = sessionService.getUserData();
             $rootScope.logout = logout;
 
