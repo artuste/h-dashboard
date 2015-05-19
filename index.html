@@ -62,23 +62,32 @@
 
                 <ul ng-if="oauth2.login" class="dropdown-menu dropdown-menu-default">
                     <li>
+                        <a ui-sref="mood-first">
+                            <i class="icon-rocket"></i> KROK 1: Ocena ogólnego nastroju
+                        </a>
                         <a ui-sref="scorm">
-                            <i class="icon-rocket"></i> Moje lekcje
+                            <i class="icon-rocket"></i> KROK 2: Lekcie LPC
                             <span class="badge badge-primary">3</span>
+                        </a>
+                        <a ui-sref="mood-last">
+                            <i class="icon-rocket"></i> KROK 3: Ocena końcowa nastroju
+                        </a>
+                        <a ui-sref="scorm-form">
+                            <i class="icon-rocket"></i> KROK 4: Formularz
                         </a>
                     </li>
                     <li class="divider">
                     </li>
                     <li>
                         <a href="#" ng-click="logout()">
-                            <i class="icon-key"></i> Log Out </a>
+                            <i class="icon-key"></i> Wyloguj </a>
                     </li>
                 </ul>
 
                 <ul ng-if="!oauth2.login" class="dropdown-menu dropdown-menu-default">
                     <li>
                         <a ui-sref="login">
-                            <i class="icon-key"></i> Log In </a>
+                            <i class="icon-key"></i> Zaloguj </a>
                     </li>
                 </ul>
             </li>
@@ -197,6 +206,11 @@
 <script src="app/modules/results/config.js"></script>
 <script src="app/modules/results/results.module.js"></script>
 <script src="app/modules/results/results.js"></script>
+
+<!--Mood-->
+<script src="app/modules/mood/config.js"></script>
+<script src="app/modules/mood/mood.module.js"></script>
+<script src="app/modules/mood/mood.js"></script>
 
 <!-- end AngularJS app files -->
 

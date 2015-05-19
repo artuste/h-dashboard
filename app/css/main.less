@@ -162,3 +162,66 @@ iframe {
 .legend img{
   vertical-align: bottom;
 }
+
+//Mood
+
+.mood {
+  //border: 0;
+  background-repeat: no-repeat;
+
+  //label > input{ /* HIDE RADIO */
+  //  display:none;
+  //}
+  //label { /* IMAGE STYLES */
+  //  cursor:pointer;
+  //  border:2px solid transparent;
+  //}
+  //label > input:checked { /* (CHECKED) IMAGE STYLES */
+  //  border:2px solid #f00;
+  //}
+
+  .mood-first {
+    background-image: url('../img/rys_1.png');
+    width: 134px;
+    height: 147px;
+    &.joyful {
+      background-position: 2px 0px;
+    }
+    &.interested {
+      background-position: -156px 0px;
+    }
+    &.calm {
+      background-position: -316px 0px;
+    }
+    &.worried {
+      background-position: -462px 0px;
+    }
+    &.sad {
+      background-position: 8px -159px;
+    }
+    &.bored {
+      background-position: -153px -159px;
+    }
+    &.upset {
+      background-position: -319px -159px;
+    }
+    &.sleepy {
+      background-position: -456px -159px;
+    }
+  }
+
+  .mood-last {
+    background-image: url('../img/rys_2.png');
+    width: 174px;
+    height: 212px;
+    &.like-it-not {
+      background-position: 2px 0px;
+    }
+    &.so-so {
+      background-position: -187px 0px;
+    }
+    &.like-it {
+      background-position: -361px 0px;
+    }
+  }
+}
