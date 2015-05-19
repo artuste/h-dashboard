@@ -5,9 +5,10 @@
         .constant('URLS', {
             base: window.location.origin
         })
-        .config(['$urlRouterProvider', 'toastrConfig', config]);
+        .config(['$locationProvider', '$urlRouterProvider', 'toastrConfig', config]);
 
-    function config($urlRouterProvider, toastrConfig) {
+    function config($locationProvider, $urlRouterProvider, toastrConfig) {
+        //$locationProvider.html5Mode(true);
         $urlRouterProvider.otherwise("/login");
 
         angular.extend(toastrConfig, {
