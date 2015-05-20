@@ -10,7 +10,7 @@
 
         $stateProvider
             .state('mood-first', {
-                url: '/mood-first',
+                url: '/mood-first/:id',
                 templateUrl: basePath + '/app/modules/mood/mood.first.tpl.html',
                 controller: 'MoodFirst',
                 controllerAs: 'vm'

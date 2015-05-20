@@ -5,9 +5,18 @@
         .controller('MoodFirst', MoodFirst)
         .controller('MoodLast', MoodLast);
 
-    function MoodFirst() {
+    MoodFirst.$inject = ['$state'];
+
+    function MoodFirst($state) {
         /* jshint validthis: true */
         var vm = this;
+
+        vm.id = parseInt($state.params.id);
+        vm.next = next;
+
+        function next(id) {
+            $state.go('klasa_' + id);
+        }
     }
 
     function MoodLast() {

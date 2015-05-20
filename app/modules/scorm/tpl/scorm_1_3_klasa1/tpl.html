@@ -1,9 +1,11 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         Klasa 1
-        <a ui-sref="mood-last" class="pull-right btn btn-xs btn-primary">Dalej</a>
     </div>
     <div class="panel-body">
         <iframe ng-if="vm.url.scorm.klasa_1" src="{{vm.url.scorm.klasa_1}}"></iframe>
+    </div>
+    <div class="panel-footer">
+        <a ui-sref="mood-last" class="btn btn-primary">Dalej</a>
     </div>
 </div>

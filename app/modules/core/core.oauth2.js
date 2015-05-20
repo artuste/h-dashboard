@@ -41,7 +41,7 @@
         function watchAuth() {
             $rootScope.$watch('oauth2', function (newValue, oldValue) {
                 if (!!newValue.login && !!newValue.token) {
-                    $state.go('mood-first');
+                    $state.go('scorm');
                 } else {
                     $state.go('login');
                 }

@@ -47,6 +47,7 @@
                     $rootScope.logout();
 
                     $state.go('login');
+                    logger.success('Dane zostały wysłane pomyślnie!');
                 }, function () {
                     logger.error('Dane nie zostały wysłane');
                     vm.isDisabled = false;
