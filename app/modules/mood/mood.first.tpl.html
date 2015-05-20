@@ -1,79 +1,83 @@
 <div class="panel panel-default">
-    <div class="panel-heading">
-        Ocena og&#243;lnego nastroju
-    </div>
-    <div class="panel-body">
-        <div class="container">
-            <div class="row mood">
-                <div class="col-xs-6 col-md-3 text-center">
+    <form name="moodForm">
+        <div class="panel-heading">
+            Ocena og&#243;lnego nastroju
+        </div>
+        <div class="panel-body">
+            <div class="container">
+                <div class="row mood">
 
-                    <label class="mood-first joyful">
-                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="joyful"/>
+                    <div class="col-xs-6 col-md-3 text-center">
 
-                        <div class="pointer"></div>
-                    </label>
-                </div>
+                        <label class="mood-first joyful">
+                            <input required ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="joyful"/>
 
-                <div class="col-xs-6 col-md-3 text-center">
-                    <label class="mood-first interested">
-                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="interested"/>
+                            <div class="pointer"></div>
+                        </label>
+                    </div>
 
-                        <div class="pointer"></div>
-                    </label>
-                </div>
+                    <div class="col-xs-6 col-md-3 text-center">
+                        <label class="mood-first interested">
+                            <input ng-model="vm.data.moodFirst" required type="radio" name="moodFirst" value="interested"/>
 
-                <div class="col-xs-6 col-md-3 text-center">
-                    <label class="mood-first calm">
-                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="calm"/>
+                            <div class="pointer"></div>
+                        </label>
+                    </div>
 
-                        <div class="pointer"></div>
-                    </label>
-                </div>
+                    <div class="col-xs-6 col-md-3 text-center">
+                        <label class="mood-first calm">
+                            <input ng-model="vm.data.moodFirst" required type="radio" name="moodFirst" value="calm"/>
 
-                <div class="col-xs-6 col-md-3 text-center">
-                    <label class="mood-first worried">
-                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="worried"/>
+                            <div class="pointer"></div>
+                        </label>
+                    </div>
 
-                        <div class="pointer"></div>
-                    </label>
-                </div>
+                    <div class="col-xs-6 col-md-3 text-center">
+                        <label class="mood-first worried">
+                            <input ng-model="vm.data.moodFirst" required type="radio" name="moodFirst" value="worried"/>
 
-                <div class="col-xs-6 col-md-3 text-center">
-                    <label class="mood-first sad">
-                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="sad"/>
+                            <div class="pointer"></div>
+                        </label>
+                    </div>
 
-                        <div class="pointer"></div>
-                    </label>
-                </div>
+                    <div class="col-xs-6 col-md-3 text-center">
+                        <label class="mood-first sad">
+                            <input ng-model="vm.data.moodFirst" required type="radio" name="moodFirst" value="sad"/>
 
-                <div class="col-xs-6 col-md-3 text-center">
-                    <label class="mood-first bored">
-                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="bored"/>
+                            <div class="pointer"></div>
+                        </label>
+                    </div>
 
-                        <div class="pointer"></div>
-                    </label>
-                </div>
+                    <div class="col-xs-6 col-md-3 text-center">
+                        <label class="mood-first bored">
+                            <input ng-model="vm.data.moodFirst" required type="radio" name="moodFirst" value="bored"/>
 
-                <div class="col-xs-6 col-md-3 text-center">
-                    <label class="mood-first upset">
-                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="upset"/>
+                            <div class="pointer"></div>
+                        </label>
+                    </div>
 
-                        <div class="pointer"></div>
-                    </label>
-                </div>
+                    <div class="col-xs-6 col-md-3 text-center">
+                        <label class="mood-first upset">
+                            <input ng-model="vm.data.moodFirst" required type="radio" name="moodFirst" value="upset"/>
 
-                <div class="col-xs-6 col-md-3 text-center">
-                    <label class="mood-first sleepy">
-                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="sleepy"/>
+                            <div class="pointer"></div>
+                        </label>
+                    </div>
 
-                        <div class="pointer"></div>
-                    </label>
+                    <div class="col-xs-6 col-md-3 text-center">
+                        <label class="mood-first sleepy">
+                            <input ng-model="vm.data.moodFirst" required type="radio" name="moodFirst" value="sleepy"/>
+
+                            <div class="pointer"></div>
+                        </label>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </div>
-    <div class="panel-footer">
-        <a class="btn btn-primary" ui-sref="scorm">Powr&#243;t</a>
-        <button class="btn btn-primary" ng-click="vm.next(vm.data.classId)">Dalej</button>
-    </div>
+        <div class="panel-footer">
+            <a class="btn btn-primary" ui-sref="scorm">Powr&#243;t</a>
+            <button ng-disabled="!vm.data.moodFirst" class="btn btn-primary" ng-click="vm.next(vm.data.classId)">Dalej</button>
+        </div>
+    </form>
 </div>

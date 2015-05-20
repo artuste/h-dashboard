@@ -13,7 +13,7 @@
         var vm = this;
 
         vm.data = HData.getData();
-        vm.data.moodFirst = {};
+        vm.data.moodFirst = null;
         vm.data.classId = parseInt($state.params.id);
 
         vm.next = next;
@@ -28,7 +28,7 @@
         var vm = this;
 
         vm.data = HData.getData();
-        vm.data.moodLast = {};
+        vm.data.moodLast = null;
     }
 
 })();
