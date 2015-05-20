@@ -64,19 +64,20 @@
 
                 <ul ng-if="oauth2.login" class="dropdown-menu dropdown-menu-default">
                     <li>
-                        <a ui-sref="mood-first">
-                            <i class="icon-rocket"></i> KROK 1: Ocena ogólnego nastroju
-                        </a>
                         <a ui-sref="scorm">
-                            <i class="icon-rocket"></i> KROK 2: Lekcie LPC
+                            <i class="icon-rocket"></i> Lekcie LPC
                             <span class="badge badge-primary">3</span>
                         </a>
-                        <a ui-sref="mood-last">
-                            <i class="icon-rocket"></i> KROK 3: Ocena końcowa nastroju
-                        </a>
-                        <a ui-sref="scorm-form">
-                            <i class="icon-rocket"></i> KROK 4: Formularz
-                        </a>
+                        <!--<a ui-sref="mood-first">-->
+                            <!--<i class="icon-rocket"></i> KROK 2: Ocena ogólnego nastroju-->
+                        <!--</a>-->
+                        <!--<span>Wybrana lekcja</span>-->
+                        <!--<a ui-sref="mood-last">-->
+                            <!--<i class="icon-rocket"></i> KROK 3: Ocena końcowa nastroju-->
+                        <!--</a>-->
+                        <!--<a ui-sref="scorm-form">-->
+                            <!--<i class="icon-rocket"></i> KROK 4: Formularz-->
+                        <!--</a>-->
                     </li>
                     <li class="divider">
                     </li>
@@ -106,6 +107,10 @@
 
 <div id="center">
     <div class="container">
+
+        <!--Form object-->
+        <form-data></form-data>
+
         <section>
             <div class="page-container">
                 <div class="page-content-wrapper">
@@ -183,6 +188,7 @@
 <!--tools-->
 <script src="app/modules/tools/tools.js"></script>
 <script src="app/modules/components/components.module.js"></script>
+<script src="app/modules/components/formData.js"></script>
 
 <!--Integration-->
 <script src="app/modules/integration/integration.js"></script>
