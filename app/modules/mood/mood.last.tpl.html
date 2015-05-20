@@ -3,11 +3,12 @@
         Ocena ko&#324;cowa nastroju
     </div>
     <div class="panel-body">
+        <pre>{{ vm.data | json }}</pre>
         <div class="row mood">
             <div class="container">
                 <div class="col-md-4 text-center">
                     <label class="mood-last like-it-not">
-                        <input type="radio" name="moodLast" value="like-it-not"/>
+                        <input ng-model="vm.data.moodLast" type="radio" name="moodLast" value="like-it-not"/>
 
                         <div class="pointer"></div>
                     </label>
@@ -15,7 +16,7 @@
 
                 <div class="col-md-4 text-center">
                     <label class="mood-last so-so">
-                        <input type="radio" name="moodLast" value="so-so"/>
+                        <input ng-model="vm.data.moodLast" type="radio" name="moodLast" value="so-so"/>
 
                         <div class="pointer"></div>
                     </label>
@@ -23,7 +24,7 @@
 
                 <div class="col-md-4 text-center">
                     <label class="mood-last like-it">
-                        <input type="radio" name="moodLast" value="like-it"/>
+                        <input ng-model="vm.data.moodLast" type="radio" name="moodLast" value="like-it"/>
 
                         <div class="pointer"></div>
                     </label>

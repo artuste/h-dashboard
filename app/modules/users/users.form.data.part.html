@@ -6,7 +6,7 @@
             <label class="control-label" for="gender">Płeć</label>
 
             <div class="controls">
-                <select id="gender" class="form-control">
+                <select ng-model="vm.data.form.gender" id="gender" class="form-control">
                     <option>Kobieta</option>
                     <option>Mężczyzna</option>
                 </select>
@@ -18,7 +18,7 @@
             <label class="control-label" for="age">Podaj wiek</label>
 
             <div class="controls">
-                <input id="age" name="age" type="number" placeholder="Podaj wiek" class="form-control">
+                <input ng-model="vm.data.form.age" id="age" name="age" type="number" placeholder="Podaj wiek" class="form-control">
             </div>
         </div>
 
@@ -27,7 +27,7 @@
             <label class="control-label" for="device">Urządzenie</label>
 
             <div class="controls">
-                <select id="device" name="device" class="form-control">
+                <select ng-model="vm.data.form.device" id="device" name="device" class="form-control">
                     <option>Komputer</option>
                     <option>Tablet</option>
                     <option>Telefon</option>
@@ -40,7 +40,7 @@
             <label class="control-label" for="age">Dysfunkcja</label>
 
             <div class="controls">
-                <textarea class="form-control" rows="5"></textarea>
+                <textarea ng-model="vm.data.form.disfunction" class="form-control" rows="5"></textarea>
             </div>
         </div>
     </fieldset>

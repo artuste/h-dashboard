@@ -4,20 +4,29 @@
     angular.module('app.scorm')
         .controller('Scorm', Scorm);
 
-    Scorm.$inject = ['$rootScope', '$state', 'logger', 'URLS', 'Integration', 'sessionService'];
+    Scorm.$inject = [
+        '$rootScope',
+        '$state',
+        'logger',
+        'URLS',
+        'Integration',
+        'sessionService',
+        'HData'
+    ];
 
-    function Scorm($rootScope, $state, logger, URLS, Integration, sessionService) {
+    function Scorm($rootScope, $state, logger, URLS, Integration, sessionService, HData) {
         /* jshint validthis: true */
         var vm = this,
             basePath = URLS.base;
 
         activate();
 
-
         function activate() {
             var userData = sessionService.getUserData();
 
-            if(!userData.login || !userData.token) {
+            vm.data = HData.getData();
+
+            if (!userData.login || !userData.token) {
                 $state.go('login');
             }
         }

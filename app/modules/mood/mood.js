@@ -5,13 +5,17 @@
         .controller('MoodFirst', MoodFirst)
         .controller('MoodLast', MoodLast);
 
-    MoodFirst.$inject = ['$state'];
+    MoodFirst.$inject = ['$state', 'HData'];
+    MoodLast.$inject = ['HData'];
 
-    function MoodFirst($state) {
+    function MoodFirst($state, HData) {
         /* jshint validthis: true */
         var vm = this;
 
-        vm.id = parseInt($state.params.id);
+        vm.data = HData.getData();
+        vm.data.moodFirst = {};
+        vm.data.classId = parseInt($state.params.id);
+
         vm.next = next;
 
         function next(id) {
@@ -19,9 +23,12 @@
         }
     }
 
-    function MoodLast() {
+    function MoodLast(HData) {
         /* jshint validthis: true */
         var vm = this;
+
+        vm.data = HData.getData();
+        vm.data.moodLast = {};
     }
 
 })();

@@ -2,7 +2,8 @@
     "use strict";
 
     angular.module('app')
-        .factory('Integration', Integration);
+        .factory('Integration', Integration)
+        .factory('HData', HData);
 
     function Integration() {
         return {
@@ -40,6 +41,23 @@
 
         function getAssessment() {
             return harimata.getAssessment();
+        }
+    }
+
+    var _model = {};
+
+    function HData() {
+        return {
+            getData: getData,
+            clear: clear
+        };
+
+        function getData() {
+            return _model;
+        }
+
+        function clear() {
+            _model = {};
         }
     }
 
