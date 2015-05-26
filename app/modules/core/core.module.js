@@ -29,6 +29,7 @@
         'angular-lodash',
         'LocalStorageModule',
         'ng-token-auth',
+        'chart.js',
 
         /*
          * Feature areas
