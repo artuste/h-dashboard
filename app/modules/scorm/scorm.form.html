@@ -1,14 +1,17 @@
-<div class="panel panel-default">
-    <div class="panel-heading">
-        Formularz
-    </div>
-    <div class="panel-body">
-        <div ng-include="'app/modules/users/users.form.data.part.html'"></div>
+<form name="form" role="form">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Formularz
+        </div>
+        <div class="panel-body">
+            <div ng-include="'app/modules/users/users.form.data.part.html'"></div>
+        </div>
     </div>
     <div class="panel-footer">
         <a class="btn btn-primary" href="/#/mood-last">Powr&#243;t</a>
-        <button ng-disabled="vm.isDisabled"
+        <button ng-disabled="vm.isDisabled || form.$invalid"
                 ng-click="vm.send()"
-                type="button" class="btn btn-primary">Zapisz i wyloguj</button>
+                type="button" class="btn btn-primary">Zapisz i wyloguj
+        </button>
     </div>
-</div>
+</form>

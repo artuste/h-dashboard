@@ -8,7 +8,7 @@
                 <div class="col-xs-6 col-md-3 text-center">
 
                     <label class="mood-first joyful">
-                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="joyful"/>
+                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="joyful" required/>
 
                         <div class="pointer"></div>
                     </label>
@@ -16,7 +16,8 @@
 
                 <div class="col-xs-6 col-md-3 text-center">
                     <label class="mood-first interested">
-                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="interested"/>
+                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="interested"
+                               required/>
 
                         <div class="pointer"></div>
                     </label>
@@ -24,7 +25,7 @@
 
                 <div class="col-xs-6 col-md-3 text-center">
                     <label class="mood-first calm">
-                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="calm"/>
+                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="calm" required/>
 
                         <div class="pointer"></div>
                     </label>
@@ -32,7 +33,7 @@
 
                 <div class="col-xs-6 col-md-3 text-center">
                     <label class="mood-first worried">
-                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="worried"/>
+                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="worried" required/>
 
                         <div class="pointer"></div>
                     </label>
@@ -40,7 +41,7 @@
 
                 <div class="col-xs-6 col-md-3 text-center">
                     <label class="mood-first sad">
-                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="sad"/>
+                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="sad" required/>
 
                         <div class="pointer"></div>
                     </label>
@@ -48,7 +49,7 @@
 
                 <div class="col-xs-6 col-md-3 text-center">
                     <label class="mood-first bored">
-                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="bored"/>
+                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="bored" required/>
 
                         <div class="pointer"></div>
                     </label>
@@ -56,7 +57,7 @@
 
                 <div class="col-xs-6 col-md-3 text-center">
                     <label class="mood-first upset">
-                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="upset"/>
+                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="upset" required/>
 
                         <div class="pointer"></div>
                     </label>
@@ -64,7 +65,7 @@
 
                 <div class="col-xs-6 col-md-3 text-center">
                     <label class="mood-first sleepy">
-                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="sleepy"/>
+                        <input ng-model="vm.data.moodFirst" type="radio" name="moodFirst" value="sleepy" required/>
 
                         <div class="pointer"></div>
                     </label>
@@ -74,6 +75,9 @@
     </div>
     <div class="panel-footer">
         <a class="btn btn-primary" ui-sref="scorm">Powr&#243;t</a>
-        <button class="btn btn-primary" ng-click="vm.next(vm.data.classId)">Dalej</button>
+        <button ng-disabled="!vm.data.moodFirst.length"
+                class="btn btn-primary"
+                ng-click="vm.next(vm.data.classId)">Dalej
+        </button>
     </div>
 </div>
