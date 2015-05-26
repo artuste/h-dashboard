@@ -44,9 +44,10 @@
         }
     }
 
-    var _model = {};
 
     function HData() {
+        var _model = {};
+
         return {
             getData: getData,
             clear: clear
