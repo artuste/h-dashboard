@@ -1,6 +1,13 @@
 <h3>Lekcje LPC</h3>
 <hr />
 
+<!--CSV Example-->
+<button class="btn btn-default"
+        ng-csv="vm.getArray" filename="{{ vm.filename }}.csv">
+    Export to CSV
+</button>
+<hr />
+
 <div class="row">
     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
         <div class="dashboard-stat blue-madison">

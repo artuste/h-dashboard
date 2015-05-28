@@ -22,6 +22,9 @@
         activate();
 
         function activate() {
+            // test
+            csv();
+
             var userData = sessionService.getUserData();
 
             vm.data = HData.getData();
@@ -29,6 +32,21 @@
             if (!userData.login || !userData.token) {
                 $state.go('login');
             }
+        }
+
+        function csv() {
+            vm.filename = "test";
+            vm.getArray = [{a: 1, b:2}, {a:3, b:4}];
+
+            vm.addRandomRow = function() {
+                vm.getArray.push({a: Math.floor((Math.random()*10)+1), b: Math.floor((Math.random()*10)+1)});
+            };
+
+            vm.getHeader = function () {return ["A", "B"]};
+
+            vm.clickFn = function() {
+                console.log("click click click");
+            };
         }
 
         vm.send = send;

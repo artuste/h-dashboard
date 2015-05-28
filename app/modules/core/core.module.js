@@ -7,20 +7,21 @@
          */
         'ngRoute',
         'ngAnimate',
-        'toastr',
+        'ngSanitize',
         'ngResource',
-        'pascalprecht.translate',
-        'ui.router',
 
         /*
          * Our reusable cross app code modules
          */
-        'tools', 'ui.components',
+        'tools',
+        'ui.components',
 
         /*
          * 3rd Party modules
          */
-        //'angular-oauth2',
+        'toastr',
+        'pascalprecht.translate',
+        'ui.router',
         'ui.utils',
         'ui.bootstrap',
         'angularMoment',
@@ -30,6 +31,7 @@
         'LocalStorageModule',
         'ng-token-auth',
         'chart.js',
+        'ngCsv',
 
         /*
          * Feature areas
