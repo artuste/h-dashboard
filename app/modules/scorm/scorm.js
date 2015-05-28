@@ -53,7 +53,7 @@
 
         vm.send = send;
         vm.isDisabled = false;
-        vm.isFullScreen = false;
+        vm.isFullScreen = true;
 
 
         // working scorm

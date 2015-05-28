@@ -2,10 +2,9 @@
         ng-class="{'portlet-full-screen': vm.isFullScreen}">
     <div class="panel-heading">
         Klasa 1
-        <button class="btn btn-xs btn-primary pull-right"
-                ng-click="vm.toggleFullScreen()">
-            <i class="glyphicon {{ vm.isFullScreen ? 'glyphicon-resize-small' : 'glyphicon-resize-full' }}"></i>
-        </button>
+        <i style="cursor: pointer" ng-click="vm.toggleFullScreen()"
+           class="pull-right glyphicon {{ vm.isFullScreen ? 'glyphicon-resize-small' : 'glyphicon-resize-full' }}">
+        </i>
     </div>
     <div class="panel-body">
         <iframe class="harimata-flow"
