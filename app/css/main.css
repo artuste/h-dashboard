@@ -334,3 +334,10 @@ iframe {
 .mood .mood-last.like-it {
   background-position: -361px 0px;
 }
+.portlet-full-screen {
+  position: absolute;
+  top: -130px;
+  left: -20px;
+  width: 103%;
+  height: 100%;
+}

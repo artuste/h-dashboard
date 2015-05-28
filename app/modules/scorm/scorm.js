@@ -19,6 +19,8 @@
         var vm = this,
             basePath = URLS.base;
 
+        vm.toggleFullScreen = toggleFullScreen;
+
         activate();
 
         function activate() {
@@ -51,6 +53,7 @@
 
         vm.send = send;
         vm.isDisabled = false;
+        vm.isFullScreen = false;
 
 
         // working scorm
@@ -63,6 +66,14 @@
                 klasa_3: basePath + "/app/modules/scorm/tpl/scorm_1_3_klasa3/lpc_pl-test_lpc_klasa3/proxy/scorm13/script_00003.emt.html"
             }
         };
+
+        function toggleFullScreen() {
+            if(vm.isFullScreen === false) {
+                vm.isFullScreen = true;
+            } else {
+                vm.isFullScreen = false;
+            }
+        }
 
         function send() {
             vm.isDisabled = true;
