@@ -340,4 +340,5 @@ iframe {
   left: -20px;
   width: 103%;
   height: 100%;
+  z-index: 1;
 }
