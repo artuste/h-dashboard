@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.3.249" identifier="ITEM_011" playerVersion="1.9.0" timeDependent="false" title="Cloze draggable – Addition or subtraction">
+<styleDeclaration><link href="../common/default2.css" userAgent=".*"/><link href="../common/default.css" userAgent=".*"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>8</value>
+		</defaultValue>
+	</outcomeDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_1-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_1-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_1-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_1-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_1-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_1-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_1-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_1-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_1">
+					<correctResponse>
+						<value forIndex="0">4 — 2</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_2-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_2-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_2-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_2-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_2-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_2-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_2-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_2-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_2">
+					<correctResponse>
+						<value forIndex="0">3 + 1</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_3-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_3-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_3-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_3-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_3-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_3-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_3-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_3-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_3">
+					<correctResponse>
+						<value forIndex="0">1 + 2</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_4-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_4-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_4-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_4-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_4-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_4-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DRAG_RESPONSE_4-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DRAG_RESPONSE_4-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DRAG_RESPONSE_4">
+					<correctResponse>
+						<value forIndex="0">2 — 1</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_4-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_4-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_4-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_4-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_4-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_4-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_4-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_4-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_4">
+					<correctResponse>
+						<value forIndex="0">50</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_5-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_5-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_5-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_5-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_5-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_5-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_5-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_5-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_5">
+					<correctResponse>
+						<value forIndex="0">52</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_6-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_6-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_6-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_6-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_6-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_6-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_6-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_6-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_6">
+					<correctResponse>
+						<value forIndex="0">51</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_7-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_7-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_7-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_7-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_7-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_7-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_7-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_7-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_7">
+					<correctResponse>
+						<value forIndex="0">49</value>
+					</correctResponse>
+				</responseDeclaration>
+		<itemBody>
+
+
+<div class="emp_header">
+	<div class="emp_header_navi">
+		<div class="emp_header_navi_inset emp_header_activity">
+			<div class="emp_button emp_home_button"><link itemIndex="0"><shape class="emp_home_container"/></link></div>
+			
+			<div class="emp_info_page_title"><div class="emp_info_page_title_inset"><info class="info_page_title"/></div></div>
+			<div class="emp_info_page_counter"><div class="emp_info_page_counter_inset"><info class="info_page_counter"/></div></div>	
+		</div>	
+	</div>	
+</div>
+
+<div class="emp_content">
+	<div class="emp_content_container emp_bg_activity">
+		
+		<div class="emp_content_center">
+			<div class="emp_content_prev"><prevItemNavigation class="emp_button"/></div>
+
+			<div class="emp_activity_page">
+				<div class="emp_activity_title">
+					<div class="emp_activity_title_audio"><audioPlayer data="media/lpc_ma_007_06.mp3" id="dummy1">
+<source src="media/lpc_ma_007_06.mp3" type="audio/mp4"/>	</audioPlayer></div>
+					<div class="emp_activity_title_text"><simpleText id="dummy2">
+Match the expressions with pictures and calculate.</simpleText></div>
+				</div>
+				<div class="emp_activity_content">
+					<div class="emp_activities">
+						<group id="dummy3">
+	<table class="emp_center" id="dummy3_1">
+	<feedbacks>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="wrong"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/wrong.mp3" type="narration">
+								<source src="media/wrong.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+		<feedback>
+			<condition>
+				<and>
+		<propertyCondition property="ok"/>
+				</and>
+			</condition>
+		<action>
+			<showText/>
+				<showUrl href="media/ok.mp3" type="narration">
+								<source src="media/ok.mp3" type="audio/mp4"/>
+				</showUrl>
+		</action>
+		</feedback>
+	</feedbacks>
+	<tr>
+		<td>
+<simpleText><img class="" src="media/lpc_ma_007_i03.png"/></simpleText>		</td>
+		<td>
+<simpleText>                </simpleText>		</td>
+		<td>
+<simpleText><img class="" src="media/lpc_ma_007_i04.png"/></simpleText>		</td>
+	</tr>
+	<tr>
+		<td>
+
+<textInteraction id="dummy3_1_x0y1">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_1" sourcelistId="defaultSourceListId"/><span> = </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_4" shuffle="false">
+			<inlineChoice identifier="49">1</inlineChoice>
+			<inlineChoice identifier="50">2</inlineChoice>
+			<inlineChoice identifier="51">3</inlineChoice>
+			<inlineChoice identifier="52">4</inlineChoice>
+		</inlineChoiceInteraction></textInteraction>		</td>
+		<td>
+<simpleText>                </simpleText>		</td>
+		<td>
+
+<textInteraction id="dummy3_1_x2y1">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_2" sourcelistId="defaultSourceListId"/><span> = </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_5" shuffle="false">
+			<inlineChoice identifier="49">1</inlineChoice>
+			<inlineChoice identifier="50">2</inlineChoice>
+			<inlineChoice identifier="51">3</inlineChoice>
+			<inlineChoice identifier="52">4</inlineChoice>
+		</inlineChoiceInteraction></textInteraction>		</td>
+	</tr>
+	<tr>
+		<td>
+<simpleText> </simpleText>		</td>
+		<td>
+<simpleText> </simpleText>		</td>
+		<td>
+<simpleText> </simpleText>		</td>
+	</tr>
+	<tr>
+		<td>
+<simpleText><img class="" src="media/lpc_ma_007_i05.png"/></simpleText>		</td>
+		<td>
+<simpleText>                </simpleText>		</td>
+		<td>
+<simpleText><img class="" src="media/lpc_ma_007_i06.png"/></simpleText>		</td>
+	</tr>
+	<tr>
+		<td>
+
+<textInteraction id="dummy3_1_x0y4">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_3" sourcelistId="defaultSourceListId"/><span> = </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_6" shuffle="false">
+			<inlineChoice identifier="49">1</inlineChoice>
+			<inlineChoice identifier="50">2</inlineChoice>
+			<inlineChoice identifier="51">3</inlineChoice>
+			<inlineChoice identifier="52">4</inlineChoice>
+		</inlineChoiceInteraction></textInteraction>		</td>
+		<td>
+<simpleText>                </simpleText>		</td>
+		<td>
+
+<textInteraction id="dummy3_1_x2y4">
+<dragInteraction responseIdentifier="DRAG_RESPONSE_4" sourcelistId="defaultSourceListId"/><span> = </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_7" shuffle="false">
+			<inlineChoice identifier="49">1</inlineChoice>
+			<inlineChoice identifier="50">2</inlineChoice>
+			<inlineChoice identifier="51">3</inlineChoice>
+			<inlineChoice identifier="52">4</inlineChoice>
+		</inlineChoiceInteraction></textInteraction>		</td>
+	</tr>
+</table>
+			
+	<sourceList id="dummy3_2" moveElements="false" shuffle="true" sourcelistId="defaultSourceListId">
+				<simpleSourceListItem alt="4 — 2">4 — 2</simpleSourceListItem>
+				<simpleSourceListItem alt="3 + 1">3 + 1</simpleSourceListItem>
+				<simpleSourceListItem alt="1 + 2">1 + 2</simpleSourceListItem>
+				<simpleSourceListItem alt="2 — 1">2 — 1</simpleSourceListItem>
+	</sourceList>
+</group>
+					</div>	
+					
+					<!-- cannot find module for dummy 'dummy4'!-->
+					<!-- cannot find module for dummy 'dummy5'!-->
+					<!-- cannot find module for dummy 'dummy6'!-->
+					<!-- cannot find module for dummy 'dummy7'!-->
+					<!-- cannot find module for dummy 'dummy8'!-->
+					<!-- cannot find module for dummy 'dummy9'!-->
+					<!-- cannot find module for dummy 'dummy10'!-->
+				
+				</div>
+			</div>
+										
+			<div class="emp_content_next"><nextItemNavigation class="emp_button"/></div>
+			
+			<div class="emp_activity_buttons">
+				<div class="emp_activity_buttons_inset">
+					<markAllButton class="emp_button" id="markAnswers"/>
+					<showAnswersButton class="emp_button" id="showAnswers"/>
+					<resetButton class="emp_button" id="reset"/>
+				</div>
+			</div>
+
+			<div class="emp_button emp_home_button_down"><link itemIndex="0"><shape class="emp_home_container"/></link></div>
+
+			<textFeedback id="textFeedback"/>
+			
+			<div class="emp_character"/>
+			
+			<tutor tutorId="tutor1"/>
+			<bonus bonusId="bonus1"/>	
+		</div>	
+		
+	</div>	
+</div>
+		</itemBody>
+</assessmentItem>

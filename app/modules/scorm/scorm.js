@@ -52,6 +52,10 @@
         vm.send = send;
         vm.isDisabled = false;
 
+
+        // working scorm
+        //'http://localhost:1338/app/modules/scorm/tpl/lower_primary_curriculum_demo_tech/scorm-emt.html?sco=content%2Fscript_00001.emt.xml&title=Selection+of+Multimedia+and+Activity+Screens&api=13'
+
         vm.url = {
             scorm: {
                 klasa_1: basePath + "/app/modules/scorm/tpl/scorm_1_3_klasa1/lpc_pl-test_lpc_klasa1/proxy/scorm13/script_00001.emt.html",

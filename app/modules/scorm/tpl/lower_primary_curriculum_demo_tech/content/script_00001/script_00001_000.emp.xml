@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.3.249" identifier="ITEM_000" playerVersion="1.9.0" timeDependent="false" title="Lesson contents">
+<styleDeclaration><link href="../common/default2.css" userAgent=".*"/><link href="../common/default.css" userAgent=".*"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+		<itemBody>
+
+
+<div class="emp_header">
+	<div class="emp_header_navi">
+		<div class="emp_header_navi_inset emp_header_info">
+			<div class="emp_button emp_home_button emp_home_button_blank"/>
+			<div class="emp_info_page_title"><div class="emp_info_page_title_inset"><info class="info_page_title"/></div></div>
+			<div class="emp_info_page_counter"><div class="emp_info_page_counter_inset"><info class="info_page_counter"/></div></div>
+		</div>	
+	</div>	
+</div>
+
+<div class="emp_content">
+	<div class="emp_content_container emp_bg_toc">
+		
+		<div class="emp_content_center">
+			<div class="emp_content_prev"/>
+
+
+
+			<div class="emp_toc_page">
+				<div>
+				
+					<report class="toc-page">
+					  <prr>
+						<rd>
+						  <div class="emp_content_icon"><link><info class="info_content_title"/></link></div>
+						</rd>
+					  </prr>
+					</report>
+				</div>
+			</div>
+				
+	
+
+			<div class="emp_content_next"><nextItemNavigation class="emp_button"/></div>
+			
+			<div class="emp_cloud"/>			
+			
+		</div>	
+		
+	</div>	
+</div>
+
+
+		</itemBody>
+</assessmentItem>

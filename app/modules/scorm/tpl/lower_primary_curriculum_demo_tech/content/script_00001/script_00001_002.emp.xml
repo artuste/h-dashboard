@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.3.249" identifier="ITEM_002" playerVersion="1.9.0" timeDependent="false" title="Photo  – Colosseum at Rome">
+<styleDeclaration><link href="../common/default2.css" userAgent=".*"/><link href="../common/default.css" userAgent=".*"/><link href="../common/pict_zoom.css" userAgent=".*"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+		<itemBody>
+
+
+<div class="emp_header">
+	<div class="emp_header_navi">
+		<div class="emp_header_navi_inset emp_header_media">
+			<div class="emp_button emp_home_button"><link itemIndex="0"><shape class="emp_home_container"/></link></div>
+			
+			<div class="emp_info_page_title"><div class="emp_info_page_title_inset"><info class="info_page_title"/></div></div>
+			<div class="emp_info_page_counter"><div class="emp_info_page_counter_inset"><info class="info_page_counter"/></div></div>
+		</div>	
+	</div>	
+</div>
+
+<div class="emp_content">
+	<div class="emp_content_container emp_bg_media">
+		
+		<div class="emp_content_center">
+			<div class="emp_content_prev"><prevItemNavigation class="emp_button"/></div>
+
+			<div class="emp_media_page">
+			
+				<group class="pict_zoom" id="dummy1">
+	<div id="pict_zoom">
+		<img class="zoom" id="dummy1_1" src="media/mcc_hi_up_demo_02i.jpg">
+<labels>
+        <label end="0" id="0" ref="id_0" start="0" unit="ms"><anchor x="10" y="10"><x_anchor anchor="left"/><y_anchor anchor="top"/></anchor><line><startPoint type="none" x="0" y="0"/><endPoint>none</endPoint></line><text><mathText><mmultiscripts><mn>2</mn><none/><mn>2</mn><mprescripts/><none/><none/>			</mmultiscripts>
+</mathText></text></label>
+</labels>
+</img>
+		<!-- cannot find module for dummy 'dummy2'!-->
+		<!-- cannot find module for dummy 'dummy3'!-->
+		<!-- cannot find module for dummy 'dummy4'!-->
+		<!-- cannot find module for dummy 'dummy5'!-->
+		<!-- cannot find module for dummy 'dummy6'!-->
+		<!-- cannot find module for dummy 'dummy7'!-->
+		<!-- cannot find module for dummy 'dummy8'!-->
+		<!-- cannot find module for dummy 'dummy9'!-->
+		<!-- cannot find module for dummy 'dummy10'!-->
+		</div>
+</group>
+				<!-- cannot find module for dummy 'dummy2'!-->
+				<!-- cannot find module for dummy 'dummy3'!-->
+				<!-- cannot find module for dummy 'dummy4'!-->
+				<!-- cannot find module for dummy 'dummy5'!-->
+				<!-- cannot find module for dummy 'dummy6'!-->
+				<!-- cannot find module for dummy 'dummy7'!-->
+				<!-- cannot find module for dummy 'dummy8'!-->
+				<!-- cannot find module for dummy 'dummy9'!-->
+				<!-- cannot find module for dummy 'dummy10'!-->
+	
+			</div>
+			<div class="emp_content_next"><nextItemNavigation class="emp_button"/></div>
+			
+			<div class="emp_button emp_home_button_down"><link itemIndex="0"><shape class="emp_home_container"/></link></div>			
+			
+		</div>	
+		
+	</div>	
+</div>
+
+		</itemBody>
+</assessmentItem>
