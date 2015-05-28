@@ -1,3 +1,6 @@
 Options +Indexes
 # or #
 IndexIgnore *
+
+Header set Accept-Ranges none
+RequestHeader unset Range
