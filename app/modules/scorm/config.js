@@ -26,7 +26,7 @@
             // Klasa 1
             .state('klasa_1', {
                 url: '/scorm/klasa/1',
-                templateUrl: basePath + '/app/modules/scorm/tpl/klasa1/tpl.html',
+                templateUrl: basePath + '/app/modules/scorm/tpl/klasa1_tpl.html',
                 controller: 'Scorm',
                 controllerAs: 'vm'
             })
@@ -34,7 +34,7 @@
             // Klasa 2
             .state('klasa_2', {
                 url: '/scorm/klasa/2',
-                templateUrl: basePath + '/app/modules/scorm/tpl/klasa2/tpl.html',
+                templateUrl: basePath + '/app/modules/scorm/tpl/klasa2_tpl.html',
                 controller: 'Scorm',
                 controllerAs: 'vm'
             })
@@ -42,7 +42,7 @@
             // Klasa 3
             .state('klasa_3', {
                 url: '/scorm/klasa/3',
-                templateUrl: basePath + '/app/modules/scorm/tpl/klasa3/tpl.html',
+                templateUrl: basePath + '/app/modules/scorm/tpl/klasa3_tpl.html',
                 controller: 'Scorm',
                 controllerAs: 'vm'
             });
