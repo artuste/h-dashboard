@@ -6,14 +6,17 @@
     </div>
 
     <div ng-if="!vm.loader">
+        <h3>Lista użytkowników</h3>
         <table class="table table-bordered table-striped">
             <thead>
             <tr>
-                <th>Users</th>
+                <th>#</th>
+                <th>Login</th>
             </tr>
             </thead>
             <tbody>
             <tr ng-repeat="user in vm.users">
+                <td>{{ $index + 1 }}</td>
                 <td>
                     <a ui-sref="resultsDetails({ id: user.userId })">
                         {{ user.login}}
