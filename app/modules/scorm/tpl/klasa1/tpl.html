@@ -1,0 +1,19 @@
+<div class="panel panel-default"
+        ng-class="{'portlet-full-screen': vm.isFullScreen}">
+    <div class="panel-heading">
+        Klasa 1
+        <i style="cursor: pointer" ng-click="vm.toggleFullScreen()"
+           class="pull-right glyphicon {{ vm.isFullScreen ? 'glyphicon-resize-small' : 'glyphicon-resize-full' }}">
+        </i>
+    </div>
+    <div class="panel-body" style="margin: 0; padding: 0;">
+        <iframe class="harimata-flow"
+                class="harimata-class-1"
+                ng-if="vm.url.scorm.klasa_1"
+                src="{{vm.url.scorm.klasa_1}}"></iframe>
+    </div>
+    <div class="panel-footer">
+        <a class="btn btn-primary" href="/#/mood-first/1">Powr&#243;t</a>
+        <a ui-sref="mood-last" class="btn btn-primary">Dalej</a>
+    </div>
+</div>
