@@ -7,7 +7,7 @@
         .factory('ResultsData', ResultsData);
 
     Results.$inject = ['ResultsData'];
-    ResultsDetails.$inject = ['$state', 'ResultsData'];
+    ResultsDetails.$inject = ['$state', 'KEYS', 'ResultsData'];
     ResultsData.$inject = ['$q'];
 
     function Results(ResultsData) {
@@ -28,7 +28,7 @@
         }
     }
 
-    function ResultsDetails($state, ResultsData) {
+    function ResultsDetails($state, KEYS, ResultsData) {
         /* jshint validthis: true */
         var vm = this;
 
@@ -69,14 +69,18 @@
                     'precissionOfMovements',
                     'stability',
                     'rangeOfMovement',
-                    'movementSpeed'
+                    'movementSpeed',
+                    'moodFirst',
+                    'moodLast',
+                    'classId',
+                    'gender'
                 ],
                 dataArray = [];
 
             dataArray.push(
                 {
                     login: res.Login,
-                    gender: res.Gender,
+                    gender: KEYS.gender[res.Gender],
                     age: res.Age,
                     comments: res.Comment,
                     sessionStart: res.sessions[0].SessionStart,
@@ -88,7 +92,11 @@
                     precissionOfMovements: res.sessions[0].results.precissionOfMovements,
                     stability: res.sessions[0].results.stability,
                     rangeOfMovement: res.sessions[0].results.rangeOfMovement,
-                    movementSpeed: res.sessions[0].results.movementSpeed
+                    movementSpeed: res.sessions[0].results.movementSpeed,
+                    feedbackMoodFirst: KEYS.moodFirst[res.feedback.moodFirst],
+                    feedbackMoodLast: KEYS.moodLast[res.feedback.moodLast],
+                    feedbackClassId: res.feedback.classId,
+                    feedbackGender: KEYS.gender[res.feedback.gender]
                 }
             );
 

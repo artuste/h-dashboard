@@ -2,6 +2,27 @@
     "use strict";
 
     angular.module('app')
+        .constant('KEYS', {
+            moodFirst: {
+                '1': 'radosny',
+                '2': 'zainteresowany',
+                '3': 'spokojny',
+                '4': 'zmartwiony',
+                '5': 'smutny',
+                '6': 'znudzony',
+                '7': 'zdenerwowany',
+                '8': 'senny'
+            },
+            moodLast: {
+                '1': 'nie podobalo sie',
+                '2': 'takie sobie',
+                '3': 'podobalo mi sie'
+            },
+            gender: {
+                'f': 'Kobieta',
+                'm': 'Mezczyzna'
+            }
+        })
         .factory('Integration', Integration)
         .factory('HData', HData);
 
