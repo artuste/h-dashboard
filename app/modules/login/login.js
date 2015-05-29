@@ -32,6 +32,7 @@
 
             Integration.init(login)
                 .then(function () {
+                    Integration.selectUser(); // TODO: podać user id
                     Integration.startSession();
 
                     $rootScope.oauth2 = sessionService.getUserData();
@@ -40,8 +41,6 @@
 
                     logger.success('Zostałeś poprawnie zalogowany <b>' + sessionService.getUserData().login + '</b>');
                     logger.info('Sesja została rozpoczęta');
-
-                    //$state.go('mood-first');
                 }, function () {
                     logger.error('Błąd!');
                     vm.loader = false;

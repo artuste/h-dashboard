@@ -8,10 +8,12 @@
     function Integration() {
         return {
             init: init,
+            selectUser: selectUser,
             startSession: startSession,
             endSession: endSession,
             clearCache: clearCache,
             getAssessment: getAssessment,
+
             sendFeedback: sendFeedback
         };
 
@@ -20,7 +22,9 @@
         }
 
         function startSession() {
-            harimata.startSession({
+            console.log('startSession');
+
+            return harimata.startSession({
                 device: "Browser 5",
                 appName: "YDPApp 5",
                 comment: "put comment here 5"
@@ -38,6 +42,17 @@
 
         function getAssessment() {
             return harimata.getAssessment();
+        }
+
+        function selectUser() {
+            return harimata.selectUser({
+                userId: "66662f82-f8a8-11e4-a322-1697f925ec7b",
+                login: "ydpTest6",
+                age: 6, // OUT !!!!
+                gender: 'm',  // OUT !!!!
+                disorders: "foo6, bar6",  // OUT !!!!
+                device: 6 // OUT !!!!
+            });
         }
 
         function sendFeedback(data) {
