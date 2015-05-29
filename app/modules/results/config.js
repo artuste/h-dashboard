@@ -14,6 +14,12 @@
                 templateUrl: basePath + '/app/modules/results/results.tpl.html',
                 controller: 'Results',
                 controllerAs: 'vm'
+            })
+            .state('resultsDetails', {
+                url: '/results/:id',
+                templateUrl: basePath + '/app/modules/results/results.details.tpl.html',
+                controller: 'ResultsDetails',
+                controllerAs: 'vm'
             });
     }
 

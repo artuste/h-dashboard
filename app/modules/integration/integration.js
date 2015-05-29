@@ -11,7 +11,8 @@
             startSession: startSession,
             endSession: endSession,
             clearCache: clearCache,
-            getAssessment: getAssessment
+            getAssessment: getAssessment,
+            sendFeedback: sendFeedback
         };
 
         function init(params) {
@@ -20,15 +21,11 @@
 
         function startSession() {
             harimata.startSession({
-                age: 4,
-                gender: "m", // 'm' for male, 'f' for female
-                device: "Browser",
-                appName: "YDPApp",
-                comment: "put comment here",
-                disorders: "list, of, disorders",
-                userId: "ad282f82-f8a8-11e4-a322-1697f925ec7b",
-                login: "ydpTestLogin1"
+                device: "Browser 5",
+                appName: "YDPApp 5",
+                comment: "put comment here 5"
             });
+
         }
 
         function endSession() {
@@ -41,6 +38,14 @@
 
         function getAssessment() {
             return harimata.getAssessment();
+        }
+
+        function sendFeedback(data) {
+            return harimata.sendFeedback({
+                moodFirst: data.moodFirst,
+                classId: data.classId,
+                moodLast: data.moodLast
+            });
         }
     }
 

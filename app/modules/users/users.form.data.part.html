@@ -5,12 +5,11 @@
 
         <div class="controls">
             <select ng-model="vm.data.form.gender" id="gender" class="form-control" required="true">
-                <option>Kobieta</option>
-                <option>Mężczyzna</option>
+                <option value="F">Kobieta</option>
+                <option value="M">Mężczyzna</option>
             </select>
         </div>
     </div>
-
     <!-- Text input-->
     <div class="form-group">
         <label class="control-label" for="age">Podaj wiek</label>
@@ -28,9 +27,9 @@
         <div class="controls">
             <select ng-model="vm.data.form.device" id="device" name="device" class="form-control"
                     required="true">
-                <option>Komputer</option>
-                <option>Tablet</option>
-                <option>Telefon</option>
+                <option value="1">Komputer</option>
+                <option value="2">Tablet</option>
+                <option value="3">Telefon</option>
             </select>
         </div>
     </div>

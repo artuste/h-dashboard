@@ -78,6 +78,12 @@
         function send() {
             vm.isDisabled = true;
 
+            debugger;
+            Integration.sendFeedback(vm.data)
+                .then(function (res) {
+                    debugger;
+                });
+
             Integration.endSession()
                 .then(function () {
                     Integration.clearCache();

@@ -2,26 +2,76 @@
     "use strict";
 
     angular.module('app.results')
-        .controller('Results', Results);
+        .controller('Results', Results)
+        .controller('ResultsDetails', ResultsDetails)
+        .factory('ResultsData', ResultsData);
 
-    function Results() {
+    Results.$inject = ['ResultsData'];
+    ResultsDetails.$inject = ['$state', 'ResultsData'];
+    ResultsData.$inject = ['$q'];
+
+    function Results(ResultsData) {
         /* jshint validthis: true */
         var vm = this;
 
-        //Line Chart
-        vm.labels = ["January", "February", "March", "April", "May", "June", "July"];
-        vm.series = ['Series A', 'Series B'];
-        vm.data = [
-            [65, 59, 80, 81, 56, 55, 40],
-            [28, 48, 40, 19, 86, 27, 90]
-        ];
-        vm.onClick = function (points, evt) {
-            console.log(points, evt);
+        vm.users = null;
+
+        activate();
+
+        function activate() {
+            return ResultsData.getUsersList()
+                .then(function (res) {
+                    vm.users = res.users;
+                });
+        }
+    }
+
+    function ResultsDetails($state, ResultsData) {
+        /* jshint validthis: true */
+        var vm = this;
+
+        vm.user = {};
+        console.log('$state', $state);
+
+        vm.getUser = getUser;
+
+        var userId = $state.params.id;
+
+        activate();
+
+        function activate() {
+            getUser(userId);
+        }
+
+        function getUser(userId) {
+            return ResultsData.getUser(userId)
+                .then(function (res) {
+                    vm.user = res;
+                });
+        }
+    }
+
+    function ResultsData($q) {
+        return {
+            getUser: getUser,
+            getUsersList: getUsersList
         };
 
-        //Doughnut Chart
-        vm.labels2 = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
-        vm.data2 = [300, 500, 100];
+        function getUser(userId) {
+            var deferred = $q.defer();
+
+            deferred.resolve(harimata.getUser(userId));
+
+            return deferred.promise;
+        }
+
+        function getUsersList() {
+            var deferred = $q.defer();
+
+            deferred.resolve(harimata.getUsersList());
+
+            return deferred.promise;
+        }
     }
 
 })();

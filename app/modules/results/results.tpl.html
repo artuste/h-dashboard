@@ -1,4 +1,22 @@
 <div class="container">
     <h3>Results</h3>
 
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Id</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="user in vm.users">
+            <td>
+                <a ui-sref="resultsDetails({ id: user.userId })">
+                    {{ user.userId}}
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
 </div>
