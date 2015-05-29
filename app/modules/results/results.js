@@ -47,9 +47,56 @@
         function getUser(userId) {
             return ResultsData.getUser(userId)
                 .then(function (res) {
-                    vm.user = res;
                     vm.loader = false;
+
+                    vm.user = res;
+                    csv(res);
                 });
+        }
+
+        function csv(res) {
+            var headerArray = [
+                    'Login',
+                    'Gender',
+                    'Age',
+                    'Comment',
+                    'SessionStart',
+                    'SessionEnd',
+                    'motivation',
+                    'arousal',
+                    'concentration',
+                    'focusingAttention',
+                    'precissionOfMovements',
+                    'stability',
+                    'rangeOfMovement',
+                    'movementSpeed'
+                ],
+                dataArray = [];
+
+            dataArray.push(
+                {
+                    login: res.Login,
+                    gender: res.Gender,
+                    age: res.Age,
+                    comments: res.Comment,
+                    sessionStart: res.sessions[0].SessionStart,
+                    sessionEnd: res.sessions[0].SessionEnd,
+                    motivation: res.sessions[0].results.motivation,
+                    arousal: res.sessions[0].results.arousal,
+                    concentration: res.sessions[0].results.concentration,
+                    focusingAttention: res.sessions[0].results.focusingAttention,
+                    precissionOfMovements: res.sessions[0].results.precissionOfMovements,
+                    stability: res.sessions[0].results.stability,
+                    rangeOfMovement: res.sessions[0].results.rangeOfMovement,
+                    movementSpeed: res.sessions[0].results.movementSpeed
+                }
+            );
+
+            vm.getHeader = headerArray;
+            vm.getData = dataArray;
+
+
+            vm.filename = userId + '-details';
         }
     }
 

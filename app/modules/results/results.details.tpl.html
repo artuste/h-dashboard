@@ -6,6 +6,13 @@
 
 <div ng-if="!vm.loader">
     <h3>User details</h3>
+    <button class="btn btn-default"
+            csv-header="vm.getHeader"
+            ng-csv="vm.getData"
+            filename="{{ vm.filename }}.csv"
+            field-separator=";">
+        Export to CSV
+    </button>
     <table class="table table-bordered table-striped">
         <tr ng-repeat="(key, value) in vm.user">
             <td>{{key}}</td>
@@ -14,5 +21,5 @@
     </table>
 
     <a ui-sref="results" class="btn btn-primary">Powr&#243;t</a>
-    <!--<pre>{{ vm.user | json }}</pre>-->
+    <pre>{{ vm.user | json }}</pre>
 </div>
