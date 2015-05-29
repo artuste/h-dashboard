@@ -1,20 +1,12 @@
 .qp-player .vjs-poster {
-    background-repeat: repeat;
+	background-repeat: repeat;
 }
 
 .qp-player .ui-sortable-placeholder {
-    display: inline-block;
-    height: 1px;
+  display: inline-block;
+  height: 1px;
 }
 
 .jqte ol, .jqte ul {
     padding-left: 40px;
-}
-
-.qp-slideshow-button-pause.qp-slideshow-button-pause-up {
-    display: none;
-}
-
-.mfp-wrap {
-    z-index: 10000 !important;
 }
