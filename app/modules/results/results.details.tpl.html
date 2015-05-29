@@ -5,21 +5,106 @@
 </div>
 
 <div ng-if="!vm.loader">
-    <h3>User details</h3>
-    <button class="btn btn-default"
-            csv-header="vm.getHeader"
-            ng-csv="vm.getData"
-            filename="{{ vm.filename }}.csv"
-            field-separator=";">
-        Export to CSV
-    </button>
+    <h3>{{ vm.user.Login}}
+        <button class="btn btn-sm btn-primary pull-right"
+                csv-header="vm.getHeader"
+                ng-csv="vm.getData"
+                filename="{{ vm.filename }}.csv"
+                field-separator=";">
+            CSV
+        </button>
+    </h3>
+<hr />
+
+    <h4>Basic informations</h4>
     <table class="table table-bordered table-striped">
-        <tr ng-repeat="(key, value) in vm.user">
-            <td>{{key}}</td>
-            <td>{{value}}</td>
+        <tr>
+            <td>Login</td>
+            <td>{{ vm.user.Login }}</td>
+        </tr>
+
+        <tr>
+            <td>Gender</td>
+            <td>{{ vm.user.Gender === 'm' ? 'Male' : 'Female' }}</td>
+        </tr>
+
+        <tr>
+            <td>Comment</td>
+            <td>{{ vm.user.Comment }}</td>
+        </tr>
+    </table>
+
+    <h4>Sessions</h4>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <td>motivation</td>
+            <td>{{ vm.user.sessions[0].results.motivation }}</td>
+        </tr>
+
+        <tr>
+            <td>arousal</td>
+            <td>{{ vm.user.sessions[0].results.arousal }}</td>
+        </tr>
+
+        <tr>
+            <td>concentration</td>
+            <td>{{ vm.user.sessions[0].results.concentration }}</td>
+        </tr>
+
+        <tr>
+            <td>focusingAttention</td>
+            <td>{{ vm.user.sessions[0].results.focusingAttention }}</td>
+        </tr>
+
+        <tr>
+            <td>precissionOfMovements</td>
+            <td>{{ vm.user.sessions[0].results.precissionOfMovements }}</td>
+        </tr>
+
+        <tr>
+            <td>stability</td>
+            <td>{{ vm.user.sessions[0].results.stability }}</td>
+        </tr>
+
+        <tr>
+            <td>rangeOfMovement</td>
+            <td>{{ vm.user.sessions[0].results.rangeOfMovement }}</td>
+        </tr>
+
+        <tr>
+            <td>movementSpeed</td>
+            <td>{{ vm.user.sessions[0].results.movementSpeed }}</td>
+        </tr>
+    </table>
+
+    <h4>Feedback</h4>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <td>MoodFirst</td>
+            <td>{{ vm.user.feedback.moodFirst }}</td>
+        </tr>
+
+        <tr>
+            <td>MoodLast</td>
+            <td>{{ vm.user.feedback.moodLast }}</td>
+        </tr>
+
+        <tr>
+            <td>ClassId</td>
+            <td>{{ vm.user.feedback.classId }}</td>
+        </tr>
+
+        <tr>
+            <td>Gender</td>
+            <td>{{ vm.user.feedback.gender }}</td>
+        </tr>
+
+        <tr>
+            <td>Device</td>
+            <td>{{ vm.user.feedback.device }}</td>
         </tr>
     </table>
 
     <a ui-sref="results" class="btn btn-primary">Powr&#243;t</a>
-    <pre>{{ vm.user | json }}</pre>
+    <!--<pre>{{ vm.user | json }}</pre>-->
 </div>
