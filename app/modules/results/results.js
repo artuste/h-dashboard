@@ -15,6 +15,7 @@
         var vm = this;
 
         vm.users = null;
+        vm.loader = true;
 
         activate();
 
@@ -22,6 +23,7 @@
             return ResultsData.getUsersList()
                 .then(function (res) {
                     vm.users = res.users;
+                    vm.loader = false;
                 });
         }
     }
@@ -31,11 +33,10 @@
         var vm = this;
 
         vm.user = {};
-        console.log('$state', $state);
-
         vm.getUser = getUser;
 
         var userId = $state.params.id;
+        vm.loader = true;
 
         activate();
 
@@ -47,6 +48,7 @@
             return ResultsData.getUser(userId)
                 .then(function (res) {
                     vm.user = res;
+                    vm.loader = false;
                 });
         }
     }

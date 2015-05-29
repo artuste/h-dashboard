@@ -1,22 +1,26 @@
 <div class="container">
-    <h3>Results</h3>
+    <div ng-if="vm.loader" class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+        <div class="loading-text">Loading</div>
+    </div>
 
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-            <th>Id</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        <tr ng-repeat="user in vm.users">
-            <td>
-                <a ui-sref="resultsDetails({ id: user.userId })">
-                    {{ user.userId}}
-                </a>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-
+    <div ng-if="!vm.loader">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>Users</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="user in vm.users">
+                <td>
+                    <a ui-sref="resultsDetails({ id: user.userId })">
+                        {{ user.userId}}
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
