@@ -19,8 +19,8 @@
                 '3': 'podobalo mi sie'
             },
             gender: {
-                'f': 'Kobieta',
-                'm': 'Mezczyzna'
+                'f': 'kobieta',
+                'm': 'mezczyzna'
             }
         })
         .factory('Integration', Integration)

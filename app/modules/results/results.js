@@ -42,6 +42,7 @@
 
         function activate() {
             getUser(userId);
+            vm.keys = KEYS;
         }
 
         function getUser(userId) {
