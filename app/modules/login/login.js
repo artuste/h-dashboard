@@ -23,10 +23,15 @@
 
         function login() {
             vm.loader = true;
+
+            //użyj tego (?)
+            //login: ydpWebUser
+            //password: 11f997bcb211077c8df02c7a576f8111
+
             var login = {
                 login: vm.user.username,
                 password: vm.user.password,
-                clientId: 'WebClient',
+                clientId: vm.user.username,
                 clientSecret: 'i%^+g5Xm7F.^^-F'
             };
 
