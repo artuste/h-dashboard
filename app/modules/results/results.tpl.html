@@ -7,10 +7,11 @@
 
     <div ng-if="!vm.loader">
         <h3>Lista użytkowników</h3>
+        <br/>
         <table class="table table-bordered table-striped">
             <thead>
             <tr>
-                <th>#</th>
+                <th style="width: 10px;">#</th>
                 <th>Login</th>
             </tr>
             </thead>
@@ -18,7 +19,7 @@
             <tr ng-repeat="user in vm.users">
                 <td>{{ $index + 1 }}</td>
                 <td>
-                    <a ui-sref="resultsDetails({ id: user.userId })">
+                    <a ui-sref="resultsDetails({ id: user.userId })" style="color: #4D4D4D;">
                         {{ user.login}}
                     </a>
                 </td>

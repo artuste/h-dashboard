@@ -105,7 +105,7 @@
             vm.getData = dataArray;
 
 
-            vm.filename = userId + '-details';
+            vm.filename = res.Login + '-details';
         }
     }
 

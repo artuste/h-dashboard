@@ -24,10 +24,6 @@
         function login() {
             vm.loader = true;
 
-            //użyj tego (?)
-            //login: ydpWebUser
-            //password: 11f997bcb211077c8df02c7a576f8111
-
             var login = {
                 login: vm.user.username,
                 password: vm.user.password,
@@ -37,7 +33,7 @@
 
             Integration.init(login)
                 .then(function () {
-                    Integration.selectUser(); // TODO: podać user id
+                    Integration.selectUser(); // TODO: podać user id ???
                     Integration.startSession();
 
                     $rootScope.oauth2 = sessionService.getUserData();

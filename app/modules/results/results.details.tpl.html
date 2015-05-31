@@ -19,7 +19,7 @@
     </h3>
     <hr/>
 
-    <h4>Basic informations</h4>
+    <h4>Podstawowe informacje</h4>
     <table class="table table-bordered table-striped">
         <tr>
             <td>Login</td>
@@ -27,83 +27,83 @@
         </tr>
 
         <tr>
-            <td>Gender</td>
+            <td>P&#322;e&#263;</td>
             <td>{{ vm.keys.gender[vm.user.Gender] }}</td>
         </tr>
 
         <tr>
-            <td>Comment</td>
+            <td>Komentarz</td>
             <td>{{ vm.user.Comment }}</td>
         </tr>
     </table>
 
-    <h4>Sessions</h4>
+    <h4>Wska&#380;niki</h4>
     <table class="table table-bordered table-striped">
         <tr>
-            <td>motivation</td>
+            <td>motywacja</td>
             <td>{{ vm.user.sessions[0].results.motivation }}</td>
         </tr>
 
         <tr>
-            <td>arousal</td>
+            <td>pobudzenie</td>
             <td>{{ vm.user.sessions[0].results.arousal }}</td>
         </tr>
 
         <tr>
-            <td>concentration</td>
+            <td>koncentracja</td>
             <td>{{ vm.user.sessions[0].results.concentration }}</td>
         </tr>
 
         <tr>
-            <td>focusingAttention</td>
+            <td>skupienie uwagi</td>
             <td>{{ vm.user.sessions[0].results.focusingAttention }}</td>
         </tr>
 
         <tr>
-            <td>precissionOfMovements</td>
+            <td>precyzja ruch&#243;w</td>
             <td>{{ vm.user.sessions[0].results.precissionOfMovements }}</td>
         </tr>
 
         <tr>
-            <td>stability</td>
+            <td>stabilno&#347;&#263; ruchu</td>
             <td>{{ vm.user.sessions[0].results.stability }}</td>
         </tr>
 
         <tr>
-            <td>rangeOfMovement</td>
+            <td>zakres ruchu</td>
             <td>{{ vm.user.sessions[0].results.rangeOfMovement }}</td>
         </tr>
 
         <tr>
-            <td>movementSpeed</td>
+            <td>szybko&#347;&#263; ruchu</td>
             <td>{{ vm.user.sessions[0].results.movementSpeed }}</td>
         </tr>
     </table>
 
-    <h4>Feedback</h4>
+    <h4>Dane z formularza</h4>
     <table class="table table-bordered table-striped">
         <tr>
-            <td>MoodFirst</td>
+            <td>Ocena og&#243;lnego nastroju</td>
             <td>{{ vm.keys.moodFirst[vm.user.feedback.moodFirst] }}</td>
         </tr>
 
         <tr>
-            <td>MoodLast</td>
+            <td>Ocena ko&#324;cowa nastroju</td>
             <td>{{ vm.keys.moodLast[vm.user.feedback.moodLast] }}</td>
         </tr>
 
         <tr>
-            <td>ClassId</td>
-            <td>Klasa {{ vm.user.feedback.classId }}</td>
+            <td>Klasa</td>
+            <td>{{ vm.user.feedback.classId }}</td>
         </tr>
 
         <tr>
-            <td>Gender</td>
+            <td>P&#322;e&#263;</td>
             <td>{{ vm.keys.gender[vm.user.feedback.gender] }}</td>
         </tr>
 
         <tr>
-            <td>Device</td>
+            <td>Urz&#261;dzenie</td>
             <td>{{ vm.keys.moodFirst[vm.user.feedback.device] }}</td>
         </tr>
     </table>

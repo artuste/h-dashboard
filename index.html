@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>YDP/HARIMATA</title>
+    <title>YDP App</title>
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet"
           type="text/css"/>
@@ -48,9 +48,7 @@
 
 <div id="main">
     <div id="header">
-        <div class="logo">YDP/Harimata</div>
-
-
+        <div class="logo">YDP App</div>
         <ul class="nav navbar-nav pull-right">
             <li class="dropdown dropdown-user">
                 <a href="javascript:;" style="color: #9F9F9F;"
@@ -69,16 +67,6 @@
                             <i class="icon-rocket"></i> Lekcie LPC
                             <span class="badge badge-primary">3</span>
                         </a>
-                        <!--<a ui-sref="mood-first">-->
-                            <!--<i class="icon-rocket"></i> KROK 2: Ocena ogólnego nastroju-->
-                        <!--</a>-->
-                        <!--<span>Wybrana lekcja</span>-->
-                        <!--<a ui-sref="mood-last">-->
-                            <!--<i class="icon-rocket"></i> KROK 3: Ocena końcowa nastroju-->
-                        <!--</a>-->
-                        <!--<a ui-sref="scorm-form">-->
-                            <!--<i class="icon-rocket"></i> KROK 4: Formularz-->
-                        <!--</a>-->
                     </li>
                     <li class="divider">
                     </li>
@@ -90,8 +78,12 @@
 
                 <ul ng-if="!oauth2.login" class="dropdown-menu dropdown-menu-default">
                     <li>
+                        <a ui-sref="results">
+                            <i class="icon-drawer"></i> Wyniki </a>
+                    </li>
+                    <li>
                         <a ui-sref="login">
-                            <i class="icon-key"></i> Zaloguj </a>
+                            <i class="icon-key"></i> Zaloguj si&#281; </a>
                     </li>
                 </ul>
             </li>
