@@ -37,6 +37,7 @@
 
         var userId = $state.params.id;
         vm.loader = true;
+        vm.error = false;
 
         activate();
 
@@ -50,8 +51,13 @@
                 .then(function (res) {
                     vm.loader = false;
 
-                    vm.user = res;
-                    csv(res);
+                    if(!!res.Login) {
+                        vm.user = res;
+                        csv(res);
+                    } else {
+                       vm.error = true;
+                    }
+
                 });
         }
 

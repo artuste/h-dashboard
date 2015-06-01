@@ -5,107 +5,115 @@
 </div>
 
 <div ng-if="!vm.loader">
-    <h3>{{ vm.user.Login}}
-        <div class="btn-group pull-right" role="group">
-            <button class="btn btn-sm btn-primary"
-                    csv-header="vm.getHeader"
-                    ng-csv="vm.getData"
-                    filename="{{ vm.filename }}.csv"
-                    field-separator=";">
-                CSV
-            </button>
-            <a ui-sref="results" class="btn btn-sm btn-primary">Powr&#243;t</a>
+    <div ng-if="vm.error">
+        <div class="alert alert-danger" role="alert">
+            <b>B&#322;&#261;d: </b> Brak danych u&#380;ytkownika
         </div>
-    </h3>
-    <hr/>
+        <a ui-sref="results" class="btn btn-sm btn-primary">Powr&#243;t</a>
+    </div>
+    <div ng-if="!vm.error">
+        <h3>{{ vm.user.Login}}
+            <div class="btn-group pull-right" role="group">
+                <button class="btn btn-sm btn-primary"
+                        csv-header="vm.getHeader"
+                        ng-csv="vm.getData"
+                        filename="{{ vm.filename }}.csv"
+                        field-separator=";">
+                    CSV
+                </button>
+                <a ui-sref="results" class="btn btn-sm btn-primary">Powr&#243;t</a>
+            </div>
+        </h3>
+        <hr/>
 
-    <h4>Podstawowe informacje</h4>
-    <table class="table table-bordered table-striped">
-        <tr>
-            <td>Login</td>
-            <td>{{ vm.user.Login }}</td>
-        </tr>
+        <h4>Podstawowe informacje</h4>
+        <table class="table table-bordered table-striped">
+            <tr>
+                <td>Login</td>
+                <td>{{ vm.user.Login }}</td>
+            </tr>
 
-        <tr>
-            <td>P&#322;e&#263;</td>
-            <td>{{ vm.keys.gender[vm.user.Gender] }}</td>
-        </tr>
+            <tr>
+                <td>P&#322;e&#263;</td>
+                <td>{{ vm.keys.gender[vm.user.Gender] }}</td>
+            </tr>
 
-        <tr>
-            <td>Komentarz</td>
-            <td>{{ vm.user.Comment }}</td>
-        </tr>
-    </table>
+            <tr>
+                <td>Komentarz</td>
+                <td>{{ vm.user.Comment }}</td>
+            </tr>
+        </table>
 
-    <h4>Wska&#380;niki</h4>
-    <table class="table table-bordered table-striped">
-        <tr>
-            <td>motywacja</td>
-            <td>{{ vm.user.sessions[0].results.motivation }}</td>
-        </tr>
+        <h4>Wska&#380;niki</h4>
+        <table class="table table-bordered table-striped">
+            <tr>
+                <td>motywacja</td>
+                <td>{{ vm.user.sessions[0].results.motivation }}</td>
+            </tr>
 
-        <tr>
-            <td>pobudzenie</td>
-            <td>{{ vm.user.sessions[0].results.arousal }}</td>
-        </tr>
+            <tr>
+                <td>pobudzenie</td>
+                <td>{{ vm.user.sessions[0].results.arousal }}</td>
+            </tr>
 
-        <tr>
-            <td>koncentracja</td>
-            <td>{{ vm.user.sessions[0].results.concentration }}</td>
-        </tr>
+            <tr>
+                <td>koncentracja</td>
+                <td>{{ vm.user.sessions[0].results.concentration }}</td>
+            </tr>
 
-        <tr>
-            <td>skupienie uwagi</td>
-            <td>{{ vm.user.sessions[0].results.focusingAttention }}</td>
-        </tr>
+            <tr>
+                <td>skupienie uwagi</td>
+                <td>{{ vm.user.sessions[0].results.focusingAttention }}</td>
+            </tr>
 
-        <tr>
-            <td>precyzja ruch&#243;w</td>
-            <td>{{ vm.user.sessions[0].results.precissionOfMovements }}</td>
-        </tr>
+            <tr>
+                <td>precyzja ruch&#243;w</td>
+                <td>{{ vm.user.sessions[0].results.precissionOfMovements }}</td>
+            </tr>
 
-        <tr>
-            <td>stabilno&#347;&#263; ruchu</td>
-            <td>{{ vm.user.sessions[0].results.stability }}</td>
-        </tr>
+            <tr>
+                <td>stabilno&#347;&#263; ruchu</td>
+                <td>{{ vm.user.sessions[0].results.stability }}</td>
+            </tr>
 
-        <tr>
-            <td>zakres ruchu</td>
-            <td>{{ vm.user.sessions[0].results.rangeOfMovement }}</td>
-        </tr>
+            <tr>
+                <td>zakres ruchu</td>
+                <td>{{ vm.user.sessions[0].results.rangeOfMovement }}</td>
+            </tr>
 
-        <tr>
-            <td>szybko&#347;&#263; ruchu</td>
-            <td>{{ vm.user.sessions[0].results.movementSpeed }}</td>
-        </tr>
-    </table>
+            <tr>
+                <td>szybko&#347;&#263; ruchu</td>
+                <td>{{ vm.user.sessions[0].results.movementSpeed }}</td>
+            </tr>
+        </table>
 
-    <h4>Dane z formularza</h4>
-    <table class="table table-bordered table-striped">
-        <tr>
-            <td>Ocena og&#243;lnego nastroju</td>
-            <td>{{ vm.keys.moodFirst[vm.user.feedback.moodFirst] }}</td>
-        </tr>
+        <h4>Dane z formularza</h4>
+        <table class="table table-bordered table-striped">
+            <tr>
+                <td>Ocena og&#243;lnego nastroju</td>
+                <td>{{ vm.keys.moodFirst[vm.user.feedback.moodFirst] }}</td>
+            </tr>
 
-        <tr>
-            <td>Ocena ko&#324;cowa nastroju</td>
-            <td>{{ vm.keys.moodLast[vm.user.feedback.moodLast] }}</td>
-        </tr>
+            <tr>
+                <td>Ocena ko&#324;cowa nastroju</td>
+                <td>{{ vm.keys.moodLast[vm.user.feedback.moodLast] }}</td>
+            </tr>
 
-        <tr>
-            <td>Klasa</td>
-            <td>{{ vm.user.feedback.classId }}</td>
-        </tr>
+            <tr>
+                <td>Klasa</td>
+                <td>{{ vm.user.feedback.classId }}</td>
+            </tr>
 
-        <tr>
-            <td>P&#322;e&#263;</td>
-            <td>{{ vm.keys.gender[vm.user.feedback.gender] }}</td>
-        </tr>
+            <tr>
+                <td>P&#322;e&#263;</td>
+                <td>{{ vm.keys.gender[vm.user.feedback.gender] }}</td>
+            </tr>
 
-        <tr>
-            <td>Urz&#261;dzenie</td>
-            <td>{{ vm.keys.moodFirst[vm.user.feedback.device] }}</td>
-        </tr>
-    </table>
-    <!--<pre>{{ vm.user | json }}</pre>-->
+            <tr>
+                <td>Urz&#261;dzenie</td>
+                <td>{{ vm.keys.moodFirst[vm.user.feedback.device] }}</td>
+            </tr>
+        </table>
+        <!--<pre>{{ vm.user | json }}</pre>-->
+    </div>
 </div>
