@@ -23,9 +23,9 @@
             return ResultsData.getUsersList()
                 .then(function (res) {
                     //JSON
-                    //vm.users = res.data;
+                    vm.users = res.data;
 
-                    vm.users = res.users;
+                    //vm.users = res.users;
                     vm.loader = false;
                 });
         }
@@ -134,13 +134,11 @@
 
         function getUsersList() {
             //JSON
-            //return $http.get(URLS.base + '/app/modules/results/ids.json');
+            return $http.get(URLS.base + '/app/modules/results/ids.json');
 
-            var deferred = $q.defer();
-
-            deferred.resolve(harimata.getUsersList());
-
-            return deferred.promise;
+            //var deferred = $q.defer();
+            //deferred.resolve(harimata.getUsersList());
+            //return deferred.promise;
         }
     }
 

@@ -31,7 +31,10 @@
         function activate() {
             return ResultsData.getUsersList()
                 .then(function (res) {
-                    vm.users = res.users;
+                    //JSON
+                    vm.users = res.data;
+
+                    //vm.users = res.users;
                 });
         }
 
