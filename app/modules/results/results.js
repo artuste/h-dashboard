@@ -8,7 +8,7 @@
 
     Results.$inject = ['ResultsData'];
     ResultsDetails.$inject = ['$state', 'KEYS', 'ResultsData'];
-    ResultsData.$inject = ['$q'];
+    ResultsData.$inject = ['$q', '$http', 'URLS'];
 
     function Results(ResultsData) {
         /* jshint validthis: true */
@@ -22,6 +22,9 @@
         function activate() {
             return ResultsData.getUsersList()
                 .then(function (res) {
+                    //JSON
+                    //vm.users = res.data;
+
                     vm.users = res.users;
                     vm.loader = false;
                 });
@@ -115,7 +118,7 @@
         }
     }
 
-    function ResultsData($q) {
+    function ResultsData($q, $http, URLS) {
         return {
             getUser: getUser,
             getUsersList: getUsersList
@@ -130,6 +133,9 @@
         }
 
         function getUsersList() {
+            //JSON
+            //return $http.get(URLS.base + '/app/modules/results/ids.json');
+
             var deferred = $q.defer();
 
             deferred.resolve(harimata.getUsersList());
