@@ -66,7 +66,6 @@
                     Integration.clearCache();
                     HData.clear();
 
-                    logger.info('Zostałeś wylogowany ponieważ sesja się skończyła');
                     logger.success('Dane zostały wysłane pomyślnie!');
 
                     vm.isDisabled = false;

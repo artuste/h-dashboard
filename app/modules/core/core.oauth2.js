@@ -5,7 +5,7 @@
 
     angular.module('app')
         .factory('sessionService', sessionService)
-            .run(['$rootScope', '$state', '$injector', 'sessionService', function ($rootScope, $state, $injector, sessionService) {
+            .run(['$rootScope', '$state', '$injector', 'logger', 'sessionService', function ($rootScope, $state, $injector, logger, sessionService) {
 
             $rootScope.oauth2 = sessionService.getUserData();
             $rootScope.logout = logout;
@@ -15,6 +15,8 @@
                 localStorage.removeItem('access_token');
 
                 $rootScope.oauth2 = {};
+
+                logger.info('Zosta&#322;e&#347; wylogowany!');
             }
 
             sessionService.watchAuth();

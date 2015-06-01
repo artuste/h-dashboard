@@ -55,7 +55,7 @@
 
                     vm.loader = false;
 
-                    logger.success('Zostałeś poprawnie zalogowany <b>' + sessionService.getUserData().login + '</b>');
+                    logger.success('Zostałeś poprawnie zalogowany!');
                     logger.info('Sesja została rozpoczęta');
                 }, function () {
                     logger.error('Błąd!');
