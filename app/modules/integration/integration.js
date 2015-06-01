@@ -43,14 +43,11 @@
         }
 
         function startSession() {
-            console.log('startSession');
-
             return harimata.startSession({
-                device: "Browser 5",
-                appName: "YDPApp",
-                comment: "put comment here 5"
+                device: "Tablet",
+                appName: "YDP App",
+                comment: "test"
             });
-
         }
 
         function endSession() {
