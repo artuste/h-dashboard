@@ -20,6 +20,9 @@
         activate();
 
         function activate() {
+            // TODO! CSV Button generate
+            //getAllCsvData();
+
             return ResultsData.getUsersList()
                 .then(function (res) {
                     //JSON
@@ -29,6 +32,35 @@
                     vm.loader = false;
                 });
         }
+
+        //function getAllCsvData() {
+        //    //var n = "f09aacca-0f8b-46f2-8f33-45ad2d770593";
+        //    //
+        //    //ResultsData.getUser(n)
+        //    //    .then(function (item) {
+        //    //        debugger;
+        //    //    });
+        //
+        //    return ResultsData.getUsersList()
+        //        .then(function (users) {
+        //            var usersCollection = [],
+        //                usersArr = users.data;
+        //
+        //            _.each(usersArr, function (user) {
+        //                if (user.userId.length > 0) {
+        //                    return ResultsData.getUser(user.userId)
+        //                        .then(function (detail) {
+        //                            if (typeof(detail.error) !== 'object') {
+        //                                console.log('detail', detail);
+        //                                usersCollection.push(detail);
+        //                            }
+        //                        });
+        //                }
+        //            });
+        //
+        //            return usersCollection;
+        //        });
+        //}
     }
 
     function ResultsDetails($state, KEYS, ResultsData) {
@@ -136,10 +168,12 @@
             //JSON
             return $http.get(URLS.base + '/app/modules/results/ids.json');
 
+            //API
             //var deferred = $q.defer();
             //deferred.resolve(harimata.getUsersList());
             //return deferred.promise;
         }
+
     }
 
 })();

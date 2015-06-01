@@ -34,6 +34,7 @@
                     //JSON
                     vm.users = res.data;
 
+                    //API
                     //vm.users = res.users;
                 });
         }
