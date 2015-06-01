@@ -62,10 +62,10 @@
             return harimata.getAssessment();
         }
 
-        function selectUser() {
+        function selectUser(data) {
             return harimata.selectUser({
-                userId: "66662f82-f8a8-11e4-a322-1697f925ec7b",
-                login: "ydpTest6"
+                userId: data.userId,
+                login: data.login
             });
         }
 

@@ -16,30 +16,45 @@
             </div>
 
             <div style="padding-top:30px" class="panel-body">
-                <pre>WebClient<br />70fdb7b56227077c8df02c7a576f8937</pre>
+                <!--<pre>WebClient<br />70fdb7b56227077c8df02c7a576f8937</pre>-->
 
-                <form ng-submit="vm.login()" id="loginform" name="form" class="form-horizontal" role="form">
+                <form ng-submit="vm.login()" id="form" name="form" class="form-horizontal" role="form">
+
                     <div style="margin-bottom: 25px" class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input ng-model="vm.user.username"
-                               id="login-username" type="text" class="form-control"
-                               name="username" value=""
-                               placeholder="username or email"
-                                required />
+                        <!--<pre>{{vm.users | filter: { userId: vm.user} }}</pre>-->
+                        <!--<pre>{{vm.user}}</pre>-->
+
+
+                        <select class="form-control"
+                                ng-change="vm.catch()"
+                                ng-model="vm.user"
+                                ng-options="item.userId as item.login for item in vm.users"
+                                required></select>
                     </div>
 
-                    <div style="margin-bottom: 25px" class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input ng-model="vm.user.password" id="login-password" type="password" class="form-control"
-                               name="password"
-                               placeholder="password"
-                                required />
-                    </div>
+
+                    <!--<div style="margin-bottom: 25px" class="input-group">-->
+                        <!--<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>-->
+                        <!--<input ng-model="vm.user.username"-->
+                               <!--id="login-username" type="text" class="form-control"-->
+                               <!--name="username" value=""-->
+                               <!--placeholder="username or email"-->
+                                <!--required />-->
+                    <!--</div>-->
+
+                    <!--<div style="margin-bottom: 25px" class="input-group">-->
+                        <!--<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>-->
+                        <!--<input ng-model="vm.user.password" id="login-password" type="password" class="form-control"-->
+                               <!--name="password"-->
+                               <!--placeholder="password"-->
+                                <!--required />-->
+                    <!--</div>-->
 
                     <div style="margin-top:10px" class="form-group">
                         <!-- Button -->
                         <div class="col-sm-12 controls">
-                            <button type="submit" ng-disabled="form.$invalid" id="btn-login" class="btn green">Zaloguj si&#281;</button>
+                            <button ng-disabled="form.$invalid" type="submit" ng-disabled="form.$invalid" id="btn-login" class="btn green">Zaloguj si&#281;</button>
                             <!--<button ui-sref="users" class="btn red">Back</button>-->
                         </div>
                     </div>
