@@ -53,23 +53,21 @@
             vm.csvFilename = 'ydpApp_Users_' + moment(new Date()).format('DD-MM-YYYY_Hm') + '.csv';
             vm.getHeader = [
                 'Login',
-                'Plec',
-                'Wiek',
-                'Komentarz',
-                'SessionStart',
-                'SessionEnd',
-                'motywacja',
-                'pobudzenie',
-                'koncentracja',
-                'skupienie uwagi',
-                'precyzja ruchow',
-                'stabilnosc ruchu',
-                'zakres ruchu',
-                'szybkosc ruchu',
                 'Ocena ogolnego nastroju',
                 'Ocena koncowa nastroju',
                 'Klasa',
                 'Plec'
+
+                //'SessionStart',
+                //'SessionEnd',
+                //'motywacja',
+                //'pobudzenie',
+                //'koncentracja',
+                //'skupienie uwagi',
+                //'precyzja ruchow',
+                //'stabilnosc ruchu',
+                //'zakres ruchu',
+                //'szybkosc ruchu'
             ];
 
             getCsvData(data);
@@ -98,26 +96,46 @@
         }
 
         function _createUserDetails(res) {
-            return {
+            var userDetails = {};
+
+            userDetails = {
                 login: res.Login,
-                gender: KEYS.gender[res.Gender],
-                age: res.Age,
-                comments: res.Comment,
-                sessionStart: moment(new Date(res.sessions[0].SessionStart * 1000)).format('DD-MM-YYYY'),
-                sessionEnd: moment(new Date(res.sessions[0].SessionEnd * 1000)).format('DD-MM-YYYY'),
-                motivation: res.sessions[0].results.motivation,
-                arousal: res.sessions[0].results.arousal,
-                concentration: res.sessions[0].results.concentration,
-                focusingAttention: res.sessions[0].results.focusingAttention,
-                precissionOfMovements: res.sessions[0].results.precissionOfMovements,
-                stability: res.sessions[0].results.stability,
-                rangeOfMovement: res.sessions[0].results.rangeOfMovement,
-                movementSpeed: res.sessions[0].results.movementSpeed,
                 feedbackMoodFirst: KEYS.moodFirst[res.feedback.moodFirst],
                 feedbackMoodLast: KEYS.moodLast[res.feedback.moodLast],
                 feedbackClassId: res.feedback.classId,
-                feedbackGender: KEYS.gender[res.feedback.gender]
-            }
+                feedbackGender: KEYS.gender[res.feedback.gender],
+                sessions: []
+
+                // only for one indicator
+                //sessionStart: moment(new Date(res.sessions[0].SessionStart * 1000)).format('DD-MM-YYYY'),
+                //sessionEnd: moment(new Date(res.sessions[0].SessionEnd * 1000)).format('DD-MM-YYYY'),
+                //motivation: res.sessions[0].results.motivation,
+                //arousal: res.sessions[0].results.arousal,
+                //concentration: res.sessions[0].results.concentration,
+                //focusingAttention: res.sessions[0].results.focusingAttention,
+                //precissionOfMovements: res.sessions[0].results.precissionOfMovements,
+                //stability: res.sessions[0].results.stability,
+                //rangeOfMovement: res.sessions[0].results.rangeOfMovement,
+                //movementSpeed: res.sessions[0].results.movementSpeed
+            };
+
+            //TODO
+            //_.forEach(res.sessions, function(session) {
+            //    userDetails.sessions.push({
+            //        sessionStart: moment(new Date(session.SessionStart * 1000)).format('DD-MM-YYYY'),
+            //        sessionEnd: moment(new Date(session.SessionEnd * 1000)).format('DD-MM-YYYY'),
+            //        motivation: session.results.motivation,
+            //        arousal: session.results.arousal,
+            //        concentration: session.results.concentration,
+            //        focusingAttention: session.results.focusingAttention,
+            //        precissionOfMovements: session.results.precissionOfMovements,
+            //        stability: session.results.stability,
+            //        rangeOfMovement: session.results.rangeOfMovement,
+            //        movementSpeed: session.results.movementSpeed
+            //    });
+            //});
+
+            return userDetails;
         }
     }
 
