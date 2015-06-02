@@ -18,6 +18,10 @@
         vm.loader = true;
         vm.counter = 0;
         vm.data = null;
+        vm.getCsvData = null;
+
+        vm.generateCSV = generateCSV;
+
 
         activate();
 
@@ -26,15 +30,23 @@
             return ResultsData.getUsersList()
                 .then(function (res) {
                     //CSV
-                    csv(res);
+                    //csv(res);
 
                     //JSON
                     vm.users = res.data;
-
+                    vm.loader = false;
                     //vm.users = res.users;
                     //vm.loader = false;
                 });
         }
+
+        function generateCSV() {
+            return ResultsData.getUsersList()
+                .then(function (res) {
+                    csv(res);
+                });
+        }
+
 
         function csv(data) {
             vm.csvFilename = 'ydpApp_Users_' + moment(new Date()).format('DD-MM-YYYY_Hm') + '.csv';
