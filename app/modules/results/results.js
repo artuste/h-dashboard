@@ -56,18 +56,18 @@
                 'Ocena ogolnego nastroju',
                 'Ocena koncowa nastroju',
                 'Klasa',
-                'Plec'
+                'Plec',
 
                 //'SessionStart',
                 //'SessionEnd',
-                //'motywacja',
-                //'pobudzenie',
-                //'koncentracja',
-                //'skupienie uwagi',
-                //'precyzja ruchow',
-                //'stabilnosc ruchu',
-                //'zakres ruchu',
-                //'szybkosc ruchu'
+                'motywacja',
+                'pobudzenie',
+                'koncentracja',
+                'skupienie uwagi',
+                'precyzja ruchow',
+                'stabilnosc ruchu',
+                'zakres ruchu',
+                'szybkosc ruchu'
             ];
 
             getCsvData(data);
@@ -104,19 +104,19 @@
                 feedbackMoodLast: KEYS.moodLast[res.feedback.moodLast],
                 feedbackClassId: res.feedback.classId,
                 feedbackGender: KEYS.gender[res.feedback.gender],
-                sessions: []
+                //sessions: []
 
                 // only for one indicator
                 //sessionStart: moment(new Date(res.sessions[0].SessionStart * 1000)).format('DD-MM-YYYY'),
                 //sessionEnd: moment(new Date(res.sessions[0].SessionEnd * 1000)).format('DD-MM-YYYY'),
-                //motivation: res.sessions[0].results.motivation,
-                //arousal: res.sessions[0].results.arousal,
-                //concentration: res.sessions[0].results.concentration,
-                //focusingAttention: res.sessions[0].results.focusingAttention,
-                //precissionOfMovements: res.sessions[0].results.precissionOfMovements,
-                //stability: res.sessions[0].results.stability,
-                //rangeOfMovement: res.sessions[0].results.rangeOfMovement,
-                //movementSpeed: res.sessions[0].results.movementSpeed
+                motivation: res.sessions[0].results.motivation,
+                arousal: res.sessions[0].results.arousal,
+                concentration: res.sessions[0].results.concentration,
+                focusingAttention: res.sessions[0].results.focusingAttention,
+                precissionOfMovements: res.sessions[0].results.precissionOfMovements,
+                stability: res.sessions[0].results.stability,
+                rangeOfMovement: res.sessions[0].results.rangeOfMovement,
+                movementSpeed: res.sessions[0].results.movementSpeed
             };
 
             //TODO
