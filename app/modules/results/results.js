@@ -41,6 +41,7 @@
         }
 
         function generateCSV() {
+            vm.loader = true;
             return ResultsData.getUsersList()
                 .then(function (res) {
                     csv(res);
