@@ -6,33 +6,38 @@
         .controller('ResultsDetails', ResultsDetails)
         .factory('ResultsData', ResultsData);
 
-    Results.$inject = ['ResultsData'];
+    Results.$inject = ['KEYS', 'ResultsData'];
     ResultsDetails.$inject = ['$state', 'KEYS', 'ResultsData'];
     ResultsData.$inject = ['$q', '$http', 'URLS'];
 
-    function Results(ResultsData) {
+    function Results(KEYS, ResultsData) {
         /* jshint validthis: true */
         var vm = this;
 
         vm.users = null;
         vm.loader = true;
+        vm.counter = 0;
+        vm.data = null;
 
         activate();
 
         function activate() {
-            csv();
+
             return ResultsData.getUsersList()
                 .then(function (res) {
+                    //CSV
+                    csv(res);
+
                     //JSON
                     vm.users = res.data;
 
                     //vm.users = res.users;
-                    vm.loader = false;
+                    //vm.loader = false;
                 });
         }
 
-        function csv() {
-            // TODO: CSV Data for all users!
+        function csv(data) {
+            vm.csvFilename = 'ydpApp_Users_' + moment(new Date()).format('DD-MM-YYYY_Hm') + '.csv';
             vm.getHeader = [
                 'Login',
                 'Plec',
@@ -54,30 +59,52 @@
                 'Plec'
             ];
 
-            vm.getCsvData = getCsvData();
+            getCsvData(data);
         }
 
-        function getCsvData() {
+        function getCsvData(users) {
             var usersCollection = [];
+            var usersArr = users.data;
 
-            ResultsData.getUsersList()
-                .then(function (users) {
-                    var usersArr = users.data;
+            _.forEach(usersArr, function (user) {
+                if (user.userId.length > 0) {
+                    return ResultsData.getUser(user.userId)
+                        .then(function (detail) {
+                            if (typeof(detail.error) !== 'object') {
+                                usersCollection.push(_createUserDetails(detail));
+                            }
+                            vm.counter++;
 
-                    _.each(usersArr, function (user) {
-                        if (user.userId.length > 0) {
-                            return ResultsData.getUser(user.userId)
-                                .then(function (detail) {
-                                    if (typeof(detail.error) !== 'object') {
-                                        console.log('detail', detail);
-                                        usersCollection.push(detail);
-                                    }
-                                });
-                        }
-                    });
-                });
+                            if (usersArr.length === vm.counter) {
+                                vm.getCsvData = usersCollection;
+                                vm.loader = false;
+                            }
+                        });
+                }
+            });
+        }
 
-            return usersCollection;
+        function _createUserDetails(res) {
+            return {
+                login: res.Login,
+                gender: KEYS.gender[res.Gender],
+                age: res.Age,
+                comments: res.Comment,
+                sessionStart: moment(new Date(res.sessions[0].SessionStart * 1000)).format('DD-MM-YYYY'),
+                sessionEnd: moment(new Date(res.sessions[0].SessionEnd * 1000)).format('DD-MM-YYYY'),
+                motivation: res.sessions[0].results.motivation,
+                arousal: res.sessions[0].results.arousal,
+                concentration: res.sessions[0].results.concentration,
+                focusingAttention: res.sessions[0].results.focusingAttention,
+                precissionOfMovements: res.sessions[0].results.precissionOfMovements,
+                stability: res.sessions[0].results.stability,
+                rangeOfMovement: res.sessions[0].results.rangeOfMovement,
+                movementSpeed: res.sessions[0].results.movementSpeed,
+                feedbackMoodFirst: KEYS.moodFirst[res.feedback.moodFirst],
+                feedbackMoodLast: KEYS.moodLast[res.feedback.moodLast],
+                feedbackClassId: res.feedback.classId,
+                feedbackGender: KEYS.gender[res.feedback.gender]
+            }
         }
     }
 
@@ -104,11 +131,11 @@
                 .then(function (res) {
                     vm.loader = false;
 
-                    if(!!res.Login) {
+                    if (!!res.Login) {
                         vm.user = res;
                         //csv(res);
                     } else {
-                       vm.error = true;
+                        vm.error = true;
                     }
 
                 });
