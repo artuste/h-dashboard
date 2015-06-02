@@ -45,64 +45,82 @@
         </table>
         <br />
 
-        <h3>Wska&#380;niki</h3>
+        <h3>Wska&#378;niki</h3>
+        <br/>
         <!--<pre>{{vm.user.sessions|json}}</pre>-->
 
         <div ng-repeat="session in vm.user.sessions">
             <!--<h4>{{session.Timestamp | amDateFormat:'dddd, MMMM YYYY, hh:mm'}} </h4>-->
             <!--<h5>{{session.SessionStart | amDateFormat:'DD-MM-YYYY, HH:mm'}} - {{session.SessionEnd | amDateFormat:'DD-MM-YYYY, HH:mm'}}</h5>-->
 
-            <table class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                    <th colspan="2">
-                        <p>Pocz&#261;tek: {{session.SessionStart | amDateFormat:'DD-MM-YYYY, HH:mm'}}</p>
-                        <p style="margin-bottom: 0;">Koniec: {{session.SessionEnd | amDateFormat:'DD-MM-YYYY, HH:mm'}}</p>
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>motywacja</td>
-                    <td>{{ session.results.motivation }}</td>
-                </tr>
+            <!--<h2>Badanie #{{ $index + 1 }}</h2>-->
+            <!--<p>Pocz&#261;tek: <i>{{session.SessionStart | amDateFormat:'DD-MM-YYYY, HH:mm'}}</i></p>-->
+            <!--<p style="margin-bottom: 0;">Koniec: <i>{{session.SessionEnd | amDateFormat:'DD-MM-YYYY, HH:mm'}}</i></p>-->
 
-                <tr>
-                    <td>pobudzenie</td>
-                    <td>{{ session.results.arousal }}</td>
-                </tr>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Badanie #{{ $index + 1 }}</h3>
+                </div>
+                <div class="panel-body">
+                    <p>Pocz&#261;tek: <i>{{session.SessionStart | amDateFormat:'DD-MM-YYYY, HH:mm'}}</i></p>
+                    <p style="margin-bottom: 0;">Koniec: <i>{{session.SessionEnd | amDateFormat:'DD-MM-YYYY, HH:mm'}}</i></p>
+<br />
+                    <table class="table table-bordered table-striped">
+                        <!--<thead>-->
+                        <!--<tr>-->
+                        <!--<th colspan="2">-->
+                        <!--<p>Pocz&#261;tek: <i>{{session.SessionStart | amDateFormat:'DD-MM-YYYY, HH:mm'}}</i></p>-->
+                        <!--<p style="margin-bottom: 0;">Koniec: <i>{{session.SessionEnd | amDateFormat:'DD-MM-YYYY, HH:mm'}}</i></p>-->
+                        <!--</th>-->
+                        <!--</tr>-->
+                        <!--</thead>-->
+                        <tbody>
+                        <tr>
+                            <td>motywacja</td>
+                            <td>{{ session.results.motivation }}</td>
+                        </tr>
 
-                <tr>
-                    <td>koncentracja</td>
-                    <td>{{ session.results.concentration }}</td>
-                </tr>
+                        <tr>
+                            <td>pobudzenie</td>
+                            <td>{{ session.results.arousal }}</td>
+                        </tr>
 
-                <tr>
-                    <td>skupienie uwagi</td>
-                    <td>{{ session.results.focusingAttention }}</td>
-                </tr>
+                        <tr>
+                            <td>koncentracja</td>
+                            <td>{{ session.results.concentration }}</td>
+                        </tr>
 
-                <tr>
-                    <td>precyzja ruch&#243;w</td>
-                    <td>{{ session.results.precissionOfMovements }}</td>
-                </tr>
+                        <tr>
+                            <td>skupienie uwagi</td>
+                            <td>{{ session.results.focusingAttention }}</td>
+                        </tr>
 
-                <tr>
-                    <td>stabilno&#347;&#263; ruchu</td>
-                    <td>{{ session.results.stability }}</td>
-                </tr>
+                        <tr>
+                            <td>precyzja ruch&#243;w</td>
+                            <td>{{ session.results.precissionOfMovements }}</td>
+                        </tr>
 
-                <tr>
-                    <td>zakres ruchu</td>
-                    <td>{{ session.results.rangeOfMovement }}</td>
-                </tr>
+                        <tr>
+                            <td>stabilno&#347;&#263; ruchu</td>
+                            <td>{{ session.results.stability }}</td>
+                        </tr>
 
-                <tr>
-                    <td>szybko&#347;&#263; ruchu</td>
-                    <td>{{ session.results.movementSpeed }}</td>
-                </tr>
-                </tbody>
-            </table>
+                        <tr>
+                            <td>zakres ruchu</td>
+                            <td>{{ session.results.rangeOfMovement }}</td>
+                        </tr>
+
+                        <tr>
+                            <td>szybko&#347;&#263; ruchu</td>
+                            <td>{{ session.results.movementSpeed }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <br />
         </div>
         <br />
 
