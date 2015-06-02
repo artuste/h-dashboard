@@ -32,12 +32,6 @@
                 <td>Login</td>
                 <td>{{ vm.user.Login }}</td>
             </tr>
-
-            <!--<tr>-->
-            <!--<td>P&#322;e&#263;</td>-->
-            <!--<td>{{ vm.keys.gender[vm.user.Gender] }}</td>-->
-            <!--</tr>-->
-
             <tr>
                 <td>Komentarz</td>
                 <td>{{ vm.user.Comment }}</td>
@@ -49,74 +43,61 @@
         <br/>
         <!--<pre>{{vm.user.sessions|json}}</pre>-->
 
-        <div ng-repeat="session in vm.user.sessions">
-            <!--<h4>{{session.Timestamp | amDateFormat:'dddd, MMMM YYYY, hh:mm'}} </h4>-->
-            <!--<h5>{{session.SessionStart | amDateFormat:'DD-MM-YYYY, HH:mm'}} - {{session.SessionEnd | amDateFormat:'DD-MM-YYYY, HH:mm'}}</h5>-->
+        <div class="row">
+            <div class="col-md-6" ng-repeat="session in vm.user.sessions">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Badanie #{{ $index + 1 }}</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>Pocz&#261;tek: <i>{{session.SessionStart | amDateFormat:'DD-MM-YYYY, HH:mm'}}</i></p>
+                        <p style="margin-bottom: 0;">Koniec: <i>{{session.SessionEnd | amDateFormat:'DD-MM-YYYY, HH:mm'}}</i></p>
+                        <br/>
 
-            <!--<h2>Badanie #{{ $index + 1 }}</h2>-->
-            <!--<p>Pocz&#261;tek: <i>{{session.SessionStart | amDateFormat:'DD-MM-YYYY, HH:mm'}}</i></p>-->
-            <!--<p style="margin-bottom: 0;">Koniec: <i>{{session.SessionEnd | amDateFormat:'DD-MM-YYYY, HH:mm'}}</i></p>-->
+                        <table class="table table-bordered table-striped">
+                            <tbody>
+                            <tr>
+                                <td>motywacja</td>
+                                <td>{{ session.results.motivation }}</td>
+                            </tr>
 
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Badanie #{{ $index + 1 }}</h3>
-                </div>
-                <div class="panel-body">
-                    <p>Pocz&#261;tek: <i>{{session.SessionStart | amDateFormat:'DD-MM-YYYY, HH:mm'}}</i></p>
+                            <tr>
+                                <td>pobudzenie</td>
+                                <td>{{ session.results.arousal }}</td>
+                            </tr>
 
-                    <p style="margin-bottom: 0;">Koniec: <i>{{session.SessionEnd | amDateFormat:'DD-MM-YYYY, HH:mm'}}</i></p>
-                    <br/>
-                    <table class="table table-bordered table-striped">
-                        <!--<thead>-->
-                        <!--<tr>-->
-                        <!--<th colspan="2">-->
-                        <!--<p>Pocz&#261;tek: <i>{{session.SessionStart | amDateFormat:'DD-MM-YYYY, HH:mm'}}</i></p>-->
-                        <!--<p style="margin-bottom: 0;">Koniec: <i>{{session.SessionEnd | amDateFormat:'DD-MM-YYYY, HH:mm'}}</i></p>-->
-                        <!--</th>-->
-                        <!--</tr>-->
-                        <!--</thead>-->
-                        <tbody>
-                        <tr>
-                            <td>motywacja</td>
-                            <td>{{ session.results.motivation }}</td>
-                        </tr>
+                            <tr>
+                                <td>koncentracja</td>
+                                <td>{{ session.results.concentration }}</td>
+                            </tr>
 
-                        <tr>
-                            <td>pobudzenie</td>
-                            <td>{{ session.results.arousal }}</td>
-                        </tr>
+                            <tr>
+                                <td>skupienie uwagi</td>
+                                <td>{{ session.results.focusingAttention }}</td>
+                            </tr>
 
-                        <tr>
-                            <td>koncentracja</td>
-                            <td>{{ session.results.concentration }}</td>
-                        </tr>
+                            <tr>
+                                <td>precyzja ruch&#243;w</td>
+                                <td>{{ session.results.precissionOfMovements }}</td>
+                            </tr>
 
-                        <tr>
-                            <td>skupienie uwagi</td>
-                            <td>{{ session.results.focusingAttention }}</td>
-                        </tr>
+                            <tr>
+                                <td>stabilno&#347;&#263; ruchu</td>
+                                <td>{{ session.results.stability }}</td>
+                            </tr>
 
-                        <tr>
-                            <td>precyzja ruch&#243;w</td>
-                            <td>{{ session.results.precissionOfMovements }}</td>
-                        </tr>
+                            <tr>
+                                <td>zakres ruchu</td>
+                                <td>{{ session.results.rangeOfMovement }}</td>
+                            </tr>
 
-                        <tr>
-                            <td>stabilno&#347;&#263; ruchu</td>
-                            <td>{{ session.results.stability }}</td>
-                        </tr>
-
-                        <tr>
-                            <td>zakres ruchu</td>
-                            <td>{{ session.results.rangeOfMovement }}</td>
-                        </tr>
-
-                        <tr>
-                            <td>szybko&#347;&#263; ruchu</td>
-                            <td>{{ session.results.movementSpeed }}</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                            <tr>
+                                <td>szybko&#347;&#263; ruchu</td>
+                                <td>{{ session.results.movementSpeed }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
