@@ -5,6 +5,15 @@
         <div class="loading-text">Loading</div>
     </div>
     <!--<pre>{{vm.users|json}}</pre>-->
+    <pre>{{vm.getCsvData}}</pre>
+
+    <button class="btn btn-sm btn-primary"
+    csv-header="vm.getHeader"
+    ng-csv="vm.getCsvData"
+    filename="test21000.csv"
+    field-separator=";">
+    CSV
+    </button>
 
     <div ng-if="!vm.loader">
         <h3>Lista użytkowników</h3>

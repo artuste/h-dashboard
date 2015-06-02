@@ -20,9 +20,7 @@
         activate();
 
         function activate() {
-            // TODO! CSV Button generate
-            //getAllCsvData();
-
+            csv();
             return ResultsData.getUsersList()
                 .then(function (res) {
                     //JSON
@@ -33,34 +31,54 @@
                 });
         }
 
-        //function getAllCsvData() {
-        //    //var n = "f09aacca-0f8b-46f2-8f33-45ad2d770593";
-        //    //
-        //    //ResultsData.getUser(n)
-        //    //    .then(function (item) {
-        //    //        debugger;
-        //    //    });
-        //
-        //    return ResultsData.getUsersList()
-        //        .then(function (users) {
-        //            var usersCollection = [],
-        //                usersArr = users.data;
-        //
-        //            _.each(usersArr, function (user) {
-        //                if (user.userId.length > 0) {
-        //                    return ResultsData.getUser(user.userId)
-        //                        .then(function (detail) {
-        //                            if (typeof(detail.error) !== 'object') {
-        //                                console.log('detail', detail);
-        //                                usersCollection.push(detail);
-        //                            }
-        //                        });
-        //                }
-        //            });
-        //
-        //            return usersCollection;
-        //        });
-        //}
+        function csv() {
+            // TODO: CSV Data for all users!
+            vm.getHeader = [
+                'Login',
+                'Plec',
+                'Wiek',
+                'Komentarz',
+                'SessionStart',
+                'SessionEnd',
+                'motywacja',
+                'pobudzenie',
+                'koncentracja',
+                'skupienie uwagi',
+                'precyzja ruchow',
+                'stabilnosc ruchu',
+                'zakres ruchu',
+                'szybkosc ruchu',
+                'Ocena ogolnego nastroju',
+                'Ocena koncowa nastroju',
+                'Klasa',
+                'Plec'
+            ];
+
+            vm.getCsvData = getCsvData();
+        }
+
+        function getCsvData() {
+            var usersCollection = [];
+
+            ResultsData.getUsersList()
+                .then(function (users) {
+                    var usersArr = users.data;
+
+                    _.each(usersArr, function (user) {
+                        if (user.userId.length > 0) {
+                            return ResultsData.getUser(user.userId)
+                                .then(function (detail) {
+                                    if (typeof(detail.error) !== 'object') {
+                                        console.log('detail', detail);
+                                        usersCollection.push(detail);
+                                    }
+                                });
+                        }
+                    });
+                });
+
+            return usersCollection;
+        }
     }
 
     function ResultsDetails($state, KEYS, ResultsData) {
@@ -88,7 +106,7 @@
 
                     if(!!res.Login) {
                         vm.user = res;
-                        csv(res);
+                        //csv(res);
                     } else {
                        vm.error = true;
                     }
@@ -96,58 +114,58 @@
                 });
         }
 
-        function csv(res) {
-            var headerArray = [
-                    'Login',
-                    'Plec',
-                    'Wiek',
-                    'Komentarz',
-                    'SessionStart',
-                    'SessionEnd',
-                    'motywacja',
-                    'pobudzenie',
-                    'koncentracja',
-                    'skupienie uwagi',
-                    'precyzja ruchow',
-                    'stabilnosc ruchu',
-                    'zakres ruchu',
-                    'szybkosc ruchu',
-                    'Ocena ogolnego nastroju',
-                    'Ocena koncowa nastroju',
-                    'Klasa',
-                    'Plec'
-                ],
-                dataArray = [];
-
-            dataArray.push(
-                {
-                    login: res.Login,
-                    gender: KEYS.gender[res.Gender],
-                    age: res.Age,
-                    comments: res.Comment,
-                    sessionStart: moment(new Date(res.sessions[0].SessionStart * 1000)).format('DD-MM-YYYY'),
-                    sessionEnd: moment(new Date(res.sessions[0].SessionEnd * 1000)).format('DD-MM-YYYY'),
-                    motivation: res.sessions[0].results.motivation,
-                    arousal: res.sessions[0].results.arousal,
-                    concentration: res.sessions[0].results.concentration,
-                    focusingAttention: res.sessions[0].results.focusingAttention,
-                    precissionOfMovements: res.sessions[0].results.precissionOfMovements,
-                    stability: res.sessions[0].results.stability,
-                    rangeOfMovement: res.sessions[0].results.rangeOfMovement,
-                    movementSpeed: res.sessions[0].results.movementSpeed,
-                    feedbackMoodFirst: KEYS.moodFirst[res.feedback.moodFirst],
-                    feedbackMoodLast: KEYS.moodLast[res.feedback.moodLast],
-                    feedbackClassId: res.feedback.classId,
-                    feedbackGender: KEYS.gender[res.feedback.gender]
-                }
-            );
-
-            vm.getHeader = headerArray;
-            vm.getData = dataArray;
-
-
-            vm.filename = res.Login + '-details';
-        }
+        //function csv(res) {
+        //    var headerArray = [
+        //            'Login',
+        //            'Plec',
+        //            'Wiek',
+        //            'Komentarz',
+        //            'SessionStart',
+        //            'SessionEnd',
+        //            'motywacja',
+        //            'pobudzenie',
+        //            'koncentracja',
+        //            'skupienie uwagi',
+        //            'precyzja ruchow',
+        //            'stabilnosc ruchu',
+        //            'zakres ruchu',
+        //            'szybkosc ruchu',
+        //            'Ocena ogolnego nastroju',
+        //            'Ocena koncowa nastroju',
+        //            'Klasa',
+        //            'Plec'
+        //        ],
+        //        dataArray = [];
+        //
+        //    dataArray.push(
+        //        {
+        //            login: res.Login,
+        //            gender: KEYS.gender[res.Gender],
+        //            age: res.Age,
+        //            comments: res.Comment,
+        //            sessionStart: moment(new Date(res.sessions[0].SessionStart * 1000)).format('DD-MM-YYYY'),
+        //            sessionEnd: moment(new Date(res.sessions[0].SessionEnd * 1000)).format('DD-MM-YYYY'),
+        //            motivation: res.sessions[0].results.motivation,
+        //            arousal: res.sessions[0].results.arousal,
+        //            concentration: res.sessions[0].results.concentration,
+        //            focusingAttention: res.sessions[0].results.focusingAttention,
+        //            precissionOfMovements: res.sessions[0].results.precissionOfMovements,
+        //            stability: res.sessions[0].results.stability,
+        //            rangeOfMovement: res.sessions[0].results.rangeOfMovement,
+        //            movementSpeed: res.sessions[0].results.movementSpeed,
+        //            feedbackMoodFirst: KEYS.moodFirst[res.feedback.moodFirst],
+        //            feedbackMoodLast: KEYS.moodLast[res.feedback.moodLast],
+        //            feedbackClassId: res.feedback.classId,
+        //            feedbackGender: KEYS.gender[res.feedback.gender]
+        //        }
+        //    );
+        //
+        //    vm.getHeader = headerArray;
+        //    vm.getData = dataArray;
+        //
+        //
+        //    vm.filename = res.Login + '-details';
+        //}
     }
 
     function ResultsData($q, $http, URLS) {
