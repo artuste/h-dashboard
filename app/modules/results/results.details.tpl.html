@@ -26,15 +26,39 @@
         </h3>
         <hr/>
 
-        <h3>Podstawowe informacje</h3>
+        <h3>Dane z formularza</h3>
         <table class="table table-bordered table-striped">
             <tr>
                 <td>Login</td>
                 <td>{{ vm.user.Login }}</td>
             </tr>
             <tr>
-                <td>Komentarz</td>
-                <td>{{ vm.user.Comment }}</td>
+                <td>Ocena og&#243;lnego nastroju</td>
+                <td>{{ vm.keys.moodFirst[vm.user.feedback.moodFirst] }}</td>
+            </tr>
+
+            <tr>
+                <td>Ocena ko&#324;cowa nastroju</td>
+                <td>{{ vm.keys.moodLast[vm.user.feedback.moodLast] }}</td>
+            </tr>
+
+            <tr>
+                <td>Klasa</td>
+                <td>{{ vm.user.feedback.classId }}</td>
+            </tr>
+
+            <tr>
+                <td>P&#322;e&#263;</td>
+                <td>{{ vm.keys.gender[vm.user.feedback.gender] }}</td>
+            </tr>
+
+            <tr>
+                <td>Urz&#261;dzenie</td>
+                <td>{{ vm.keys.moodFirst[vm.user.feedback.device] }}</td>
+            </tr>
+            <tr>
+                <td>Dysfunkcje</td>
+                <td>{{ vm.user.feedback.dysfunction }}</td>
             </tr>
         </table>
         <br/>
@@ -101,38 +125,6 @@
                 </div>
             </div>
         </div>
-
-        <h3>Dane z formularza</h3>
-        <table class="table table-bordered table-striped">
-            <tr>
-                <td>Ocena og&#243;lnego nastroju</td>
-                <td>{{ vm.keys.moodFirst[vm.user.feedback.moodFirst] }}</td>
-            </tr>
-
-            <tr>
-                <td>Ocena ko&#324;cowa nastroju</td>
-                <td>{{ vm.keys.moodLast[vm.user.feedback.moodLast] }}</td>
-            </tr>
-
-            <tr>
-                <td>Klasa</td>
-                <td>{{ vm.user.feedback.classId }}</td>
-            </tr>
-
-            <tr>
-                <td>P&#322;e&#263;</td>
-                <td>{{ vm.keys.gender[vm.user.feedback.gender] }}</td>
-            </tr>
-
-            <tr>
-                <td>Urz&#261;dzenie</td>
-                <td>{{ vm.keys.moodFirst[vm.user.feedback.device] }}</td>
-            </tr>
-            <tr>
-                <td>Dysfunkcje</td>
-                <td>{{ vm.user.feedback.dysfunction }}</td>
-            </tr>
-        </table>
         <!--<pre>{{ vm.user | json }}</pre>-->
     </div>
 </div>
