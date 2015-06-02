@@ -4,7 +4,7 @@
     <div class="loading-text">Loading</div>
 </div>
 
-<div ng-if="!vm.loader">
+<div class="container" ng-if="!vm.loader">
     <div ng-if="vm.error">
         <div class="alert alert-danger" role="alert">
             <b>B&#322;&#261;d: </b> Brak danych u&#380;ytkownika
@@ -34,8 +34,8 @@
             </tr>
 
             <!--<tr>-->
-                <!--<td>P&#322;e&#263;</td>-->
-                <!--<td>{{ vm.keys.gender[vm.user.Gender] }}</td>-->
+            <!--<td>P&#322;e&#263;</td>-->
+            <!--<td>{{ vm.keys.gender[vm.user.Gender] }}</td>-->
             <!--</tr>-->
 
             <tr>
@@ -43,7 +43,7 @@
                 <td>{{ vm.user.Comment }}</td>
             </tr>
         </table>
-        <br />
+        <br/>
 
         <h3>Wska&#378;niki</h3>
         <br/>
@@ -63,8 +63,10 @@
                 </div>
                 <div class="panel-body">
                     <p>Pocz&#261;tek: <i>{{session.SessionStart | amDateFormat:'DD-MM-YYYY, HH:mm'}}</i></p>
-                    <p style="margin-bottom: 0;">Koniec: <i>{{session.SessionEnd | amDateFormat:'DD-MM-YYYY, HH:mm'}}</i></p>
-<br />
+
+                    <p style="margin-bottom: 0;">Koniec: <i>{{session.SessionEnd | amDateFormat:'DD-MM-YYYY,
+                        HH:mm'}}</i></p>
+                    <br/>
                     <table class="table table-bordered table-striped">
                         <!--<thead>-->
                         <!--<tr>-->
@@ -118,11 +120,7 @@
                     </table>
                 </div>
             </div>
-
-
-            <br />
         </div>
-        <br />
 
         <h3>Dane z formularza</h3>
         <table class="table table-bordered table-striped">
