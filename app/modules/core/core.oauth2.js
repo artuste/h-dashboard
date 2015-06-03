@@ -13,6 +13,7 @@
             function logout() {
                 localStorage.removeItem('login');
                 localStorage.removeItem('access_token');
+                localStorage.removeItem('user');
 
                 $rootScope.oauth2 = {};
 
