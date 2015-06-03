@@ -29,14 +29,8 @@
 
             return ResultsData.getUsersList()
                 .then(function (res) {
-                    //CSV
-                    //csv(res);
-
-                    //JSON
                     vm.users = res.data;
                     vm.loader = false;
-                    //vm.users = res.users;
-                    //vm.loader = false;
                 });
         }
 
@@ -160,70 +154,15 @@
         function getUser(userId) {
             return ResultsData.getUser(userId)
                 .then(function (res) {
-                    vm.loader = false;
-
                     if (!!res.Login) {
                         vm.user = res;
-                        //csv(res);
                     } else {
                         vm.error = true;
                     }
 
+                    vm.loader = false;
                 });
         }
-
-        //function csv(res) {
-        //    var headerArray = [
-        //            'Login',
-        //            'Plec',
-        //            'Wiek',
-        //            'Komentarz',
-        //            'SessionStart',
-        //            'SessionEnd',
-        //            'motywacja',
-        //            'pobudzenie',
-        //            'koncentracja',
-        //            'skupienie uwagi',
-        //            'precyzja ruchow',
-        //            'stabilnosc ruchu',
-        //            'zakres ruchu',
-        //            'szybkosc ruchu',
-        //            'Ocena ogolnego nastroju',
-        //            'Ocena koncowa nastroju',
-        //            'Klasa',
-        //            'Plec'
-        //        ],
-        //        dataArray = [];
-        //
-        //    dataArray.push(
-        //        {
-        //            login: res.Login,
-        //            gender: KEYS.gender[res.Gender],
-        //            age: res.Age,
-        //            comments: res.Comment,
-        //            sessionStart: moment(new Date(res.sessions[0].SessionStart * 1000)).format('DD-MM-YYYY'),
-        //            sessionEnd: moment(new Date(res.sessions[0].SessionEnd * 1000)).format('DD-MM-YYYY'),
-        //            motivation: res.sessions[0].results.motivation,
-        //            arousal: res.sessions[0].results.arousal,
-        //            concentration: res.sessions[0].results.concentration,
-        //            focusingAttention: res.sessions[0].results.focusingAttention,
-        //            precissionOfMovements: res.sessions[0].results.precissionOfMovements,
-        //            stability: res.sessions[0].results.stability,
-        //            rangeOfMovement: res.sessions[0].results.rangeOfMovement,
-        //            movementSpeed: res.sessions[0].results.movementSpeed,
-        //            feedbackMoodFirst: KEYS.moodFirst[res.feedback.moodFirst],
-        //            feedbackMoodLast: KEYS.moodLast[res.feedback.moodLast],
-        //            feedbackClassId: res.feedback.classId,
-        //            feedbackGender: KEYS.gender[res.feedback.gender]
-        //        }
-        //    );
-        //
-        //    vm.getHeader = headerArray;
-        //    vm.getData = dataArray;
-        //
-        //
-        //    vm.filename = res.Login + '-details';
-        //}
     }
 
     function ResultsData($q, $http, URLS) {

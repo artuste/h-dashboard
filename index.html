@@ -52,6 +52,7 @@
             <i class="glyphicon glyphicon-eye-open"></i>
             YDP App
         </div>
+        <!--<pre>{{oauth2|json}}</pre>-->
         <ul class="nav navbar-nav pull-right">
             <li class="dropdown dropdown-user">
                 <a href="javascript:;" style="color: #9F9F9F;"
@@ -59,7 +60,7 @@
                    data-close-others="true" aria-expanded="false">
                     <span class="glyphicon glyphicon-user"></span>
                         <span class="username username-hide-on-mobile">
-                            {{oauth2.login}}
+                            {{ oauth2.login ? oauth2.user : '' }}
                         </span>
                     <i class="fa fa-angle-down"></i>
                 </a>
