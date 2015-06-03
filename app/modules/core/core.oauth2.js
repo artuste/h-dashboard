@@ -35,7 +35,7 @@
 
         function getUserData() {
             return {
-                login: localStorage.getItem('login'),
+                login: JSON.parse(localStorage.getItem('current_user')).login,
                 token: localStorage.getItem('access_token')
             }
         }
