@@ -52,8 +52,9 @@
                 'Klasa',
                 'Plec',
 
-                //'SessionStart',
-                //'SessionEnd',
+                'Start sesji',
+                'Koniec sesji',
+
                 'motywacja',
                 'pobudzenie',
                 'koncentracja',
@@ -77,7 +78,6 @@
                         .then(function (detail) {
                             if (typeof(detail.error) !== 'object') {
                                 //usersCollection.push(_createUserDetails(detail));
-
                                 _.forEach(detail.sessions, function(session) {
                                     usersCollection.push({
                                         login: detail.Login,
@@ -85,8 +85,8 @@
                                         feedbackMoodLast: KEYS.moodLast[detail.feedback.moodLast],
                                         feedbackClassId: detail.feedback.classId,
                                         feedbackGender: KEYS.gender[detail.feedback.gender],
-                                        sessionStart: moment(new Date(session.SessionStart * 1000)).format('DD-MM-YYYY'),
-                                        sessionEnd: moment(new Date(session.SessionEnd * 1000)).format('DD-MM-YYYY'),
+                                        sessionStart: moment(new Date(parseInt(session.SessionStart))).format('DD-MM-YYYY H:m'),
+                                        sessionEnd: moment(new Date(parseInt(session.SessionEnd))).format('DD-MM-YYYY H:m'),
                                         motivation: session.results.motivation,
                                         arousal: session.results.arousal,
                                         concentration: session.results.concentration,
