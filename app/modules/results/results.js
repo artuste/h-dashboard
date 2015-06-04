@@ -76,7 +76,28 @@
                     return ResultsData.getUser(user.userId)
                         .then(function (detail) {
                             if (typeof(detail.error) !== 'object') {
-                                usersCollection.push(_createUserDetails(detail));
+                                //usersCollection.push(_createUserDetails(detail));
+
+                                _.forEach(detail.sessions, function(session) {
+                                    usersCollection.push({
+                                        login: detail.Login,
+                                        feedbackMoodFirst: KEYS.moodFirst[detail.feedback.moodFirst],
+                                        feedbackMoodLast: KEYS.moodLast[detail.feedback.moodLast],
+                                        feedbackClassId: detail.feedback.classId,
+                                        feedbackGender: KEYS.gender[detail.feedback.gender],
+                                        sessionStart: moment(new Date(session.SessionStart * 1000)).format('DD-MM-YYYY'),
+                                        sessionEnd: moment(new Date(session.SessionEnd * 1000)).format('DD-MM-YYYY'),
+                                        motivation: session.results.motivation,
+                                        arousal: session.results.arousal,
+                                        concentration: session.results.concentration,
+                                        focusingAttention: session.results.focusingAttention,
+                                        precissionOfMovements: session.results.precissionOfMovements,
+                                        stability: session.results.stability,
+                                        rangeOfMovement: session.results.rangeOfMovement,
+                                        movementSpeed: session.results.movementSpeed
+                                    });
+                                });
+
                             }
                             vm.counter++;
 
@@ -89,48 +110,53 @@
             });
         }
 
-        function _createUserDetails(res) {
-            var userDetails = {};
-
-            userDetails = {
-                login: res.Login,
-                feedbackMoodFirst: KEYS.moodFirst[res.feedback.moodFirst],
-                feedbackMoodLast: KEYS.moodLast[res.feedback.moodLast],
-                feedbackClassId: res.feedback.classId,
-                feedbackGender: KEYS.gender[res.feedback.gender],
-                //sessions: []
-
-                // only for one indicator
-                //sessionStart: moment(new Date(res.sessions[0].SessionStart * 1000)).format('DD-MM-YYYY'),
-                //sessionEnd: moment(new Date(res.sessions[0].SessionEnd * 1000)).format('DD-MM-YYYY'),
-                motivation: res.sessions[0].results.motivation,
-                arousal: res.sessions[0].results.arousal,
-                concentration: res.sessions[0].results.concentration,
-                focusingAttention: res.sessions[0].results.focusingAttention,
-                precissionOfMovements: res.sessions[0].results.precissionOfMovements,
-                stability: res.sessions[0].results.stability,
-                rangeOfMovement: res.sessions[0].results.rangeOfMovement,
-                movementSpeed: res.sessions[0].results.movementSpeed
-            };
-
-            //TODO
-            //_.forEach(res.sessions, function(session) {
-            //    userDetails.sessions.push({
-            //        sessionStart: moment(new Date(session.SessionStart * 1000)).format('DD-MM-YYYY'),
-            //        sessionEnd: moment(new Date(session.SessionEnd * 1000)).format('DD-MM-YYYY'),
-            //        motivation: session.results.motivation,
-            //        arousal: session.results.arousal,
-            //        concentration: session.results.concentration,
-            //        focusingAttention: session.results.focusingAttention,
-            //        precissionOfMovements: session.results.precissionOfMovements,
-            //        stability: session.results.stability,
-            //        rangeOfMovement: session.results.rangeOfMovement,
-            //        movementSpeed: session.results.movementSpeed
-            //    });
-            //});
-
-            return userDetails;
-        }
+        //function _createUserDetails(res) {
+        //    var userDetails = [];
+        //
+        //    userDetails = {
+        //        login: res.Login,
+        //        feedbackMoodFirst: KEYS.moodFirst[res.feedback.moodFirst],
+        //        feedbackMoodLast: KEYS.moodLast[res.feedback.moodLast],
+        //        feedbackClassId: res.feedback.classId,
+        //        feedbackGender: KEYS.gender[res.feedback.gender],
+        //        //sessions: []
+        //
+        //        // only for one indicator
+        //        //sessionStart: moment(new Date(res.sessions[0].SessionStart * 1000)).format('DD-MM-YYYY'),
+        //        //sessionEnd: moment(new Date(res.sessions[0].SessionEnd * 1000)).format('DD-MM-YYYY'),
+        //        motivation: res.sessions[0].results.motivation,
+        //        arousal: res.sessions[0].results.arousal,
+        //        concentration: res.sessions[0].results.concentration,
+        //        focusingAttention: res.sessions[0].results.focusingAttention,
+        //        precissionOfMovements: res.sessions[0].results.precissionOfMovements,
+        //        stability: res.sessions[0].results.stability,
+        //        rangeOfMovement: res.sessions[0].results.rangeOfMovement,
+        //        movementSpeed: res.sessions[0].results.movementSpeed
+        //    };
+        //
+        //    //TODO
+        //    //_.forEach(res.sessions, function(session) {
+        //    //    userDetails = {
+        //    //        login: res.Login,
+        //    //        feedbackMoodFirst: KEYS.moodFirst[res.feedback.moodFirst],
+        //    //        feedbackMoodLast: KEYS.moodLast[res.feedback.moodLast],
+        //    //        feedbackClassId: res.feedback.classId,
+        //    //        feedbackGender: KEYS.gender[res.feedback.gender],
+        //    //        sessionStart: moment(new Date(session.SessionStart * 1000)).format('DD-MM-YYYY'),
+        //    //        sessionEnd: moment(new Date(session.SessionEnd * 1000)).format('DD-MM-YYYY'),
+        //    //        motivation: session.results.motivation,
+        //    //        arousal: session.results.arousal,
+        //    //        concentration: session.results.concentration,
+        //    //        focusingAttention: session.results.focusingAttention,
+        //    //        precissionOfMovements: session.results.precissionOfMovements,
+        //    //        stability: session.results.stability,
+        //    //        rangeOfMovement: session.results.rangeOfMovement,
+        //    //        movementSpeed: session.results.movementSpeed
+        //    //    };
+        //    //});
+        //
+        //    return userDetails;
+        //}
     }
 
     function ResultsDetails($state, KEYS, ResultsData) {
