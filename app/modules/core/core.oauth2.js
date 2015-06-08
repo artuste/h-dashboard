@@ -38,7 +38,7 @@
             return {
                 login: localStorage.getItem('login'),
                 token: localStorage.getItem('access_token'),
-                user: JSON.parse(localStorage.getItem('current_user')).login
+                user: !!localStorage.getItem('current_user') ? JSON.parse(localStorage.getItem('current_user')).login : ''
             }
         }
 

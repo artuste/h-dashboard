@@ -172,14 +172,18 @@ iframe {
   padding-bottom: 10px;
 }
 .logo {
+  text-decoration: none;
   float: left;
   font-size: 20px;
   padding-top: 10px;
   padding-left: 10px;
   color: #9F9F9F;
 }
-.logo .btbw {
-  color: #E65848;
+.logo:hover,
+.logo:focus,
+.logo:visited {
+  text-decoration: none;
+  color: #9F9F9F;
 }
 .sidebar-menu {
   padding: 0;
