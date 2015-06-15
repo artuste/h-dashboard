@@ -21,6 +21,11 @@
             gender: {
                 'F': 'kobieta',
                 'M': 'mezczyzna'
+            },
+            device: {
+                '1': 'komputer',
+                '2': 'tablet',
+                '3': 'telefon'
             }
         })
         .factory('Integration', Integration)
