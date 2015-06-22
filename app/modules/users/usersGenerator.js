@@ -5,6 +5,8 @@
         .controller('UsersGenerator', UsersGenerator)
         .factory('Users', Users);
 
+    Users.$inject = ['$http', 'URLS'];
+
     function UsersGenerator(Users) {
         /* jshint validthis: true */
         var vm = this;
@@ -15,6 +17,12 @@
         vm.usersCollections = [];
 
         vm.generate = generate;
+
+        activate();
+
+        function activate() {
+            currentUsers();
+        }
 
         function generate() {
             var prefix = vm.prefix,
@@ -37,11 +45,19 @@
             
             return users;
         }
+
+        function currentUsers() {
+            Users.getCurrentUsers()
+                .then(function (response) {
+                    vm.currentUsers = response.data;
+                });
+        }
     }
 
-    function Users() {
+    function Users($http, URLS) {
         return {
-            generate: generate
+            generate: generate,
+            getCurrentUsers: getCurrentUsers
         };
 
         function generate() {
@@ -52,6 +68,14 @@
                 return (c=='x' ? r : (r&0x3|0x8)).toString(16);
             });
             return uuid;
+        }
+
+        function getCurrentUsers() {
+            return $http({
+                url: URLS.base + '/app/modules/results/ids.json',
+                method: 'GET',
+                withCredentials: true
+            });
         }
     }
 

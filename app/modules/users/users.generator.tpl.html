@@ -7,21 +7,21 @@
                 <div class="form-group">
                     <label for="prefix" class="col-sm-4 control-label">Prefix</label>
 
-                    <div class="col-sm-7">
+                    <div class="col-sm-8">
                         <input class="form-control" id="prefix" type="text" ng-model="vm.prefix"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="startNumber" class="col-sm-4 control-label">Start number</label>
 
-                    <div class="col-sm-7">
+                    <div class="col-sm-8">
                         <input class="form-control" id="startNumber" type="number" ng-model="vm.startNumber"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="count" class="col-sm-4 control-label">Count</label>
 
-                    <div class="col-sm-7">
+                    <div class="col-sm-8">
                         <input class="form-control" id="count" type="number" ng-model="vm.count"/>
                     </div>
                 </div>
@@ -33,10 +33,23 @@
                 </div>
             </form>
         </div>
-        <div ng-if="vm.usersCollections.length > 0"
-             class="col-sm-6">
-            <b>JSON:</b><br /><br />
-            <pre>{{vm.usersCollections | json }}</pre>
+        <div class="col-sm-4">
+            <div ng-if="vm.currentUsers.length > 0">
+                <b>Existing users:</b><br/><br/>
+                <pre style="
+                    height: 300px;
+                    color: #000;
+                    background: lightblue;">{{ vm.currentUsers | json }}</pre>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div ng-if="vm.usersCollections.length > 0">
+                <b>New users:</b><br/><br/>
+                <pre style="
+                    max-height: 300px;
+                    background-color: rgb(67, 251, 67);
+                    color: #000;">{{ vm.usersCollections | json }}</pre>
+            </div>
         </div>
     </div>
 </div>
