@@ -12,7 +12,7 @@
         var vm = this;
         
         vm.prefix = 'Dziecko';
-        vm.startNumber = 0;
+        vm.startNumber = 1;
         vm.count = 1;
         vm.usersCollections = [];
 
