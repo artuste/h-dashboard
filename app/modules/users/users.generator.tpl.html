@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <h3>Generator u&#380;ytkownik&#243;w</h3>
+        <hr/>
+        <div class="col-sm-4">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="prefix" class="col-sm-4 control-label">Prefix</label>
+
+                    <div class="col-sm-7">
+                        <input class="form-control" id="prefix" type="text" ng-model="vm.prefix"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="startNumber" class="col-sm-4 control-label">Start number</label>
+
+                    <div class="col-sm-7">
+                        <input class="form-control" id="startNumber" type="number" ng-model="vm.startNumber"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="count" class="col-sm-4 control-label">Count</label>
+
+                    <div class="col-sm-7">
+                        <input class="form-control" id="count" type="number" ng-model="vm.count"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-4 col-sm-1">
+                        <button ng-click="vm.generate()" ng-disabled="!vm.count" class="btn btn-primary">Generate
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div ng-if="vm.usersCollections.length > 0"
+             class="col-sm-6">
+            <b>JSON:</b><br /><br />
+            <pre>{{vm.usersCollections | json }}</pre>
+        </div>
+    </div>
+</div>

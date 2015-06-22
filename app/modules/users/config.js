@@ -20,6 +20,12 @@
                 templateUrl: basePath + '/app/modules/users/users.details.tpl.html',
                 controller: 'UsersDetails',
                 controllerAs: 'vm'
+            })
+            .state('usersGenerator', {
+                url: '/users/generator',
+                templateUrl: basePath + '/app/modules/users/users.generator.tpl.html',
+                controller: 'UsersGenerator',
+                controllerAs: 'vm'
             });
     }
 
