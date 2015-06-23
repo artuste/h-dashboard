@@ -5,8 +5,9 @@
 
     angular.module('app')
         .factory('sessionService', sessionService)
-            .run(['$rootScope', '$state', '$injector', 'logger', 'sessionService', function ($rootScope, $state, $injector, logger, sessionService) {
+        .run(['$rootScope', '$state', '$injector', 'logger', 'sessionService', function ($rootScope, $state, $injector, logger, sessionService) {
 
+            $rootScope.theme = 'theme1';
             $rootScope.oauth2 = sessionService.getUserData();
             $rootScope.logout = logout;
 
@@ -21,6 +22,13 @@
             }
 
             sessionService.watchAuth();
+
+
+            $rootScope.changeTheme = changeTheme;
+
+            function changeTheme(number) {
+                $rootScope.theme = 'theme' + number;
+            }
 
         }]);
 

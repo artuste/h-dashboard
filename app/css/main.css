@@ -131,6 +131,42 @@
     -webkit-transform: scale(1);
   }
 }
+.theme1 #header {
+  border-bottom: 1px solid #E0DBDB;
+}
+.theme1 .dropdown-menu.dropdown-menu-default {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.theme1 .dropdown-toggle {
+  color: #9F9F9F;
+}
+.theme2 {
+  background: #ECF9FF;
+}
+.theme2 hr {
+  border-color: #000;
+}
+.theme2 #header {
+  background: #3358DB;
+}
+.theme2 #header .logo {
+  color: #fff;
+}
+.theme2 #header .nav > li > a:hover,
+.theme2 #header .nav > li > a:focus {
+  background: #4E70E8;
+}
+.theme2 #header .nav .open > a,
+.theme2 #header .nav .open > a:hover,
+.theme2 #header .nav .open > a:focus {
+  background-color: #D05050;
+  border-color: #428bca;
+}
+.theme2 #header .navbar-nav > li > a {
+  color: #FFF;
+}
 body {
   background: #fff;
 }
